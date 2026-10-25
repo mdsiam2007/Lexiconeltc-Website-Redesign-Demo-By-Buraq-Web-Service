@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-surface":"#0e1d2b","secondary-container":"#d0e0fe","on-tertiary-container":"#f4f4ff","surface-light":"#F5F7FA","primary-fixed":"#ffdad7","tertiary":"#004dcc","surface-bright":"#f8f9ff","tertiary-fixed":"#dbe1ff","on-primary-container":"#fff2f0","surface-container-highest":"#d5e4f8","inverse-primary":"#ffb3af","on-tertiary-fixed":"#00174b","secondary-fixed":"#d4e3ff","tertiary-fixed-dim":"#b4c5ff","secondary":"#505f78","tertiary-container":"#2a66ee","secondary-fixed-dim":"#b7c7e4","border-subtle":"#DCE2E9","inverse-on-surface":"#e9f1ff","success":"#10B981","crimson-hover":"#B71C28","on-background":"#0e1d2b","outline-variant":"#e4bdbb","on-secondary-fixed-variant":"#38475f","surface-dim":"#cddbef","surface-tint":"#bd0f26","inverse-surface":"#243241","surface-container-low":"#eef4ff","error":"#ba1a1a","on-error-container":"#93000a","on-surface-variant":"#5c403e","primary-fixed-dim":"#ffb3af","outline":"#906f6d","background":"#f8f9ff","error-container":"#ffdad6","warning":"#F59E0B","on-secondary":"#ffffff","surface-variant":"#d5e4f8","surface-container-lowest":"#ffffff","on-secondary-container":"#54637c","on-tertiary":"#ffffff","on-secondary-fixed":"#0b1c32","primary-container":"#d62835","surface-container":"#e4efff","on-tertiary-fixed-variant":"#003ea8","on-primary":"#ffffff","surface":"#f8f9ff","on-error":"#ffffff","on-primary-fixed-variant":"#930018","surface-container-high":"#dbe9fe","primary":"#b20120","on-primary-fixed":"#410006"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"margin":"2rem","gutter-mobile":"1rem","gutter":"1.5rem","space-lg":"1.5rem","space-md":"1rem","margin-mobile":"1rem","space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"2.5rem"},fontFamily:{"headline-md":["Lexend"],"label-lg":["Lexend"],"body-md":["Lexend"],"display-lg":["Lexend"],"label-sm":["Lexend"],"headline-lg":["Lexend"],"headline-sm":["Lexend"],"body-sm":["Lexend"],"label-md":["Lexend"],"body-lg":["Lexend"],"display-lg-mobile":["Lexend"]},fontSize:{"headline-md":["1.5rem",{"lineHeight":"2rem","fontWeight":"600"}],"label-lg":["1rem",{"lineHeight":"1.5rem","fontWeight":"500"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"display-lg":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.04em","fontWeight":"600"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}],"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"label-md":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"display-lg-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased">
+<!-- BURAQ WEB SERVICE DEMO HEADER BANNER -->
+<div id="buraq-demo-banner" style="position: fixed; top: 0; left: 0; right: 0; height: 40px; z-index: 9999999; background: #0e1d2b; color: #ffffff; border-bottom: 2px solid #b20120; font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); box-sizing: border-box;">
+  <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+    <span style="background: #b20120; color: #ffffff; padding: 3px 9px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; flex-shrink: 0;">Demo Notice</span>
+    <span style="color: #f1f5f9; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">It's just a demo, original design will be much better than this</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;">
+    <a href="../index.html" target="_top" style="display: inline-flex; align-items: center; gap: 6px; background: #ffffff; color: #0e1d2b; padding: 5px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.18);" onmouseover="this.style.background='#ffdad7';this.style.color='#930018'" onmouseout="this.style.background='#ffffff';this.style.color='#0e1d2b'">
+      <svg style="width: 14px; height: 14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+      <span>Back to Index</span>
+    </a>
+  </div>
+</div>
+<style id="buraq-demo-styles">
+  body { padding-top: 40px !important; }
+  header.fixed, header[class*="fixed"], nav.fixed, nav[class*="fixed"] { top: 40px !important; }
+  aside.fixed, aside[class*="fixed"] { top: 40px !important; height: calc(100vh - 40px) !important; }
+</style>
+<header class="fixed top-0 left-0 right-0 z-50 shadow-[0_1px_8px_rgba(20,36,58,0.06)]"><div class="bg-inverse-surface text-inverse-on-surface text-label-sm font-label-sm"><div class="max-w-7xl mx-auto px-6 h-9 flex items-center justify-between"><div class="flex items-center gap-space-sm truncate"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse shrink-0"></span><span class="truncate">Admissions Open for Spring &amp; Summer IELTS, PTE &amp; Spoken English Batches | Free Diagnostic Placement Test Available</span></div><div class="hidden md:flex items-center gap-space-md shrink-0"><span class="text-inverse-on-surface/80">Helpline:</span><a class="font-label-sm text-surface-container-lowest hover:text-primary-fixed transition-colors" href="tel:+8801913919470">+8801913 919470</a></div></div></div><div class="bg-surface-container-lowest/95 backdrop-blur-md"><div class="h-20 max-w-7xl mx-auto px-6 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md shrink-0"><img alt="Image from https://www.lexiconeltc.com/images/logos/logo5.jpeg" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2P1PayUmPkzgL-HEvjLfp0FArwYFuj-sU8BBvJHrSNv9rAbmk-3DMkWCDdi4wUBzPeMEa75NZzqpLhaBPU2pL_Gaw9TArYcatIqRmXmXeDR_fxtJqCIXqUxD9ZLlNZ2vVO8DY763gatWbsiPabxl2gLFbTRw92je1uc5QlBH72P0B9CLKz_ZDt6G1Tf9s3KRgCXjpgN2FGkazEvAaopGPuLCjgZ5gc-K8mcSHTGJT4H7sPbPFlECU"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none tracking-tight">LEXICON</span><span class="font-label-sm text-[10px] tracking-widest uppercase text-secondary">Language Training Centre</span></div></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="text-primary font-bold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="courses" href="#">Courses</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="ielts-preparation" href="#">IELTS</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="esl-spoken-english" href="#">ESL / Spoken English</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="pte-academic" href="#">PTE</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="young-learners" href="#">Young Learners</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="study-abroad-lexifly" href="#">Study Abroad (Lexifly)</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="about-lexicon" href="#">About</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm shrink-0"><a class="hidden sm:inline-flex items-center justify-center font-label-md text-label-md text-on-surface hover:text-primary transition-colors px-3 py-2" data-path="student-portal-login" href="#">Student Portal Login</a><a class="inline-flex items-center justify-center rounded-lg bg-primary-container text-on-primary font-label-md text-label-md px-4 py-2.5 transition-colors hover:bg-crimson-hover hover:text-on-primary" data-path="courses" href="#">Explore Courses</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="w-full pt-[116px] bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- BREADCRUMBS & COHORT BANNER -->
+<section class="w-full bg-surface-container-low py-space-sm">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs text-label-sm font-label-sm text-secondary">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Programmes &amp; Courses</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">IELTS Preparation</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold">IELTS Signature Lab Course</span>
+</nav>
+<!-- Dynamic Enrolment Status Ribbon Pill -->
+<div class="flex items-center gap-space-xs px-3 py-1 rounded-full bg-surface-container-lowest shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-success animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Spring 2026 Batch #48:</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">4 Seats Remaining</span>
+<span class="text-secondary text-label-sm font-label-sm hidden sm:inline">(Registration Closes March 28)</span>
+</div>
+</div>
+</section>
+<!-- HERO SECTION -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Hero Details (7 Cols) -->
+<div class="lg:col-span-7 space-y-space-md">
+<div class="inline-flex items-center gap-space-xs px-3.5 py-1.5 rounded-full bg-surface-container text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-base">verified</span>
+            British Council Official Partner Venue • Certified Academic Curriculum
+          </div>
+<h1 class="font-headline-lg text-headline-lg lg:text-[2.75rem] lg:leading-[3.25rem] text-on-surface font-bold tracking-tight">
+            IELTS Signature Preparation: <span class="text-primary">Official Computer-Delivered Lab Cohort</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl leading-relaxed">
+            Southwestern Bangladesh's most comprehensive IELTS programme, conducted in the accredited computer testing lab at NLI Tower. Diagnostic-driven band escalation engineered specifically for Band 7.5 – 8.5+.
+          </p>
+<!-- Intended Audience Tags -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm text-secondary">Target Cohort:</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light text-on-surface font-label-sm text-label-sm">Canada Express Entry / Aus PR</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light text-on-surface font-label-sm text-label-sm">UK Russell Group &amp; US Postgrad</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-light text-on-surface font-label-sm text-label-sm">Band 6.0 Retakers</span>
+</div>
+<!-- Quick Specs Ribbon -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-md">
+<div class="p-3 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-xl mb-1">schedule</span>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Duration</p>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-0.5">3 Months</p>
+<span class="text-[11px] font-label-sm text-secondary">12 Intensive Weeks</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-xl mb-1">devices</span>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Lab Format</p>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Lab + Hybrid</p>
+<span class="text-[11px] font-label-sm text-secondary">Stations 1–15 &amp; Portal</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-xl mb-1">fact_check</span>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Sessions</p>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-0.5">36 + 10 Mocks</p>
+<span class="text-[11px] font-label-sm text-secondary">72 Classroom Hrs</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-xl mb-1">grade</span>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Target Score</p>
+<p class="font-headline-sm text-headline-sm text-primary mt-0.5">Band 7.5 – 8.5</p>
+<span class="text-[11px] font-label-sm text-secondary">Verified Diagnostics</span>
+</div>
+</div>
+</div>
+<!-- Hero Media Feature (5 Cols) -->
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-xl overflow-hidden shadow-xl bg-surface-container aspect-[4/3]">
+<img class="w-full h-full object-cover" data-alt="Students wearing professional noise-cancelling headsets practicing for computer-delivered IELTS exam in a high-tech clean testing lab with divider partitions at Lexicon ELTC, high visual clarity, warm educational lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr8LmcebaVBnLvGCoeBHLq8EfMgHa4R3os0Ems7NbHOHO8eHOmXHNodCdOM-7MeTb45oyMBqDajHgDuAIzFNqKMxGrO_FtFMClBMxjWDfzbjJ2YAMN1Zz-CATYPjabtrDvUErN3fRlsySJuC_6OBjEmXFBuA_zoJj1F6QU_8MHwgxEqD0Fz5uCVW1uE_9Xtc5Hs_1kL97gHu7d2Dp1K_l48943Ujs4O_IqDmvPRZkLCFegSPqzHUHw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/20 to-transparent flex flex-col justify-end p-space-md text-surface-container-lowest">
+<div class="flex items-center gap-space-xs text-label-sm font-label-sm text-primary-fixed mb-1">
+<span class="material-symbols-outlined text-base">desktop_windows</span>
+                Dedicated CBT Station 1–15
+              </div>
+<p class="font-headline-sm text-headline-sm font-bold text-surface-container-lowest leading-snug">
+                Official BC Computer Simulator &amp; Jabra Headsets
+              </p>
+<p class="font-body-sm text-body-sm text-surface-container-high/80 mt-1">
+                Train on identical screen layouts, timer alerts, and physical peripherals used on official examination day in Bangladesh.
+              </p>
+</div>
+</div>
+<!-- Micro Floating Badge -->
+<div class="absolute -bottom-4 -left-4 bg-surface-container-lowest rounded-lg p-space-sm shadow-md flex items-center gap-space-sm max-w-xs">
+<div class="w-10 h-10 rounded-full bg-success/15 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-success">military_tech</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">94.8% Success Metric</p>
+<p class="font-body-sm text-body-sm text-secondary text-xs">Achieved Band 7.0 or higher within 90 days</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TWO-COLUMN SPLIT ARCHITECTURE -->
+<section class="w-full py-space-xl">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT MAIN CONTENT COLUMN (approx 65% / 8 columns) -->
+<div class="lg:col-span-8 space-y-space-xl">
+<!-- 1. COURSE OVERVIEW & CORE DIFFERENTIATORS -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Why Lexicon ELTC</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">
+                  Engineered Specifically for Computer-Delivered Band 8.0+
+                </h2>
+</div>
+<span class="material-symbols-outlined text-3xl text-secondary">psychology</span>
+</div>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              Most test-takers lose 0.5 to 1.0 band simply due to mechanical friction—unfamiliarity with split-screen reading, on-screen text highlighting, or typing speed in IELTS Academic Writing. At Lexicon's NLI Tower test lab, every concept is taught through direct workstation interaction with our proprietary simulated examination engine.
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs">
+<div class="p-4 rounded-lg bg-surface-container-low space-y-2">
+<span class="material-symbols-outlined text-primary text-2xl">speed</span>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface">Exact CBT Platform</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+                  Practice on the genuine Cambridge &amp; British Council UI, matching color schemes, split panes, and instant word counters.
+                </p>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low space-y-2">
+<span class="material-symbols-outlined text-tertiary text-2xl">hearing</span>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface">Acoustic Precision</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+                  Individual active noise-cancellation headsets to acclimate candidates to ambient multi-accented speech dynamics.
+                </p>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low space-y-2">
+<span class="material-symbols-outlined text-primary text-2xl">record_voice_over</span>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface">Daily 1-on-1 Clinics</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+                  Individual 15-minute speaking evaluations with CELTA certified trainers, recorded with phonetic rubric feedback.
+                </p>
+</div>
+</div>
+</div>
+<!-- 2. DETAILED LEARNING OUTCOMES & 4-DOMAIN COMPETENCIES -->
+<div class="space-y-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Curriculum Competencies</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">Four Skill Modules Built for Algorithmic Accuracy</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Listening Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">headphones</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Module A</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface pt-1">Listening Mastery</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+                  Decode British, Australian, and North American accents with systematic distractor-elimination protocols.
+                </p>
+<ul class="font-body-sm text-body-sm text-secondary space-y-1.5 pt-2">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-base shrink-0">check_circle</span>
+<span>Multi-accent signpost word tracking &amp; trap detection</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-base shrink-0">check_circle</span>
+<span>Micro-second note-taking for Section 3 &amp; 4 lectures</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-base shrink-0">check_circle</span>
+<span>Map labeling &amp; spatial direction blueprint drills</span>
+</li>
+</ul>
+</div>
+<!-- Reading Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">menu_book</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Module B</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface pt-1">Reading Architecture</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+                  Complete 40 questions within 52 minutes using Lexicon's high-yield paragraph scanning algorithms.
+                </p>
+<ul class="font-body-sm text-body-sm text-secondary space-y-1.5 pt-2">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-base shrink-0">check_circle</span>
+<span>Deterministic True / False / Not Given decision trees</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-base shrink-0">check_circle</span>
+<span>Heading matching via topic sentence &amp; thesis detection</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-base shrink-0">check_circle</span>
+<span>Scientific passage vocabulary deduction tactics</span>
+</li>
+</ul>
+</div>
+<!-- Writing Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">edit_note</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Module C</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface pt-1">Writing Laboratory</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+                  Human redline critique on every essay within 24 hours. Master Task 1 synthesis and Task 2 argument flow.
+                </p>
+<ul class="font-body-sm text-body-sm text-secondary space-y-1.5 pt-2">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-base shrink-0">check_circle</span>
+<span>Band-9 lexical cohesive linkers &amp; grammar variance</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-base shrink-0">check_circle</span>
+<span>Process diagrams, dynamic graphs &amp; multi-charts</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-base shrink-0">check_circle</span>
+<span>Counter-argument synthesis and paragraph balance</span>
+</li>
+</ul>
+</div>
+<!-- Speaking Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">forum</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Module D</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface pt-1">Speaking Fluency &amp; Pronunciation</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+                  Overcome hesitations, grammatical stumbling, and localized L1 mother-tongue accent interference.
+                </p>
+<ul class="font-body-sm text-body-sm text-secondary space-y-1.5 pt-2">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-base shrink-0">check_circle</span>
+<span>The 2-Minute Part 2 Cue-Card Storytelling formula</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-base shrink-0">check_circle</span>
+<span>Part 3 abstract philosophical discourse frameworks</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-base shrink-0">check_circle</span>
+<span>Intonation contouring &amp; sentence stress calibration</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- 3. CURRICULUM BREAKDOWN (ACCESSIBLE EXPANDABLE MODULES) -->
+<div class="space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">12-Week Syllabus</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">Syllabus Architecture &amp; Milestone Schedule</h2>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">5 Core Phases • 72 Contact Hours</span>
+</div>
+<!-- Curriculum Accordion Container -->
+<div class="space-y-space-xs" id="curriculumContainer">
+<!-- Module 1 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all duration-200">
+<button class="w-full p- space-md p-5 flex items-center justify-between text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion('mod1')" type="button">
+<div class="flex items-center gap-space-md">
+<span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center font-label-md text-label-md shrink-0">01</span>
+<div>
+<p class="font-label-sm text-label-sm text-primary uppercase font-bold">Weeks 1 – 2 • 6 Classes (12 Lab Hours)</p>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Diagnostic Baseline &amp; Phonetics Calibration</h4>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="hidden sm:inline font-label-sm text-label-sm text-secondary">Diagnostic Milestone</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200" id="icon-mod1">expand_more</span>
+</div>
+</button>
+<div class="hidden px-5 pb-5 pt-1 space-y-3 bg-surface-bright" id="content-mod1">
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+                    Full official baseline diagnostic mock test on Station 1-15 to identify individual band deficits. Phonetic correction on challenging consonant clusters, intonation glides, and band-7 academic grammar rules (conditionals, inverted syntax, participle clauses).
+                  </p>
+<div class="flex flex-wrap gap-2 text-label-sm font-label-sm text-secondary">
+<span class="px-2.5 py-1 rounded bg-surface-container">Diagnostic Test #1</span>
+<span class="px-2.5 py-1 rounded bg-surface-container">Phonemic Chart Exercises</span>
+<span class="px-2.5 py-1 rounded bg-surface-container">Complex Clause Matrix</span>
+</div>
+</div>
+</div>
+<!-- Module 2 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all duration-200">
+<button class="w-full p-5 flex items-center justify-between text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion('mod2')" type="button">
+<div class="flex items-center gap-space-md">
+<span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center font-label-md text-label-md shrink-0">02</span>
+<div>
+<p class="font-label-sm text-label-sm text-primary uppercase font-bold">Weeks 3 – 5 • 9 Classes (18 Lab Hours)</p>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Receptive Mastery: High-Speed Reading &amp; Audio Traps</h4>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="hidden sm:inline font-label-sm text-label-sm text-secondary">Speed &amp; Logic</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200" id="icon-mod2">expand_more</span>
+</div>
+</button>
+<div class="hidden px-5 pb-5 pt-1 space-y-3 bg-surface-bright" id="content-mod2">
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+                    Intensive focus on Cambridge Academic passages 1 through 3. Techniques for managing split-screen passage reading on 24-inch monitors without cognitive fatigue. Section 3 conversational dialogues and multiple-speaker tracking.
+                  </p>
+<div class="flex flex-wrap gap-2 text-label-sm font-label-sm text-secondary">
+<span class="px-2.5 py-1 rounded bg-surface-container">True/False/Not Given Matrix</span>
+<span class="px-2.5 py-1 rounded bg-surface-container">Summary Completion Drills</span>
+<span class="px-2.5 py-1 rounded bg-surface-container">Accent Exposure Labs</span>
+</div>
+</div>
+</div>
+<!-- Module 3 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all duration-200">
+<button class="w-full p-5 flex items-center justify-between text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion('mod3')" type="button">
+<div class="flex items-center gap-space-md">
+<span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center font-label-md text-label-md shrink-0">03</span>
+<div>
+<p class="font-label-sm text-label-sm text-primary uppercase font-bold">Weeks 6 – 8 • 9 Classes (18 Lab Hours)</p>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Productive Mastery: Task 1 Analytics &amp; Task 2 Rhetoric</h4>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="hidden sm:inline font-label-sm text-label-sm text-secondary">Human Redlines</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200" id="icon-mod3">expand_more</span>
+</div>
+</button>
+<div class="hidden px-5 pb-5 pt-1 space-y-3 bg-surface-bright" id="content-mod3">
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+                    Typing drills under exam conditions. Comprehensive coverage of Task 1 bar charts, line graphs, pie charts, tables, maps, and cycles. Deconstruction of Task 2 essays: Opinion, Discussion, Problem-Solution, and Two-Part questions with personalized feedback rubrics.
+                  </p>
+<div class="flex flex-wrap gap-2 text-label-sm font-label-sm text-secondary">
+<span class="px-2.5 py-1 rounded bg-surface-container">12 Evaluated Essays</span>
+<span class="px-2.5 py-1 rounded bg-surface-container">Lexicon Vocabulary Guide</span>
+<span class="px-2.5 py-1 rounded bg-surface-container">Typing Speed Diagnostics</span>
+</div>
+</div>
+</div>
+<!-- Module 4 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all duration-200">
+<button class="w-full p-5 flex items-center justify-between text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion('mod4')" type="button">
+<div class="flex items-center gap-space-md">
+<span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center font-label-md text-label-md shrink-0">04</span>
+<div>
+<p class="font-label-sm text-label-sm text-primary uppercase font-bold">Weeks 9 – 10 • 6 Classes (12 Lab Hours)</p>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Advanced Speaking Clinics &amp; Video Review</h4>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="hidden sm:inline font-label-sm text-label-sm text-secondary">1-on-1 Interviews</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200" id="icon-mod4">expand_more</span>
+</div>
+</button>
+<div class="hidden px-5 pb-5 pt-1 space-y-3 bg-surface-bright" id="content-mod4">
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+                    Live interview simulations with CELTA certified examiners. Video recording and granular breakdown of filler words ("uhm", "like"), eye contact, discourse markers, and natural idiomatic precision.
+                  </p>
+<div class="flex flex-wrap gap-2 text-label-sm font-label-sm text-secondary">
+<span class="px-2.5 py-1 rounded bg-surface-container">6 Live Mock Interviews</span>
+<span class="px-2.5 py-1 rounded bg-surface-container">Recorded Video Analysis</span>
+<span class="px-2.5 py-1 rounded bg-surface-container">Part 2 Cue Card Compendium</span>
+</div>
+</div>
+</div>
+<!-- Module 5 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all duration-200">
+<button class="w-full p-5 flex items-center justify-between text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion('mod5')" type="button">
+<div class="flex items-center gap-space-md">
+<span class="w-8 h-8 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center font-label-md text-label-md shrink-0">05</span>
+<div>
+<p class="font-label-sm text-label-sm text-primary uppercase font-bold">Weeks 11 – 12 • 6 Classes + 10 Full Mocks (12 Lab Hours)</p>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Computer Mock Marathon &amp; Error Log Sanitization</h4>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="hidden sm:inline font-label-sm text-label-sm text-secondary">Exam Simulation</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-200" id="icon-mod5">expand_more</span>
+</div>
+</button>
+<div class="hidden px-5 pb-5 pt-1 space-y-3 bg-surface-bright" id="content-mod5">
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed">
+                    10 full-length timed tests in the accredited British Council test room. Candidates receive comprehensive band score reports across all 4 components within 12 hours of test completion, followed by group strategic reviews.
+                  </p>
+<div class="flex flex-wrap gap-2 text-label-sm font-label-sm text-secondary">
+<span class="px-2.5 py-1 rounded bg-surface-container">10 Full Lab Mocks</span>
+<span class="px-2.5 py-1 rounded bg-surface-container">Individual Score Audit</span>
+<span class="px-2.5 py-1 rounded bg-surface-container">Test-Day Stress Management</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. VERIFIED INSTRUCTOR SPOTLIGHT -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Academic Faculty</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">Mentorship from Internationally Certified Experts</h2>
+</div>
+<!-- Lead Instructor Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col md:flex-row gap-space-md items-center md:items-start">
+<div class="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden shrink-0 shadow-md">
+<img alt="Md Shozibul Islam, Cambridge CELTA Certified and M.Ed. in Educational Linguistics Canada, Lead Trainer at Lexicon ELTC" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WfVxbxk5T8bTXvTPBAotXShG3cjuLfO9yhSly_hHk9N9E94vusMkUmpvvUaHgKSc6PGmZvuRfcQCjlABPU-iyXLP7m_vhN6WZ6oiIsjXZiTpaprwDDCntxg7a8Cf22u1pHnixdkEf1PNMJ4vA95BCbE1o1y5dZv5R2hwLr7sMM8vmgczzxE19CMSeBorAEqCOWoddYnNduagyg135mb51zxMwTlR_yyQJsNoHp4a2vmSxHYeW-T6PwTJc"/>
+</div>
+<div class="space-y-space-xs text-center md:text-left">
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-2">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Md Shozibul Islam</h3>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-sm bg-primary-container text-on-primary">Founder &amp; Head of Academics</span>
+</div>
+<p class="font-label-sm text-label-sm text-tertiary font-semibold">
+                  Cambridge CELTA Certified (UK) • M.Ed. in Educational Linguistics (Canada)
+                </p>
+<p class="font-body-sm text-body-sm text-secondary leading-relaxed pt-1">
+                  With over 12 years of specialized IELTS instructional experience across Bangladesh and North America, Shozibul has guided more than 3,800 candidates to Band 7.5+. He personally oversees the diagnostic scoring rubric and Task 2 analytical essay training.
+                </p>
+<div class="pt-2 flex flex-wrap gap-4 text-label-sm font-label-sm text-secondary justify-center md:justify-start">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-success text-base">verified</span>Official BC Certified</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-base">school</span>3,800+ Alumni</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-tertiary text-base">star</span>4.9 / 5.0 Rating</span>
+</div>
+</div>
+</div>
+<!-- Supporting Faculty Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-2">
+<div class="p-4 rounded-lg bg-surface-bright flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-full overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Afrin Shruti, Senior ESL &amp; IELTS Speaking Specialist at Lexicon ELTC, portrait in professional blazer smiling warmly against neutral academic background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQiAn5xjg8X0ZkKTijtF2s0EXvGhWq3fVIvfv9vFFq5919lDS7ZC-0E9rrGBoJPXpZpLQMvtcJnYY45iAb152laCs1Ax_-IjQzsx2aPOptSge_94dxBcHFNZ-valWt18sgf7zReDNz2eB7XXZeMloc8hHvfBtJwXzumzKnYZLQou6DJDp6nZnMHXUGJ0SCuNruZcCkYZRPpvtOtm3rVvVtV15DpSZxuYZ0nZMJxnI3fUdMtTsnFH_q"/>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface">Afrin Shruti</h4>
+<p class="font-label-sm text-label-sm text-secondary">Senior ESL &amp; Speaking Specialist</p>
+<p class="font-body-sm text-body-sm text-secondary text-xs mt-0.5">MA in Applied English • Band 8.5 Speaking</p>
+</div>
+</div>
+<div class="p-4 rounded-lg bg-surface-bright flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-full overflow-hidden shrink-0 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Diganggana Barai, IELTS Academic Reading and Writing Coach at Lexicon ELTC, clean modern studio portrait with academic insignia." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRybDnVkXWH8MxVhINlPKNZHttDOudVt5r4TgH_GKEIp90hrSPjZEiecBkzUfjcU-t7WLGzsd7zBUk8noYz3Atgfe2GvL_aigiEw1nfKjrI5-EjmlZe0SuK6viOcyiIoQuddei2mdMKZxvOzHYLc7VG9-sRPKVPZkjeyWRN9j6B6FzdH_Ek0Y6dwmtMYqKv5MapDxPEGGHDBQL20pdkZYiAIQmtUd_ORwYrYBle95KAlOqrJGWkrU9"/>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-bold text-on-surface">Diganggana Barai</h4>
+<p class="font-label-sm text-label-sm text-secondary">Writing &amp; Receptive Skills Lead</p>
+<p class="font-body-sm text-body-sm text-secondary text-xs mt-0.5">IELTS Academic 8.5 • 6+ Yrs Prep Experience</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. INCLUDED RESOURCES & LEARNING TOOLKIT -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Comprehensive Kit</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">Official Materials &amp; Institutional Privileges Included</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex gap-space-sm items-start p-3 rounded-lg bg-surface-light">
+<span class="material-symbols-outlined text-primary text-2xl shrink-0 mt-0.5">auto_stories</span>
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Cambridge IELTS Practice Guides (Books 17–19)</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Official Cambridge University Press authentic papers with detailed answer explanations.</p>
+</div>
+</div>
+<div class="flex gap-space-sm items-start p-3 rounded-lg bg-surface-light">
+<span class="material-symbols-outlined text-tertiary text-2xl shrink-0 mt-0.5">menu_book</span>
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Proprietary Band 8.5 Collocation Compendium</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">High-frequency academic vocabulary clusters grouped into 14 key essay topics.</p>
+</div>
+</div>
+<div class="flex gap-space-sm items-start p-3 rounded-lg bg-surface-light">
+<span class="material-symbols-outlined text-primary text-2xl shrink-0 mt-0.5">card_membership</span>
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Lifelong Speaking &amp; Movie Club Membership</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Daily conversational circles and Friday film reviews at Lexicon student lounge.</p>
+</div>
+</div>
+<div class="flex gap-space-sm items-start p-3 rounded-lg bg-surface-light">
+<span class="material-symbols-outlined text-tertiary text-2xl shrink-0 mt-0.5">storefront</span>
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Official British Council Venue Familiarization</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Test-day walkthrough pass to acclimate candidates to security, lockers, and seating.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 6. WHAT HAPPENS AFTER PAYMENT? (ROADMAP) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Seamless Onboarding</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">What Happens After Your Enrolment?</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-4 gap-space-md relative">
+<div class="p-4 rounded-lg bg-surface-container-low space-y-2 relative">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary text-label-sm font-label-sm flex items-center justify-center font-bold">1</span>
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Instant Confirmation</h4>
+<p class="font-body-sm text-body-sm text-secondary text-xs">
+                  Immediate SMS &amp; email with Student Portal credentials and fee receipt.
+                </p>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low space-y-2 relative">
+<span class="w-7 h-7 rounded-full bg-tertiary text-on-tertiary text-label-sm font-label-sm flex items-center justify-center font-bold">2</span>
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Diagnostic Intake</h4>
+<p class="font-body-sm text-body-sm text-secondary text-xs">
+                  15-min placement consultation with an advisor scheduled within 24 hours.
+                </p>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low space-y-2 relative">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary text-label-sm font-label-sm flex items-center justify-center font-bold">3</span>
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Kit Collection</h4>
+<p class="font-body-sm text-body-sm text-secondary text-xs">
+                  Collect printed Cambridge books at NLI Tower or request home courier.
+                </p>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low space-y-2 relative">
+<span class="w-7 h-7 rounded-full bg-tertiary text-on-tertiary text-label-sm font-label-sm flex items-center justify-center font-bold">4</span>
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Station Allocation</h4>
+<p class="font-body-sm text-body-sm text-secondary text-xs">
+                  Orientation session, dedicated CBT workstation assignment, and Speaking buddy.
+                </p>
+</div>
+</div>
+</div>
+<!-- 7. PREREQUISITES & ENTRY BENCHMARK -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">info</span>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface">Recommended Course Prerequisites</h3>
+</div>
+<p class="font-body-sm text-body-sm text-secondary max-w-xl">
+                Candidates are expected to hold an Intermediate English level (CEFR B1+) or baseline IELTS diagnostic score of 5.0+. If your diagnostic is below 5.0, our advisors recommend the 4-week "Basic to IELTS Foundation" preparatory bridge before joining this intensive lab cohort.
+              </p>
+</div>
+<a class="px-4 py-2 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md font-bold shadow-sm hover:bg-surface-bright transition-colors shrink-0" href="#">
+              Take Free Diagnostic Test
+            </a>
+</div>
+<!-- 8. FREQUENTLY ASKED QUESTIONS -->
+<div class="space-y-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Got Questions?</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-space-xs" id="faqContainer">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full p-4 flex items-center justify-between text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion('faq1')" type="button">
+<span class="font-label-md text-label-md font-bold text-on-surface">What happens if I miss a scheduled class session?</span>
+<span class="material-symbols-outlined text-secondary" id="icon-faq1">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 pt-1 font-body-sm text-body-sm text-secondary bg-surface-bright" id="content-faq1">
+                  All theoretical masterclasses and review clinics are high-definition recorded and uploaded to the Lexicon Student Portal within 3 hours. You also have the privilege to attend the missing topic in another parallel batch during the same academic week.
+                </div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full p-4 flex items-center justify-between text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion('faq2')" type="button">
+<span class="font-label-md text-label-md font-bold text-on-surface">How authentic is the Computer-Delivered Lab testing setup?</span>
+<span class="material-symbols-outlined text-secondary" id="icon-faq2">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 pt-1 font-body-sm text-body-sm text-secondary bg-surface-bright" id="content-faq2">
+                  Our Khulna NLI Tower lab is an officially approved British Council Venue. You practice on identical Dell 24-inch monitors, mechanical keyboards, and active noise-cancelling Jabra headsets identical to real examination conditions.
+                </div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full p-4 flex items-center justify-between text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion('faq3')" type="button">
+<span class="font-label-md text-label-md font-bold text-on-surface">What is the Lexicon Refund and Batch Reschedule Policy?</span>
+<span class="material-symbols-outlined text-secondary" id="icon-faq3">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 pt-1 font-body-sm text-body-sm text-secondary bg-surface-bright" id="content-faq3">
+                  We maintain a 100% money-back guarantee if you choose to withdraw before Class 2 begins—no questions asked. Additionally, students can reschedule their batch free of charge once within 6 months if personal or professional commitments arise.
+                </div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<button class="w-full p-4 flex items-center justify-between text-left hover:bg-surface-container-low transition-colors" onclick="toggleAccordion('faq4')" type="button">
+<span class="font-label-md text-label-md font-bold text-on-surface">Can I repeat mock tests if my score does not reach Band 7.5?</span>
+<span class="material-symbols-outlined text-secondary" id="icon-faq4">expand_more</span>
+</button>
+<div class="hidden px-4 pb-4 pt-1 font-body-sm text-body-sm text-secondary bg-surface-bright" id="content-faq4">
+                  Yes. Your course tuition includes 10 full-length lab mocks. If your post-course average is under your target, our lead trainers allocate up to 3 complimentary remedial mocks with 1-on-1 error consultation before you book your official exam.
+                </div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT STICKY TUITION & ENROLMENT SIDEBAR (approx 35% / 4 columns) -->
+<div class="lg:col-span-4 lg:sticky lg:top-[132px] space-y-space-md">
+<!-- Enrolment Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-lg space-y-space-md">
+<!-- Cohort Status Switcher Demo (Open / Limited / Closed) -->
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary">Cohort Availability State</span>
+<span class="text-[11px] font-label-sm text-secondary">Toggle state:</span>
+</div>
+<div class="grid grid-cols-3 gap-1 bg-surface-light p-1 rounded-lg text-center font-label-sm text-label-sm">
+<button class="py-1 px-2 rounded font-bold bg-surface-container-lowest shadow-sm text-primary" id="btn-state-open" onclick="setCohortState('open')" type="button">Active</button>
+<button class="py-1 px-2 rounded text-secondary hover:text-on-surface" id="btn-state-limited" onclick="setCohortState('limited')" type="button">Limited</button>
+<button class="py-1 px-2 rounded text-secondary hover:text-on-surface" id="btn-state-closed" onclick="setCohortState('closed')" type="button">Closed</button>
+</div>
+<!-- State Card Dynamic Display -->
+<div class="mt-3 p-2.5 rounded-lg bg-success/10 text-on-surface flex items-center gap-2" id="state-display-box">
+<span class="w-2.5 h-2.5 rounded-full bg-success shrink-0"></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface" id="state-text">
+                  Spring Batch #48: 12 of 16 seats filled — Enrol Now
+                </span>
+</div>
+</div>
+<!-- Pricing Box -->
+<div class="pt-space-xs">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg lg:text-[2.25rem] font-bold text-on-surface">BDT 14,500</span>
+<span class="font-label-sm text-label-sm line-through text-secondary">BDT 18,000</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-sm bg-primary-container text-on-primary font-bold">Save 20%</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+                All-inclusive: 36 sessions, 10 lab mocks, Cambridge kit, and lifelong clubs.
+              </p>
+<div class="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-secondary text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-sm">payments</span>
+                Or 2 equal monthly installments of BDT 7,500
+              </div>
+</div>
+<!-- Batch Timing Selection -->
+<div class="space-y-space-xs pt-space-xs">
+<label class="font-label-md text-label-md font-bold text-on-surface block">Select Preferred Batch Timing:</label>
+<div class="space-y-2">
+<label class="flex items-center justify-between p-3 rounded-lg bg-surface-light cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 text-primary focus:ring-primary" name="batch" type="radio"/>
+<div>
+<p class="font-label-sm text-label-sm font-bold text-on-surface">Evening Batch (Sun, Tue, Thu)</p>
+<p class="text-[12px] font-body-sm text-secondary">6:00 PM – 8:00 PM • CBT Stations 1–15</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-success/10 text-success text-[10px] font-bold uppercase">4 Seats</span>
+</label>
+<label class="flex items-center justify-between p-3 rounded-lg bg-surface-light cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 text-primary focus:ring-primary" name="batch" type="radio"/>
+<div>
+<p class="font-label-sm text-label-sm font-bold text-on-surface">Morning Batch (Mon, Wed, Fri)</p>
+<p class="text-[12px] font-body-sm text-secondary">10:00 AM – 12:00 PM • CBT Stations 1–15</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary text-[10px] font-bold uppercase">6 Seats</span>
+</label>
+<label class="flex items-center justify-between p-3 rounded-lg bg-surface-light cursor-pointer hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 text-primary focus:ring-primary" name="batch" type="radio"/>
+<div>
+<p class="font-label-sm text-label-sm font-bold text-on-surface">Weekend Executive (Fri &amp; Sat)</p>
+<p class="text-[12px] font-body-sm text-secondary">3:30 PM – 6:30 PM • Intensive Double Lab</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase">Filling Fast</span>
+</label>
+</div>
+</div>
+<!-- Primary CTAs -->
+<div class="space-y-space-xs pt-space-xs">
+<a class="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:bg-crimson-hover transition-colors" href="#" id="primaryCtaBtn">
+<span>Enrol Now &amp; Reserve Lab Station</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+<button class="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-lg bg-surface-light text-on-surface hover:bg-surface-container font-label-md text-label-md font-semibold transition-colors" type="button">
+<span class="material-symbols-outlined text-primary text-lg">smart_toy</span>
+<span>Chat with LexiBot Advisor</span>
+</button>
+</div>
+<!-- Trust Indicators -->
+<div class="pt-space-xs space-y-2 text-label-sm font-label-sm text-secondary">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-success text-base">verified</span>
+<span>100% Full Refund before Class 2 if unsatisfied</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-base">computer</span>
+<span>Individual British Council workstation guaranteed</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">receipt_long</span>
+<span>Official VAT Invoice &amp; British Council Partner ID</span>
+</div>
+</div>
+<!-- Direct Hotline & Campus Assistance -->
+<div class="pt-space-xs p-3 rounded-lg bg-surface-light space-y-1">
+<p class="font-label-sm text-label-sm text-secondary">Need immediate admission guidance?</p>
+<div class="flex items-center justify-between">
+<a class="font-label-md text-label-md font-bold text-on-surface hover:text-primary flex items-center gap-1" href="tel:+8801913919470">
+<span class="material-symbols-outlined text-base">call</span>
+                  +8801913 919470
+                </a>
+<a class="px-2.5 py-1 rounded bg-success text-surface-container-lowest font-label-sm text-label-sm font-bold flex items-center gap-1 hover:opacity-90" href="https://wa.me/8801913919470" target="_blank">
+<span class="material-symbols-outlined text-sm">chat</span>
+                  WhatsApp
+                </a>
+</div>
+</div>
+</div>
+<!-- Diagnostic Placement Side Banner -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm space-y-2">
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined">quiz</span>
+<h4 class="font-label-md text-label-md">Unsure of your current band?</h4>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+              Book a 30-minute authentic computer placement test at NLI Tower lab or take our digital diagnostic online for free.
+            </p>
+<a class="inline-flex items-center gap-1 text-primary font-label-sm text-label-sm font-bold hover:underline pt-1" href="#">
+<span>Book Lab Placement Assessment</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- RELATED ACADEMIC PATHWAYS (CROSS-SELL / MODULAR EXPANSION) -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-7xl mx-auto px-6 space-y-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Complementary Pathways</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">Explore Related Lexicon Programmes</h2>
+</div>
+<a class="font-label-md text-label-md text-primary font-bold hover:underline flex items-center gap-1" href="#">
+<span>View All Academic Catalogues</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Pathway 1: ESL Spoken English -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between space-y-space-md hover:shadow-md transition-shadow">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container text-[11px] font-label-sm font-bold uppercase">Fluency Focus</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">BDT 11,500</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">ESL Signature Spoken English</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+              Build instinctive fluency, grammatical automaticity, and executive workplace presentation confidence with native audio tools.
+            </p>
+<div class="pt-2 flex items-center gap-4 text-label-sm font-label-sm text-secondary">
+<span>2.5 Months</span>
+<span>•</span>
+<span>30 Sessions</span>
+<span>•</span>
+<span>Daily Chat Club</span>
+</div>
+</div>
+<a class="w-full py-2.5 rounded-lg bg-surface-container hover:bg-surface-light text-on-surface text-center font-label-md text-label-md font-bold transition-colors" href="#">
+            Programme Details
+          </a>
+</div>
+<!-- Pathway 2: Pearson PTE Academic -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between space-y-space-md hover:shadow-md transition-shadow">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed text-[11px] font-label-sm font-bold uppercase">AI Scored</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">BDT 13,000</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Pearson PTE Academic Intensive</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+              Target 65+ to 79+ for Australian PR and UK university admissions with algorithmic scoring template strategies.
+            </p>
+<div class="pt-2 flex items-center gap-4 text-label-sm font-label-sm text-secondary">
+<span>2 Months</span>
+<span>•</span>
+<span>24 Sessions</span>
+<span>•</span>
+<span>15 Software Mocks</span>
+</div>
+</div>
+<a class="w-full py-2.5 rounded-lg bg-surface-container hover:bg-surface-light text-on-surface text-center font-label-md text-label-md font-bold transition-colors" href="#">
+            Programme Details
+          </a>
+</div>
+<!-- Pathway 3: Lexifly Study Abroad -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between space-y-space-md hover:shadow-md transition-shadow">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed text-[11px] font-label-sm font-bold uppercase">Global Pathways</span>
+<span class="font-headline-sm text-headline-sm font-bold text-success">Complimentary</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Lexifly Global University Admissions</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+              End-to-end university applications, SOP reviews, and visa processing for Canada, UK, Australia, and USA higher education.
+            </p>
+<div class="pt-2 flex items-center gap-4 text-label-sm font-label-sm text-secondary">
+<span>Canada &amp; UK Focus</span>
+<span>•</span>
+<span>Scholarships</span>
+<span>•</span>
+<span>Free with IELTS</span>
+</div>
+</div>
+<a class="w-full py-2.5 rounded-lg bg-surface-container hover:bg-surface-light text-on-surface text-center font-label-md text-label-md font-bold transition-colors" href="#">
+            Explore Study Abroad
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- MOBILE STICKY BOTTOM ACTION STRIP -->
+<div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest border-t border-border-subtle p-3 px-6 shadow-2xl flex items-center justify-between">
+<div>
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface leading-none">BDT 14,500</p>
+<span class="font-label-sm text-[11px] text-primary font-semibold">4 Seats Left • Closes Mar 28</span>
+</div>
+<a class="px-6 py-2.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-bold shadow-md hover:bg-crimson-hover" href="#">
+      Enrol Now
+    </a>
+</div>
+</div>
+<script>
+  function toggleAccordion(id) {
+    const content = document.getElementById('content-' + id);
+    const icon = document.getElementById('icon-' + id);
+    if (!content) return;
+    
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      if (icon) icon.classList.add('rotate-180');
+    } else {
+      content.classList.add('hidden');
+      if (icon) icon.classList.remove('rotate-180');
+    }
+  }
+
+  function setCohortState(state) {
+    const box = document.getElementById('state-display-box');
+    const text = document.getElementById('state-text');
+    const ctaBtn = document.getElementById('primaryCtaBtn');
+    
+    const btnOpen = document.getElementById('btn-state-open');
+    const btnLimited = document.getElementById('btn-state-limited');
+    const btnClosed = document.getElementById('btn-state-closed');
+    
+    // Reset button styles
+    [btnOpen, btnLimited, btnClosed].forEach(b => {
+      b.className = 'py-1 px-2 rounded text-secondary hover:text-on-surface';
+    });
+
+    if (state === 'open') {
+      btnOpen.className = 'py-1 px-2 rounded font-bold bg-surface-container-lowest shadow-sm text-primary';
+      box.className = 'mt-3 p-2.5 rounded-lg bg-success/10 text-on-surface flex items-center gap-2';
+      box.innerHTML = '<span class="w-2.5 h-2.5 rounded-full bg-success shrink-0"></span><span class="font-label-sm text-label-sm font-semibold text-on-surface">Spring Batch #48: 12 of 16 seats filled — Enrol Now</span>';
+      ctaBtn.innerHTML = '<span>Enrol Now &amp; Reserve Lab Station</span><span class="material-symbols-outlined text-lg">arrow_forward</span>';
+      ctaBtn.className = 'w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:bg-crimson-hover transition-colors';
+    } else if (state === 'limited') {
+      btnLimited.className = 'py-1 px-2 rounded font-bold bg-surface-container-lowest shadow-sm text-primary';
+      box.className = 'mt-3 p-2.5 rounded-lg bg-warning/15 text-on-surface flex items-center gap-2';
+      box.innerHTML = '<span class="w-2.5 h-2.5 rounded-full bg-warning shrink-0 animate-ping"></span><span class="font-label-sm text-label-sm font-semibold text-on-surface">Last 2 seats in Khulna Lab — Request Urgent Seat</span>';
+      ctaBtn.innerHTML = '<span>Request Urgent Lab Seat</span><span class="material-symbols-outlined text-lg">bolt</span>';
+      ctaBtn.className = 'w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:bg-crimson-hover transition-colors';
+    } else if (state === 'closed') {
+      btnClosed.className = 'py-1 px-2 rounded font-bold bg-surface-container-lowest shadow-sm text-primary';
+      box.className = 'mt-3 p-2.5 rounded-lg bg-surface-dim text-secondary flex items-center gap-2';
+      box.innerHTML = '<span class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></span><span class="font-label-sm text-label-sm font-semibold text-secondary">Cohort Full — Join Waiting List for May 2026 Batch</span>';
+      ctaBtn.innerHTML = '<span>Join May 2026 Waiting List</span><span class="material-symbols-outlined text-lg">hourglass_top</span>';
+      ctaBtn.className = 'w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg font-bold shadow-md hover:opacity-90 transition-colors';
+    }
+  }
+</script></main><footer class="w-full bg-inverse-surface text-inverse-on-surface pt-space-xl pb-space-lg shadow-[0_1px_8px_rgba(20,36,58,0.04)]"><div class="max-w-7xl mx-auto px-6"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg pb-space-xl"><div class="lg:col-span-2 space-y-space-sm"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md text-surface-container-lowest">LEXICON ELTC</span></div><p class="font-body-sm text-body-sm text-inverse-on-surface/80 max-w-sm">Premier English language training centre, British Council Official Venue partner, and comprehensive international study pathway provider in southwestern Bangladesh.</p><div class="inline-flex items-center gap-space-xs px-3 py-1.5 rounded-lg bg-surface-container-lowest/10 text-inverse-on-surface text-label-sm font-label-sm"><span class="material-symbols-outlined text-primary-fixed text-base">verified</span>British Council IELTS Venue Partner</div></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg text-surface-container-lowest">Programmes</h3><ul class="space-y-space-xs font-body-sm text-body-sm text-inverse-on-surface/80"><li><a class="hover:text-primary-fixed transition-colors" data-path="ielts-preparation" href="#">IELTS Academic &amp; General</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="pte-academic" href="#">PTE Academic Training</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="esl-spoken-english" href="#">Spoken English &amp; ESL</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="young-learners" href="#">Young Learners Club</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="courses" href="#">Corporate English Batches</a></li></ul></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg text-surface-container-lowest">Lexicon Hub</h3><ul class="space-y-space-xs font-body-sm text-body-sm text-inverse-on-surface/80"><li><a class="hover:text-primary-fixed transition-colors" data-path="study-abroad-lexifly" href="#">Lexifly Higher Education</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="courses" href="#">Diagnostic Placement Test</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="student-portal-login" href="#">Student Portal LMS</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="about-lexicon" href="#">Faculty &amp; Advisors</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="contact" href="#">Venue Inspection &amp; Timings</a></li></ul></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg text-surface-container-lowest">Campus Contact</h3><p class="font-body-sm text-body-sm text-inverse-on-surface/80">NLI Tower (7th Floor), Upper Jessore Road, Khulna, Bangladesh</p><p class="font-body-sm text-body-sm text-inverse-on-surface/80">Phone: +8801913 919470<br/>Email: info@lexiconeltc.com</p><p class="font-label-sm text-label-sm text-surface-container-lowest/90">Sat - Thu: 9:00 AM - 8:30 PM</p></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm text-label-sm font-label-sm text-inverse-on-surface/70"><p>© 2025 Lexicon English Language Training Centre. All rights reserved.</p><div class="flex flex-wrap items-center gap-space-md"><a class="hover:text-surface-container-lowest transition-colors" data-path="contact" href="#">Privacy Policy</a><a class="hover:text-surface-container-lowest transition-colors" data-path="contact" href="#">Terms of Service</a><a class="hover:text-surface-container-lowest transition-colors" data-path="contact" href="#">Refund Policy</a><a class="hover:text-surface-container-lowest transition-colors" data-path="contact" href="#">Student Code of Conduct</a></div></div></div></footer><div class="fixed bottom-6 right-6 z-50 flex items-center gap-space-xs"><div class="hidden md:flex items-center rounded-full bg-surface-container-lowest px-3 py-1.5 shadow-[0_4px_12px_-2px_rgba(20,36,58,0.12)]"><span class="font-label-sm text-label-sm text-on-surface">Ask LexiBot</span></div><button aria-label="Lexicon AI Concierge" class="relative w-14 h-14 rounded-full bg-inverse-surface text-inverse-on-surface flex items-center justify-center shadow-[0_16px_32px_-4px_rgba(20,36,58,0.24)] hover:bg-secondary transition-colors focus:outline-none" type="button"><span class="material-symbols-outlined text-2xl text-on-secondary">smart_toy</span><span class="absolute top-1 right-1 w-3.5 h-3.5 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button></div></body></html>

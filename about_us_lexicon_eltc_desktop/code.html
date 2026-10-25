@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"outline-variant":"#e4bdbb","on-primary-fixed":"#410006","tertiary-fixed-dim":"#b4c5ff","on-secondary-container":"#54637c","on-tertiary":"#ffffff","tertiary-fixed":"#dbe1ff","primary-container":"#d62835","tertiary":"#004dcc","surface-variant":"#d5e4f8","on-surface-variant":"#5c403e","surface-light":"#F5F7FA","on-primary-fixed-variant":"#930018","inverse-primary":"#ffb3af","on-tertiary-fixed":"#00174b","crimson-hover":"#B71C28","background":"#f8f9ff","on-background":"#0e1d2b","surface-container-low":"#eef4ff","error-container":"#ffdad6","surface-container-highest":"#d5e4f8","tertiary-container":"#2a66ee","on-tertiary-fixed-variant":"#003ea8","success":"#10B981","inverse-on-surface":"#e9f1ff","on-error":"#ffffff","border-subtle":"#DCE2E9","on-secondary":"#ffffff","primary-fixed":"#ffdad7","on-primary":"#ffffff","surface-container-high":"#dbe9fe","inverse-surface":"#243241","surface-bright":"#f8f9ff","on-secondary-fixed":"#0b1c32","on-tertiary-container":"#f4f4ff","primary-fixed-dim":"#ffb3af","secondary-fixed":"#d4e3ff","surface-container":"#e4efff","surface":"#f8f9ff","secondary-fixed-dim":"#b7c7e4","on-secondary-fixed-variant":"#38475f","on-primary-container":"#fff2f0","primary":"#b20120","secondary":"#505f78","on-error-container":"#93000a","surface-tint":"#bd0f26","surface-dim":"#cddbef","surface-container-lowest":"#ffffff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-md":"1rem","space-sm":"0.5rem","gutter-mobile":"1rem","space-lg":"1.5rem","margin-mobile":"1rem",margin:"2rem","space-xs":"0.25rem",gutter:"1.5rem","space-xl":"2.5rem"},fontFamily:{"headline-md":["Lexend"],"label-sm":["Lexend"],"body-md":["Lexend"],"headline-sm":["Lexend"],"display-lg-mobile":["Lexend"],"body-sm":["Lexend"],"label-lg":["Lexend"],"display-lg":["Lexend"],"body-lg":["Lexend"],"headline-lg":["Lexend"],"label-md":["Lexend"]},fontSize:{"headline-md":["1.5rem",{lineHeight:"2rem",fontWeight:"600"}],"label-sm":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.04em",fontWeight:"600"}],"body-md":["1rem",{lineHeight:"1.5rem",fontWeight:"400"}],"headline-sm":["1.25rem",{lineHeight:"1.75rem",fontWeight:"600"}],"display-lg-mobile":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.01em",fontWeight:"700"}],"body-sm":["0.875rem",{lineHeight:"1.25rem",fontWeight:"400"}],"label-lg":["1rem",{lineHeight:"1.5rem",fontWeight:"500"}],"display-lg":["3.5rem",{lineHeight:"4rem",letterSpacing:"-0.02em",fontWeight:"700"}],"body-lg":["1.125rem",{lineHeight:"1.75rem",fontWeight:"400"}],"headline-lg":["2rem",{lineHeight:"2.5rem",letterSpacing:"-0.01em",fontWeight:"600"}],"label-md":["0.875rem",{lineHeight:"1.25rem",fontWeight:"500"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased">
+<!-- BURAQ WEB SERVICE DEMO HEADER BANNER -->
+<div id="buraq-demo-banner" style="position: fixed; top: 0; left: 0; right: 0; height: 40px; z-index: 9999999; background: #0e1d2b; color: #ffffff; border-bottom: 2px solid #b20120; font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); box-sizing: border-box;">
+  <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+    <span style="background: #b20120; color: #ffffff; padding: 3px 9px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; flex-shrink: 0;">Demo Notice</span>
+    <span style="color: #f1f5f9; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">It's just a demo, original design will be much better than this</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;">
+    <a href="../index.html" target="_top" style="display: inline-flex; align-items: center; gap: 6px; background: #ffffff; color: #0e1d2b; padding: 5px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.18);" onmouseover="this.style.background='#ffdad7';this.style.color='#930018'" onmouseout="this.style.background='#ffffff';this.style.color='#0e1d2b'">
+      <svg style="width: 14px; height: 14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+      <span>Back to Index</span>
+    </a>
+  </div>
+</div>
+<style id="buraq-demo-styles">
+  body { padding-top: 40px !important; }
+  header.fixed, header[class*="fixed"], nav.fixed, nav[class*="fixed"] { top: 40px !important; }
+  aside.fixed, aside[class*="fixed"] { top: 40px !important; height: calc(100vh - 40px) !important; }
+</style>
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_4px_12px_-2px_rgba(20,36,58,0.08)]"><div class="bg-primary text-on-primary py-space-xs px-margin"><div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">verified</span><span class="font-label-sm text-label-sm font-semibold tracking-wide uppercase">British Council Awarded Venue • Khulna Campus</span></div><div class="flex items-center gap-space-md font-label-sm text-label-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-base">support_agent</span><span>Hotline: +8801913 919470</span></div><div class="hidden sm:flex items-center gap-space-xs"><span class="material-symbols-outlined text-base">schedule</span><span>Open: Sat - Thu (9:00 AM - 7:30 PM)</span></div></div></div></div><div class="h-20 max-w-7xl mx-auto px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="Lexicon English Language Training Centre" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XgWSX9CSbDFeEiIOPGvFVpxXDMy69SU-adUjEe0qOHZaDfGuyizqxtlRECMob4hMNepzPouYbBuMfzWt7U2MSrugYqhvJuGsOWmVZMFask63RgkHGg_5gkUx4ZI8Ta2jsXLDkojPqfOmZnljzSD6nfXFEIP5UzvUc1ngT7myDIOhuGRIcjCnveSbkbyMZUiJdb61YsAd4Hb6SZyHl883loArKHunafDl34UH3UgisWMukICR8kfPo7VMw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-tight">Lexicon ELTC</span><span class="font-label-sm text-label-sm text-secondary font-medium tracking-wide uppercase">Language • Testing • Pathways</span></div></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg px-space-sm py-space-xs"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" data-path="courses" href="#">Courses</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" data-path="testing-center" href="#">Testing Center</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" data-path="lexifly" href="#">Lexifly</a><a aria-current="page" class="transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg px-space-sm py-space-xs" data-path="about-us" href="#">About Us</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" data-path="faq" href="#">FAQ</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" data-path="contact-us" href="#">Contact Us</a></nav><div class="flex items-center gap-space-md"><a class="inline-flex items-center justify-center font-label-md text-label-md bg-primary-container hover:bg-crimson-hover text-on-primary font-semibold py-space-sm px-space-md rounded-lg shadow-sm transition-colors whitespace-nowrap" data-path="placement-test" href="#">Book Free Placement Test</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-28 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Progress / Brand Ribbon -->
+<div class="w-full bg-surface-container-low py-space-sm px-margin">
+<div class="max-w-7xl mx-auto flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">home</span>
+          Home
+        </a>
+<span class="text-secondary/60">/</span>
+<span class="text-primary font-semibold">About Us</span>
+</nav>
+<div class="hidden md:flex items-center gap-space-md">
+<span class="inline-flex items-center gap-1 text-on-surface-variant font-medium">
+<span class="w-2 h-2 rounded-full bg-success"></span>
+          British Council Test Partner #BD074
+        </span>
+<span class="inline-flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-primary">location_city</span>
+          Elite Tower, Shibbari More, Khulna
+        </span>
+</div>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="w-full bg-surface-container-lowest py-space-xl px-margin">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Text Content -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs self-start bg-primary-fixed/60 text-on-primary-fixed-variant px-space-sm py-space-xs rounded-full font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">military_tech</span>
+<span>British Council Awarded Most Premium IELTS Venue</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight leading-tight">
+            11 Years of <span class="text-primary-container">Academic Rigour</span> &amp; Global Pathways
+          </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl leading-relaxed">
+            Founded with an uncompromising benchmark for linguistic fluency, Lexicon ELTC has evolved into South-Western Bangladesh's most distinguished English testing and preparation ecosystem, guiding students from initial diagnosis to global universities.
+          </p>
+<!-- Verified Stat Pills -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm pt-space-sm">
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-0.5">
+<span class="font-headline-lg text-headline-lg text-primary-container font-bold">11+</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Years of Excellence</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-0.5">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">40,811+</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Students Enrolled</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-0.5">
+<span class="font-headline-lg text-headline-lg text-primary-container font-bold">3,000+</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Band 7.0 - 8.5+</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-0.5">
+<span class="font-headline-lg text-headline-lg text-success font-bold">100%</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Certified Testing</span>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center font-label-md text-label-md bg-primary-container hover:bg-crimson-hover text-on-primary font-semibold py-space-sm px-space-lg rounded-lg shadow-sm transition-colors gap-2" href="#placement-test">
+<span class="material-symbols-outlined text-lg">fact_check</span>
+              Schedule Placement Diagnostic
+            </a>
+<a class="inline-flex items-center justify-center font-label-md text-label-md bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-semibold py-space-sm px-space-lg rounded-lg transition-colors gap-2" href="#campus-tour">
+<span class="material-symbols-outlined text-lg">tour</span>
+              Explore Khulna Testing Campus
+            </a>
+</div>
+</div>
+<!-- Right Campus Inspiration Gallery -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="relative bg-surface-container rounded-xl overflow-hidden shadow-md">
+<img class="w-full h-80 object-cover" data-alt="Modern high-tech English language training centre with bright circular backlit signage reading Lexicon, wooden tiered amphitheatre study bench, tidy modular library bookshelves with study materials, bright circular ceiling lights, Bangladeshi and South Asian students reading IELTS prep books in stylish academic interior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF8zLVGt725_pQJ18MTiB7b8C_EF6POIwO3TwQO5d43nzsbgcTdDgV47bAB0vHYbDOHHzO9EXXab5XlanTeDtJl-RzG-795EBR-WmPOGjEOYVABUzunCDvUIuRTWc-m77cEx7xgSBQGabX9-nwAt6wYd1YGsxOw_f9i4wz3M4DcTZdnw8JnvN90WGJaWjKh1LCNrHP33odUEWt9bkrF3b22duNHqrvJt4LUH0i9p5dpV2gbnS-Pw5t"/>
+<div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-on-surface/90 via-on-surface/60 to-transparent p-space-md text-on-primary">
+<div class="flex items-center justify-between">
+<div>
+<p class="font-headline-sm text-headline-sm font-semibold">Khulna Central Testing Suite</p>
+<p class="font-label-sm text-label-sm text-surface-variant">Computer-Delivered IELTS Lab &amp; Discussion Forum</p>
+</div>
+<span class="bg-primary-container text-on-primary font-label-sm text-label-sm px-space-sm py-1 rounded-full uppercase tracking-wider font-semibold">
+                  Official Venue
+                </span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-xl">devices</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">15+ Testing Terminals</span>
+<span class="font-label-sm text-label-sm text-secondary">High-speed Cambridge engine</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined text-xl">record_voice_over</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Acoustic Audio Pods</span>
+<span class="font-label-sm text-label-sm text-secondary">Noise-isolated mock rooms</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Story & CEO Vision Section -->
+<section class="w-full bg-surface-container-low py-space-xl px-margin">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Story Column -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="flex items-center gap-2 text-primary-container font-label-md text-label-md uppercase tracking-wider font-semibold">
+<span class="w-8 h-0.5 bg-primary-container"></span>
+            Our Institutional Story
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold">
+            Redefining Language Pedagogy in South-Western Bangladesh
+          </h2>
+<div class="space-y-space-md text-secondary font-body-md text-body-md leading-relaxed">
+<p>
+              In 2014, Lexicon English Language Training Centre was established in Khulna to bridge a critical divide: regional students faced high barriers accessing standardized international English tests due to a lack of localized, certified testing infrastructure and structured communicative methodologies.
+            </p>
+<p>
+              Moving decisively away from rote memorization and grammar-translation techniques, Lexicon introduced Canadian and Cambridge-aligned communicative language teaching (CLT). Over the last decade, we upgraded our campus to house Khulna's premier Computer-Delivered IELTS Hall, certified directly by the British Council.
+            </p>
+<p>
+              Today, Lexicon ELTC stands as a comprehensive pathway provider. Through our global study-abroad arm, <span class="text-on-surface font-semibold">Lexifly</span>, we extend the classroom experience directly into university admissions across Canada, the United Kingdom, Australia, and the United States.
+            </p>
+</div>
+<!-- Milestones timeline -->
+<div class="grid grid-cols-3 gap-space-md pt-space-sm">
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-primary-container font-bold">2014</span>
+<p class="font-label-md text-label-md font-semibold text-on-surface mt-1">Foundation</p>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Established with 2 classrooms and a 30-student cohort in Khulna.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-primary-container font-bold">2019</span>
+<p class="font-label-md text-label-md font-semibold text-on-surface mt-1">British Council Lab</p>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Accredited computer testing venue with dedicated audio terminals.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-primary-container font-bold">2023 - Present</span>
+<p class="font-label-md text-label-md font-semibold text-on-surface mt-1">Regional Dominance</p>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Awarded Best Examination Venue; 40,000+ total candidates mentored.</p>
+</div>
+</div>
+</div>
+<!-- Leadership Callout Card -->
+<div class="lg:col-span-5 flex flex-col justify-between bg-surface-container-lowest p-space-lg rounded-xl shadow-md">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-4xl text-primary-container">format_quote</span>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface-variant px-space-sm py-1 rounded">
+                Executive Leadership
+              </span>
+</div>
+<blockquote class="font-body-lg text-body-lg text-on-surface font-medium italic leading-relaxed">
+              "We believe language proficiency is not merely an examination band score—it is the passport to intellectual agency and borderless opportunity. Our mission has always been to bring global academic benchmarks right here to the doorstep of Khulna's aspiring minds."
+            </blockquote>
+</div>
+<div class="pt-space-md flex items-center gap-space-md mt-space-md bg-surface-container-low p-space-md rounded-lg">
+<div class="w-14 h-14 rounded-full overflow-hidden bg-surface-variant shrink-0">
+<img class="w-full h-full object-cover" data-alt="Professional headshot of institutional director and educator in tailored charcoal navy blazer with friendly academic expression against modern minimalist office library background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtrfgpljnYrL5IIAoO20VfcEAdU57d3zqduAoz8XhUatsDObpn3ryC9Xfmmgx3U8sLJHhzhQPZ_ciAGpjvzMwNfqHgfR-KZ12mKuU-YFlUnwNvV6VvIKZzQpL16NRYrv4in3JCOtH10PEv4aAadZIN449vGFLBi_WwN7nxPC0RaEj2NWpy19iMS2B5Ry5DungTTJtqpiKZQo_uVd4SI3uiigO2-sQxc8Z24zGFYFtX1KdT7AyudIRb"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Academic Directorate</span>
+<span class="font-label-sm text-label-sm text-secondary">Chief Executive &amp; Head of Testing Systems</span>
+<span class="font-label-sm text-label-sm text-primary-container font-semibold mt-0.5">Lexicon ELTC Khulna</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission, Vision & Strategic Pillars -->
+<section class="w-full bg-surface-container-lowest py-space-xl px-margin">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-3xl mx-auto mb-space-xl">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider font-semibold">Institutional Blueprint</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mt-1">Our Mission, Vision &amp; Core Values</h2>
+<p class="font-body-md text-body-md text-secondary mt-2">
+          Structured frameworks designed to cultivate fluency, instill critical thinking, and ensure seamless academic transition overseas.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg mb-space-lg">
+<!-- Mission Card -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-2xl">flag</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Our Mission</h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              To empower students, university applicants, and working professionals with authentic, communicative English competence, verified examination certifications, and ethical guidance to succeed in high-stakes international academic arenas.
+            </p>
+</div>
+<ul class="space-y-2 mt-auto font-label-md text-label-md text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-success text-lg">check_circle</span>
+              High-fidelity diagnostics aligned with CEFR standards
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-success text-lg">check_circle</span>
+              Real examination hall ergonomics for maximum confidence
+            </li>
+</ul>
+</div>
+<!-- Vision Card -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">visibility</span>
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Our Vision</h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              To stand as South Asia's pre-eminent language acquisition hub and study-abroad preparation gateway, celebrated for research-backed pedagogical delivery, student band score integrity, and transformative career outcomes.
+            </p>
+</div>
+<ul class="space-y-2 mt-auto font-label-md text-label-md text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+              100% transparent testing venue metrics and audits
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-lg">check_circle</span>
+              Direct articulation partnerships with Canadian &amp; UK institutions
+            </li>
+</ul>
+</div>
+</div>
+<!-- 4 Core Values Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary-container text-2xl">balance</span>
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface">Academic Integrity</h4>
+<p class="font-body-sm text-body-sm text-secondary">
+            Zero compromises on diagnostic assessment authenticity and British Council venue invigilation protocols.
+          </p>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary-container text-2xl">person_pin</span>
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface">Learner-Centred Pedagogy</h4>
+<p class="font-body-sm text-body-sm text-secondary">
+            Micro-cohorts limited to small batches with individualized feedback matrices for speaking and writing tasks.
+          </p>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary-container text-2xl">analytics</span>
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface">Transparent Assessment</h4>
+<p class="font-body-sm text-body-sm text-secondary">
+            Weekly computerized simulations delivering instant component analytics (L, R, W, S) and diagnostic roadmaps.
+          </p>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary-container text-2xl">flight_takeoff</span>
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface">Global Pathways</h4>
+<p class="font-body-sm text-body-sm text-secondary">
+            Seamless continuum between English test completion and university application through the Lexifly counseling desk.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Teaching & Pedagogical Approach -->
+<section class="w-full bg-surface-container-low py-space-xl px-margin">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Visual Method Mosaic -->
+<div class="lg:col-span-5 order-2 lg:order-1 flex flex-col gap-space-md">
+<div class="relative bg-surface-container rounded-xl overflow-hidden shadow-sm">
+<img class="w-full h-72 object-cover" data-alt="Interactive language workshop room with instructor illustrating IELTS coherence and cohesion schema on digital smartboard while students take notes on tablets and Cambridge workbooks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuYxTQGGhYypN7wWTAfL745ELl7jUMkztPS2NaaC6FJw6IO-lxaGNbQAB1JMvStgtRvshaV17dzDe2HWxzABk8O7I8B2ZbvkZGeFh5q3SuEOYCnwUf_wqSQ4weBlr-tGHWJV5wwufugBuub2PWEp3CpPxL9g0gVFfpp_MKWQj1hSdvEi1cocRHv0CTH27UUTT1Q51H0qXL4u8a_D5p3uNo-XBEi7ZsMoHoutz53_7_zOwNjRkCfVkp"/>
+<div class="p-space-md bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm text-primary-container font-semibold uppercase">The Lexicon Method</span>
+<p class="font-label-md text-label-md font-semibold text-on-surface mt-0.5">Task-Based Language Teaching (TBLT)</p>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Students actively solve contextual communicative problems rather than memorizing rigid grammar rules.</p>
+</div>
+</div>
+<!-- Extra Activity Badges -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container">groups</span>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">Weekend Fluency Clubs</p>
+<p class="font-label-sm text-label-sm text-secondary">Chat Club • Movie Club • Grooming Club</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-success/10 text-success font-semibold px-2.5 py-1 rounded-full">
+              Free for Students
+            </span>
+</div>
+</div>
+<!-- Pedagogy Pillars -->
+<div class="lg:col-span-7 order-1 lg:order-2 flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider font-semibold">Pedagogical Framework</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold leading-tight">
+            How We Guarantee Score Enhancement: Science, Simulation &amp; Support
+          </h2>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+            Our multi-tiered pedagogical model fuses official Cambridge Assessment English materials with simulated exam conditions and continuous oral immersion.
+          </p>
+<div class="space-y-space-md mt-space-xs">
+<!-- Pillar 1 -->
+<div class="flex items-start gap-space-md bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
+<div class="w-10 h-10 rounded bg-primary-fixed text-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">forum</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface">Communicative &amp; Task-Based Immersion</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+                  Overcoming speech anxiety through daily spontaneous speaking prompts, lexical resource drills, and pronunciation masterclasses with certified trainers.
+                </p>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="flex items-start gap-space-md bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
+<div class="w-10 h-10 rounded bg-secondary-fixed text-secondary-fixed-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">computer</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface">Computer Lab Simulations (CD-IELTS &amp; PTE)</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+                  Real examination software interface practice, high-accuracy audio playback headsets, and strict timed typing drills to remove testing-day surprises.
+                </p>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="flex items-start gap-space-md bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
+<div class="w-10 h-10 rounded bg-tertiary-fixed text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">insights</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface">Diagnostic Feedback &amp; 1-on-1 Review</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">
+                  Every writing task receives granular band descriptor scoring: Task Response, Coherence &amp; Cohesion, Lexical Resource, and Grammatical Range &amp; Accuracy.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Verified Achievements & Accreditations -->
+<section class="w-full bg-surface-container-lowest py-space-xl px-margin">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div>
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider font-semibold">Institutional Standing</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mt-1">Official Accreditations &amp; Testing Partners</h2>
+</div>
+<div class="flex items-center gap-2 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-success">verified_user</span>
+          Authorized testing hall for national and international evaluations
+        </div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Badge 1: British Council Awarded Venue -->
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-3xl text-primary-container">workspace_premium</span>
+<span class="font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold px-2 py-0.5 rounded">
+                Awarded Venue
+              </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">British Council Partner</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+              Official computer-delivered IELTS testing venue with regular scheduled exam sessions right inside our Khulna facility.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low p-space-sm rounded font-label-sm text-label-sm text-on-surface-variant font-medium">
+            Registry: BD074 • Verified 2025
+          </div>
+</div>
+<!-- Badge 2: Pearson PTE Registration Partner -->
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-3xl text-tertiary">hub</span>
+<span class="font-label-sm text-label-sm bg-surface-container-highest text-tertiary font-semibold px-2 py-0.5 rounded">
+                Authorized
+              </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Pearson PTE Partner</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+              Official registration desk and diagnostic training portal for Pearson Test of English Academic candidates.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low p-space-sm rounded font-label-sm text-label-sm text-on-surface-variant font-medium">
+            AI Automated Scoring Support
+          </div>
+</div>
+<!-- Badge 3: Cambridge Alignment -->
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-3xl text-primary-container">menu_book</span>
+<span class="font-label-sm text-label-sm bg-surface-container-highest text-on-surface font-semibold px-2 py-0.5 rounded">
+                Standard
+              </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Cambridge Assessment</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+              Curriculum structures and Young Learners (YLE) frameworks strictly synchronized with CEFR benchmarks.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low p-space-sm rounded font-label-sm text-label-sm text-on-surface-variant font-medium">
+            CEFR Levels A1 through C2
+          </div>
+</div>
+<!-- Badge 4: A/O Levels Exam Hall -->
+<div class="bg-surface-container p-space-lg rounded-xl flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-3xl text-success">school</span>
+<span class="font-label-sm text-label-sm bg-success/10 text-success font-semibold px-2 py-0.5 rounded">
+                Invigilation
+              </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">A &amp; O Levels Venue</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+              Secured testing environment serving secondary and higher secondary candidates under British Council supervision.
+            </p>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low p-space-sm rounded font-label-sm text-label-sm text-on-surface-variant font-medium">
+            High-Security Protocol Tested
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Certified Instructors & Faculty -->
+<section class="w-full bg-surface-container-low py-space-xl px-margin">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div class="max-w-2xl">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider font-semibold">Our Academic Faculty</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mt-1">Certified Trainers &amp; Subject Matter Experts</h2>
+<p class="font-body-md text-body-md text-secondary mt-1">
+            Our educators hold international British Council and Cambridge certifications, combining deep pedagogical rigor with empathetic student mentorship.
+          </p>
+</div>
+<div class="bg-surface-container-lowest px-space-md py-space-xs rounded-lg shadow-sm flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-success"></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">8 Certified Resident Mentors</span>
+</div>
+</div>
+<!-- Faculty Grid (8 trainers from reference specification) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Trainer 1: Afrin Shruti -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-full h-48 rounded-lg overflow-hidden bg-surface-variant mb-space-md">
+<img class="w-full h-full object-cover" data-alt="Young female South Asian language instructor named Afrin Shruti wearing elegant professional attire, smiling warmly in modern classroom." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_vjfBEmC6pOw6IZZUxHZfqTx4tKvaUR6YSq6y5H-3wREGr7YNngrINtUWuZino5nPLPwoDkQ2ppRH-6y5BBjq-g4HkY4LXBQ1LdcOhY-uglq1i-1p8fTKVzrm9SzxHq0aQ5RWLXge7CusnKNZd-PaEDQcNnuIyZS0gSWegOQviSshQ3E1xOhFIOs97wc23qQC25I6j8dVaELh0wkWcKo9Orw1MA_-UVyu7TJ4dE1bXK9cDUs0nqCm"/>
+</div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm bg-primary-fixed text-primary-container font-semibold px-2 py-0.5 rounded">
+                ESL Trainer
+              </span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Fluency Spec</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Afrin Shruti</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Specializes in Spoken English fluency, conversational dynamics, and accent neutralization.</p>
+</div>
+<div class="pt-space-sm mt-space-md flex items-center justify-between bg-surface-container-low px-space-sm py-1.5 rounded">
+<span class="font-label-sm text-label-sm text-secondary">Student Rating</span>
+<span class="font-label-sm text-label-sm font-bold text-primary-container">4.9 / 5.0 ★</span>
+</div>
+</div>
+<!-- Trainer 2: Diganggana Barai -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-full h-48 rounded-lg overflow-hidden bg-surface-variant mb-space-md">
+<img class="w-full h-full object-cover" data-alt="Professional female IELTS trainer named Diganggana Barai holding Cambridge IELTS examination handbook in academic seminar hall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJCueCKoj7OX92cSmjqSCtr_O8IxV39GdR6E4Tsw8XMzehYdxkRjkJsup4JHWNPUfIvhp2ZzFSQKDjt1FO7KkGdNbKHULdOMqHopidONM9z4cN5vP-gkb1gMi0tOJ6ElDMm6rTDkwiNIgOorK49mlVjSjAhhh-u1nIcsL4tPCaWWATUa0NRxAYqmWq1odYdl-_QBaV8qlw8TLOo11w3JsL1mfWIDU-V-KWiwtrBf2dK3hgJ-1_6uwW"/>
+</div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface font-semibold px-2 py-0.5 rounded">
+                IELTS Trainer
+              </span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Band 8.0 Coach</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Diganggana Barai</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Expert in Academic Reading heuristics, time-management algorithms, and advanced vocabulary mastery.</p>
+</div>
+<div class="pt-space-sm mt-space-md flex items-center justify-between bg-surface-container-low px-space-sm py-1.5 rounded">
+<span class="font-label-sm text-label-sm text-secondary">Top Band Output</span>
+<span class="font-label-sm text-label-sm font-bold text-success">Band 8.5 Avg</span>
+</div>
+</div>
+<!-- Trainer 3: Usha Arunima -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-full h-48 rounded-lg overflow-hidden bg-surface-variant mb-space-md">
+<img class="w-full h-full object-cover" data-alt="Accomplished female language specialist named Usha Arunima in business casual attire engaging in one on one student diagnostic evaluation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrtKDpFd3F_icJWAov9vMoysFoTXTj6toIaOFZk36ilT84mEGkswu-RJKcsfBfVrTb_6dfvoI0AKABl-bQNZAwRidzvTlaNWbgsHKvY4liNRPZdhL_rJjvKViqdGvZeNvo-eMQ45O4Abo09e4a9OkQzebBh1wusw8k2ffxnjCeQMHW-zKJXALFsqyExfVOQAZyjehB37yAysVS8zMPTQUUHy26FPRYrA2WggNOfL5t2CWCjoBCMkkV"/>
+</div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface font-semibold px-2 py-0.5 rounded">
+                IELTS Trainer
+              </span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Writing Specialist</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Usha Arunima</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Author of modular guides for Task 1 &amp; Task 2 essay structure with rigorous coherence feedback.</p>
+</div>
+<div class="pt-space-sm mt-space-md flex items-center justify-between bg-surface-container-low px-space-sm py-1.5 rounded">
+<span class="font-label-sm text-label-sm text-secondary">Writing Band 7+</span>
+<span class="font-label-sm text-label-sm font-bold text-primary-container">89% Cohort Rate</span>
+</div>
+</div>
+<!-- Trainer 4: Israt Jahan -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-full h-48 rounded-lg overflow-hidden bg-surface-variant mb-space-md">
+<img class="w-full h-full object-cover" data-alt="Enthusiastic female young learners educator named Israt Jahan with educational flashcards in brightly decorated language studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxQo3e0z4L3ZFGom_bUTxbCBeUXNUWAilBxGPllh5P866fYO-HMZ5cPOq-bJSk7vrVb3GVs-9pMTdqxp0DprWTekHZwqTPWJKNBt3C-YIy1Pwj1CgpIcFP5SDGODYeLR_dgF5q9Ez598vZvw_ObGM7cduIyueSoiePsNTq_krYLEpp03wpcSiG5CrWcHIoLfYndFu0SyVXW3nx9o88XsNBnrO_TwN2VyiUgeLHsVnbgmxHLiWHXPKO"/>
+</div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-tertiary font-semibold px-2 py-0.5 rounded">
+                YLE Trainer
+              </span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Cambridge Kids</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Israt Jahan</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Leads Cambridge Young Learners English (Starters, Movers, Flyers) using phonics and storytelling.</p>
+</div>
+<div class="pt-space-sm mt-space-md flex items-center justify-between bg-surface-container-low px-space-sm py-1.5 rounded">
+<span class="font-label-sm text-label-sm text-secondary">YLE Shield Rate</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">15 / 15 Shields</span>
+</div>
+</div>
+<!-- Trainer 5: Nawshin Tarannum -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-full h-48 rounded-lg overflow-hidden bg-surface-variant mb-space-md">
+<img class="w-full h-full object-cover" data-alt="Confident female language instructor named Nawshin Tarannum conducting an oral speaking mock test in modern acoustic booth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsqVaRANtk-58sVb2Zcj5xmNEhI8Gd4rHSsxtdUK-MB_910n738e_ZF8zcO4mZUT14Mc6fW6-3RxRzPpdGm6vrkDm6wq-TT3mYy1jQUZ5pRcn-32wz9ztKhM5GfXGHdWYVHTkCEA-tM5q7M1gRsGqYqphtpZdE5mm4rsBf8Od5tV3x6SJLiHBJBiSIWWXq1XYSDSlp3t6p5t7cVbwpqNXG7vSJ-f_vz9pPh-NP40E4miPOhwKShBCh"/>
+</div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface font-semibold px-2 py-0.5 rounded">
+                IELTS Trainer
+              </span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Speaking Master</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Nawshin Tarannum</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Focuses on lexical range, idiomatic phrasing, and conversational confidence for high-band speaking results.</p>
+</div>
+<div class="pt-space-sm mt-space-md flex items-center justify-between bg-surface-container-low px-space-sm py-1.5 rounded">
+<span class="font-label-sm text-label-sm text-secondary">Speaking Band 8+</span>
+<span class="font-label-sm text-label-sm font-bold text-primary-container">420+ Students</span>
+</div>
+</div>
+<!-- Trainer 6: Nabila Mehzabin -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-full h-48 rounded-lg overflow-hidden bg-surface-variant mb-space-md">
+<img class="w-full h-full object-cover" data-alt="Dedicated female instructor named Nabila Mehzabin demonstrating interactive language games in an open collegiate workspace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZa3kJLAClw8hXTL8t41-s_ODsBhCK65eAshVhvBdFe-PxStNB-sTDEpwGCxcEgbt2K-SYxw_cej4RT1Epo7M89pLJVpOeKDquPXxsszUWIQSLYFx5GBXoLUQJt5YPBw6HSWBgc9yJtxsN9ln5drVJPH6WvEwxtk2b1CdfuUX3teWXObjUKIm0-atDNWsgGmWeSnM25dWcjl9WlD04Tp1R9tUWLWiSS0HzWtgr3av2Wv2rCfIenqBq"/>
+</div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-tertiary font-semibold px-2 py-0.5 rounded">
+                YLE Trainer
+              </span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Early Pedagogy</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Nabila Mehzabin</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Develops early childhood cognitive linguistics and creative writing workshops for junior scholars.</p>
+</div>
+<div class="pt-space-sm mt-space-md flex items-center justify-between bg-surface-container-low px-space-sm py-1.5 rounded">
+<span class="font-label-sm text-label-sm text-secondary">Parent Trust Index</span>
+<span class="font-label-sm text-label-sm font-bold text-success">98.4%</span>
+</div>
+</div>
+<!-- Trainer 7: Farjana Jahan -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-full h-48 rounded-lg overflow-hidden bg-surface-variant mb-space-md">
+<img class="w-full h-full object-cover" data-alt="Professional ESL trainer named Farjana Jahan delivering corporate communication presentation with slide projector in modern conference room." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt6pgxrR-AH9ErVctqY-hFDwzBARGbCSt77Ntdf_jit3zh0LcqOJEOrmL7pEAuistweI1L5bDk7JRsWv_Cgicc3C3MPNgFGG2RFkQr8pBsivXtZGvcDQZf9TocoEe9rfrUQPP7e1JlozDaJNqT_DbJFGcTke-A3Imw0SWxJJy2yEM3cdA0_3qpeFfJXgxfuv4lfCQhM4MrS9AW6B3fDEneIadFIUltAkmRNfvndjw-W2endyLT8X95"/>
+</div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm bg-primary-fixed text-primary-container font-semibold px-2 py-0.5 rounded">
+                ESL Trainer
+              </span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Corporate Comm</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Farjana Jahan</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Guides executives and graduates in business correspondence, formal presentations, and workplace interview skills.</p>
+</div>
+<div class="pt-space-sm mt-space-md flex items-center justify-between bg-surface-container-low px-space-sm py-1.5 rounded">
+<span class="font-label-sm text-label-sm text-secondary">Corporate Modules</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">35+ Workshops</span>
+</div>
+</div>
+<!-- Trainer 8: Ahona Bhowmick -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-full h-48 rounded-lg overflow-hidden bg-surface-variant mb-space-md">
+<img class="w-full h-full object-cover" data-alt="Female educator named Ahona Bhowmick teaching grammar syntax and pronunciation clinic with headphones in digital audio laboratory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5j7dkshBjydmKZthOo3UVLpfeLj2aKtSD0N4ibE-gzIvfZinS2KEVa9_e99_rSSDtNN3gGQw2LToT-MgkjECXZD0oJIM82xmseVEEmYOQTDtINm_VFnbGCyYkF89QG9dm-_GtEiGQzylk6VMXBIJfMAfoEvLbetDk1vdHNh9A40ojIR4Eks6APhPVhBm84lFF2soqd8KRrIcoCPoyP87m9PUxARLbPvokU260FGM6BbsEaaEPnly6"/>
+</div>
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm bg-primary-fixed text-primary-container font-semibold px-2 py-0.5 rounded">
+                ESL Trainer
+              </span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Grammar &amp; Syntax</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Ahona Bhowmick</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Pioneers structured diagnostic remedial modules in sentence mechanics and practical listening mastery.</p>
+</div>
+<div class="pt-space-sm mt-space-md flex items-center justify-between bg-surface-container-low px-space-sm py-1.5 rounded">
+<span class="font-label-sm text-label-sm text-secondary">Student Rating</span>
+<span class="font-label-sm text-label-sm font-bold text-primary-container">4.8 / 5.0 ★</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Campus Facilities & Testing Hall Showcase -->
+<section class="w-full bg-surface-container-lowest py-space-xl px-margin" id="campus-tour">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm text-primary-container uppercase tracking-wider font-semibold">Campus Infrastructure</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold leading-tight">
+            Built to Match International Testing Standards
+          </h2>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+            Lexicon ELTC's facility at Elite Tower in Shibbari More is engineered to eliminate exam-day distress. Our testing suites follow strict sound-dampening, air-quality, and ergonomic mandates prescribed by international test providers.
+          </p>
+<div class="space-y-space-sm pt-space-xs">
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary-container">headset_mic</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Plantronics Acoustic Headsets</span>
+<span class="font-label-sm text-label-sm text-secondary">Crystal-clear clarity for IELTS Listening sections</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary-container">videocam</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">360° Invigilation CCTV Architecture</span>
+<span class="font-label-sm text-label-sm text-secondary">Strict compliance with British Council exam protocols</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary-container">electric_bolt</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Zero-Latency Generator Backups</span>
+<span class="font-label-sm text-label-sm text-secondary">Continuous power guarantee for Computer-Delivered tests</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-2 gap-space-md">
+<div class="relative rounded-xl overflow-hidden shadow-sm h-64 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Wide panoramic interior photograph of the Lexicon library room with illuminated yellow circular brand signage and white bookshelves stocked with IELTS study guides." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtxP9vSx8OtTekiVhJHwaEqpBgaB4_w9K_jFmvK94JrHAVNbQjZllWMu36S-I3xCXTmLHMuSFi2lIb_QqwjIds5Pt7AUBlm9pHbF_py5JVzIaZAB3h46M-VyU4fgReKrfABo2PaAUEY9yvT0HWcfEAUXrBu65BiyaXezMATMylv3TNA6XR__21VdCv5XHLEkrhQ6BQvsIRZm-tHdkdI5RPXssiea_UgLkPDzwcTWamCftq_IbLJEkb"/>
+<div class="absolute bottom-2 left-2 bg-on-surface/80 text-on-primary font-label-sm text-label-sm px-2 py-1 rounded">
+              Lexicon Resource Library
+            </div>
+</div>
+<div class="relative rounded-xl overflow-hidden shadow-sm h-64 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Clean computer examination laboratory at Lexicon ELTC with partitions between widescreen monitors and high fidelity headphones for British Council CD IELTS test." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzQZIbIkeldea9l0xE_ePl5kIjzaVcIrNGcGMQz-D3VPgMZcv4_XAuZHaaPnyD-qC0BFU6s--6dYzYHqSnl-Ndwfmuqoo-3fZGCkpp3oX3Jo3C_8C5WIratgZADUaXjZmAGolfpSDY31f9LYvykLdE2YQX7QUf7tn-8iXbP1aAa3dZu494EpCLcj52S5pI6smLle1sFJwA1laAzNBL_-p8G0ouRVKZgyKCRCyyLF5dBpAdOfDNhmPC"/>
+<div class="absolute bottom-2 left-2 bg-on-surface/80 text-on-primary font-label-sm text-label-sm px-2 py-1 rounded">
+              CD-IELTS Examination Lab
+            </div>
+</div>
+<div class="relative rounded-xl overflow-hidden shadow-sm h-56 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Modern collaborative discussion zone with comfortable wooden seating and students reviewing vocabulary cards together in bright warm ambient lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyp6V9QiRf4iHy2uJcqvKO_oRTVnXCUdWpadGYToYy4u_-tiIfqR7hCW2C6q4v7i1Yjp2p1wOZyz0V18ALaNyy3giLn3FUCmfiUJzv0oeEbvIV9o0clIhgLadERPDPWKcwoCWWgh7JqPCgg-JNhxscVujui4KbAS4YDqhzuROWeMI1PWORJsT-PfmhhW9yyA62Ir07EuK04c64OOepiG-kFsHNbbI61JfIlZtU4Cb6SeujTbsyRWqm"/>
+<div class="absolute bottom-2 left-2 bg-on-surface/80 text-on-primary font-label-sm text-label-sm px-2 py-1 rounded">
+              Amphitheatre Discussion Lounge
+            </div>
+</div>
+<div class="relative rounded-xl overflow-hidden shadow-sm h-56 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Lexifly global pathway counseling office with world maps and university pennants from Canada, UK, and Australia with counsellor assisting student." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTvI2fhHqaIgGST-zY3fIIxL0iEXMnkQGNOSdx0QOwNEzKLRQ_y29v_tC-P7mz26JyC7zyNRzs8Ty43NIVJaHi0QLFZwDdSMD-0tYqIgDCSBlJqFaEPSD04eZqOEaNUo_W6NgehB2bnylGpXdxDHBFCDyNPOaxjZ2mOZVtg9jR7EH6XLPWvg_npVrAxBsHke4MJY3gv0nEMv5YPnrRVaijkU9NljUIY3dPilowc2dKp6HZ2sTitczU"/>
+<div class="absolute bottom-2 left-2 bg-on-surface/80 text-on-primary font-label-sm text-label-sm px-2 py-1 rounded">
+              Lexifly Study-Abroad Desk
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- High-Impact Call to Action Banner -->
+<section class="w-full bg-primary-container text-on-primary py-space-xl px-margin" id="placement-test">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<div class="inline-flex items-center gap-2 self-start bg-on-primary/10 text-on-primary px-space-sm py-1 rounded-full font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-sm">stars</span>
+<span>Experience The Lexicon Standard</span>
+</div>
+<h2 class="font-display-lg text-display-lg text-on-primary font-bold tracking-tight leading-tight">
+            Begin With an Accurate Diagnostic Assessment
+          </h2>
+<p class="font-body-lg text-body-lg text-on-primary/90 max-w-2xl leading-relaxed">
+            Eliminate guesswork. Sit for a free, British Council-aligned diagnostic evaluation that measures your current CEFR level, forecasts your IELTS band range, and charts a personalized preparation timeline.
+          </p>
+<div class="flex flex-wrap items-center gap-space-lg pt-space-sm text-on-primary/80 font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">timer</span>
+              45-Minute Assessment
+            </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">verified</span>
+              1-on-1 Trainer Debrief
+            </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">domain</span>
+              In-Person at Shibbari More or Online
+            </span>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-space-sm">
+<div class="bg-surface-container-lowest text-on-surface p-space-lg rounded-xl shadow-lg flex flex-col gap-space-md">
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Book Your Free Slot</h3>
+<p class="font-body-sm text-body-sm text-secondary">Walk in or schedule an exact time.</p>
+</div>
+<form class="flex flex-col gap-space-sm" onsubmit="event.preventDefault(); document.getElementById('success-toast').classList.remove('hidden');">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-secondary font-medium">Full Name</label>
+<input class="bg-surface-container-lowest text-on-surface px-space-md py-2.5 rounded-lg border-0 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container font-body-sm text-body-sm" placeholder="e.g. Mahir Rahman" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-secondary font-medium">Contact Phone</label>
+<input class="bg-surface-container-lowest text-on-surface px-space-md py-2.5 rounded-lg border-0 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container font-body-sm text-body-sm" placeholder="+880 1..." required="" type="tel"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-secondary font-medium">Target Program</label>
+<select class="bg-surface-container-lowest text-on-surface px-space-md py-2.5 rounded-lg border-0 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container font-body-sm text-body-sm">
+<option>IELTS Academic / General</option>
+<option>Spoken English Mastery (ESL)</option>
+<option>Pearson Test of English (PTE)</option>
+<option>Young Learners English (YLE)</option>
+<option>Lexifly Study Abroad Counseling</option>
+</select>
+</div>
+<button class="w-full bg-primary-container hover:bg-crimson-hover text-on-primary font-semibold py-3 rounded-lg shadow-sm transition-colors font-label-md text-label-md flex items-center justify-center gap-2 mt-space-xs" type="submit">
+<span>Confirm Diagnostic Booking</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</form>
+<div class="hidden p-space-sm bg-success/15 text-success rounded font-label-sm text-label-sm text-center" id="success-toast">
+              ✓ Diagnostic request recorded. An admissions counsellor will call within 1 hour.
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive AI Admissions Concierge Floating Capsule Trigger -->
+<div class="fixed bottom-6 right-6 z-40 flex items-center">
+<button aria-label="Ask LexiBot Admissions" class="bg-on-surface hover:bg-primary-container text-on-primary p-3.5 rounded-full shadow-xl flex items-center gap-2 transition-all group" id="lexibot-toggle" onclick="document.getElementById('lexibot-modal').classList.toggle('hidden')">
+<div class="relative">
+<span class="material-symbols-outlined text-2xl">smart_toy</span>
+<span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-primary-container group-hover:bg-success"></span>
+</div>
+<span class="font-label-sm text-label-sm font-semibold pr-1 hidden sm:inline">Ask LexiBot Concierge</span>
+</button>
+</div>
+<!-- LexiBot Modal Popover -->
+<div class="hidden fixed bottom-20 right-6 z-50 w-80 sm:w-96 bg-surface-container-lowest text-on-surface rounded-xl shadow-2xl p-space-md flex flex-col gap-space-sm" id="lexibot-modal">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-base">psychology</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-semibold text-on-surface">LexiBot Admissions</p>
+<p class="font-label-sm text-label-sm text-success">Online • 24/7 Academic Support</p>
+</div>
+</div>
+<button class="text-secondary hover:text-on-surface" onclick="document.getElementById('lexibot-modal').classList.add('hidden')">
+<span class="material-symbols-outlined text-base">close</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg text-body-sm font-body-sm text-secondary">
+      Welcome to Lexicon ELTC! I can assist with next CD-IELTS test dates, faculty credentials, or calculate your university eligibility band score.
+    </div>
+<div class="flex flex-col gap-1.5 pt-space-xs">
+<button class="w-full text-left p-2 rounded bg-surface-container hover:bg-surface-container-high font-label-sm text-label-sm text-on-surface transition-colors flex items-center justify-between" onclick="alert('Next IELTS on Computer Session: Saturday, 10:00 AM at Elite Tower Lab. 4 seats remaining.')">
+<span>Check Next Exam Seats in Khulna</span>
+<span class="material-symbols-outlined text-sm text-primary-container">arrow_forward</span>
+</button>
+<button class="w-full text-left p-2 rounded bg-surface-container hover:bg-surface-container-high font-label-sm text-label-sm text-on-surface transition-colors flex items-center justify-between" onclick="alert('Our trainers hold Cambridge CELTA, British Council verified credentials with an average student band outcome of 7.5+.')">
+<span>Faculty Accreditations &amp; Band Outcomes</span>
+<span class="material-symbols-outlined text-sm text-primary-container">arrow_forward</span>
+</button>
+<button class="w-full text-left p-2 rounded bg-primary-fixed/50 hover:bg-primary-fixed font-label-sm text-label-sm text-primary-container font-semibold transition-colors flex items-center justify-between" onclick="window.location.href='#placement-test'">
+<span>Take 5-Min Diagnostic Placement Quiz</span>
+<span class="material-symbols-outlined text-sm">quiz</span>
+</button>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface mt-space-xl shadow-[0_-4px_12px_-2px_rgba(20,36,58,0.04)]"><div class="max-w-7xl mx-auto px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-3xl">school</span><span class="font-headline-md text-headline-md text-on-surface font-bold">Lexicon ELTC</span></div><p class="font-body-sm text-body-sm text-secondary leading-relaxed max-w-sm">Premier English Language Training Centre &amp; British Council Awarded Official Testing Venue in Khulna, Bangladesh. Pioneering international language proficiency, IELTS preparation, and comprehensive study-abroad guidance through Lexifly Pathways.</p><div class="flex items-center gap-space-sm mt-space-xs"><span class="inline-flex items-center gap-space-xs font-label-sm text-label-sm bg-surface-container-lowest text-success px-space-sm py-space-xs rounded font-semibold"><span class="material-symbols-outlined text-base">verified</span>British Council Partner</span><span class="inline-flex items-center gap-space-xs font-label-sm text-label-sm bg-surface-container-lowest text-primary px-space-sm py-space-xs rounded font-semibold"><span class="material-symbols-outlined text-base">award_star</span>Top Regional Venue</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg font-semibold text-on-surface mb-space-xs">Academic Courses</span><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="courses" href="#">IELTS Regular &amp; Crash</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="courses" href="#">Spoken English Mastery</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="courses" href="#">Corporate Communication</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="courses" href="#">Academic Writing Modules</a><a class="font-body-sm text-body-sm text-primary font-medium hover:underline" data-path="placement-test" href="#">Level Assessment Test</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg font-semibold text-on-surface mb-space-xs">Institutional Pathways</span><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="testing-center" href="#">Official Testing Center</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="lexifly" href="#">Lexifly Global Pathways</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="about-us" href="#">Faculty &amp; Accreditations</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="faq" href="#">Frequently Asked Questions</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="contact-us" href="#">Campus Visit Booking</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg font-semibold text-on-surface mb-space-xs">Campus &amp; Support</span><div class="flex items-start gap-space-xs font-body-sm text-body-sm text-secondary"><span class="material-symbols-outlined text-base mt-0.5 text-primary shrink-0">location_on</span><span>Elite Tower, Shibbari More, Khulna, Bangladesh</span></div><div class="flex items-center gap-space-xs font-body-sm text-body-sm text-secondary"><span class="material-symbols-outlined text-base text-primary shrink-0">call</span><span>+8801913 919470</span></div><div class="flex items-center gap-space-xs font-body-sm text-body-sm text-secondary"><span class="material-symbols-outlined text-base text-primary shrink-0">mail</span><span>admissions@lexiconeltc.com</span></div><div class="flex items-center gap-space-sm mt-space-sm"><div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-secondary hover:bg-primary-container hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-base">language</span></div><div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-secondary hover:bg-primary-container hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-base">share</span></div><div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-secondary hover:bg-primary-container hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-base">public</span></div></div></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-secondary font-body-sm text-body-sm bg-surface-container-low"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base text-primary">verified_user</span><span>© 2025 Lexicon English Language Training Centre (Lexicon ELTC). All rights reserved.</span></div><div class="flex items-center gap-space-lg font-label-sm text-label-sm"><a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" href="#">Terms of Enrollment</a><a class="hover:text-on-surface transition-colors" href="#">Accreditation Verification</a></div></div></div></footer></body></html>

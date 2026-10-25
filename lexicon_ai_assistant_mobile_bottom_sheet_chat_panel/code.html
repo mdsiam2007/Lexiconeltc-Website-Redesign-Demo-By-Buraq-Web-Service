@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Lexicon ELTC AI Assistant Showcase</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#ffffff","secondary-fixed-dim":"#b7c7e4","secondary-fixed":"#d4e3ff","primary":"#b20120","on-error-container":"#93000a","on-surface-variant":"#5c403e","surface-light":"#F5F7FA","primary-fixed":"#ffdad7","on-primary":"#ffffff","on-primary-fixed-variant":"#930018","on-tertiary-fixed":"#00174b","inverse-on-surface":"#e9f1ff","on-error":"#ffffff","border-subtle":"#DCE2E9","surface":"#f8f9ff","inverse-primary":"#ffb3af","secondary-container":"#d0e0fe","on-tertiary-fixed-variant":"#003ea8","on-secondary-fixed-variant":"#38475f","crimson-hover":"#B71C28","secondary":"#505f78","on-background":"#0e1d2b","inverse-surface":"#243241","surface-container-high":"#dbe9fe","surface-tint":"#bd0f26","primary-fixed-dim":"#ffb3af","warning":"#F59E0B","error":"#ba1a1a","tertiary-container":"#2a66ee","tertiary-fixed-dim":"#b4c5ff","background":"#f8f9ff","on-secondary-container":"#54637c","on-tertiary":"#ffffff","tertiary-fixed":"#dbe1ff","outline":"#906f6d","surface-bright":"#f8f9ff","outline-variant":"#e4bdbb","on-tertiary-container":"#f4f4ff","on-secondary":"#ffffff","surface-variant":"#d5e4f8","on-secondary-fixed":"#0b1c32","success":"#10B981","error-container":"#ffdad6","on-primary-fixed":"#410006","surface-dim":"#cddbef","on-surface":"#0e1d2b","on-primary-container":"#fff2f0","surface-container-low":"#eef4ff","surface-container-highest":"#d5e4f8","tertiary":"#004dcc","surface-container":"#e4efff","primary-container":"#d62835"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","gutter-mobile":"1rem","space-sm":"0.5rem","margin":"2rem","space-md":"1rem","space-xl":"2.5rem","margin-mobile":"1rem","gutter":"1.5rem","space-xs":"0.25rem"},fontFamily:{"body-sm":["Lexend"],"body-lg":["Lexend"],"label-md":["Lexend"],"display-lg":["Lexend"],"headline-md":["Lexend"],"label-lg":["Lexend"],"display-lg-mobile":["Lexend"],"headline-lg":["Lexend"],"label-sm":["Lexend"],"body-md":["Lexend"],"headline-sm":["Lexend"]},fontSize:{"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"label-md":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"display-lg":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["1.5rem",{"lineHeight":"2rem","fontWeight":"600"}],"label-lg":["1rem",{"lineHeight":"1.5rem","fontWeight":"500"}],"display-lg-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.04em","fontWeight":"600"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}]}}}}</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface min-h-screen">
+<!-- BURAQ WEB SERVICE DEMO HEADER BANNER -->
+<div id="buraq-demo-banner" style="position: fixed; top: 0; left: 0; right: 0; height: 40px; z-index: 9999999; background: #0e1d2b; color: #ffffff; border-bottom: 2px solid #b20120; font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); box-sizing: border-box;">
+  <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+    <span style="background: #b20120; color: #ffffff; padding: 3px 9px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; flex-shrink: 0;">Demo Notice</span>
+    <span style="color: #f1f5f9; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">It's just a demo, original design will be much better than this</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;">
+    <a href="../index.html" target="_top" style="display: inline-flex; align-items: center; gap: 6px; background: #ffffff; color: #0e1d2b; padding: 5px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.18);" onmouseover="this.style.background='#ffdad7';this.style.color='#930018'" onmouseout="this.style.background='#ffffff';this.style.color='#0e1d2b'">
+      <svg style="width: 14px; height: 14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+      <span>Back to Index</span>
+    </a>
+  </div>
+</div>
+<style id="buraq-demo-styles">
+  body { padding-top: 40px !important; }
+  header.fixed, header[class*="fixed"], nav.fixed, nav[class*="fixed"] { top: 40px !important; }
+  aside.fixed, aside[class*="fixed"] { top: 40px !important; height: calc(100vh - 40px) !important; }
+</style>
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(20,36,58,0.06)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-4"><img alt="Image from https://www.lexiconeltc.com/images/logos/logo5.jpeg" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XgWSX9CSbDFeEiIOPGvFVpxXDMy69SU-adUjEe0qOHZaDfGuyizqxtlRECMob4hMNepzPouYbBuMfzWt7U2MSrugYqhvJuGsOWmVZMFask63RgkHGg_5gkUx4ZI8Ta2jsXLDkojPqfOmZnljzSD6nfXFEIP5UzvUc1ngT7myDIOhuGRIcjCnveSbkbyMZUiJdb61YsAd4Hb6SZyHl883loArKHunafDl34UH3UgisWMukICR8kfPo7VMw"/><div class="hidden sm:flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">Lexicon ELTC</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">English Language Training Centre</span></div><div class="hidden lg:flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-container text-on-secondary-fixed"><span class="material-symbols-outlined text-primary text-[16px]">verified</span><span class="font-label-sm text-label-sm uppercase tracking-wide">British Council Partner</span></div></div><nav class="hidden xl:flex items-center gap-2" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-lg"><a aria-current="page" class="px-3 py-2 transition-colors bg-primary-container text-on-primary-container font-label-md rounded-lg" data-path="overview" href="#">Overview</a><a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="playground" href="#">Playground</a><a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="curriculum-integration" href="#">Curriculum Integration</a><a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="admissions-support" href="#">Admissions Support</a></nav><div class="flex items-center gap-4"><a class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" href="tel:+8801913919470"><span class="material-symbols-outlined text-primary text-[18px]">call</span><span class="font-label-md text-label-md font-semibold">+8801913919470</span></a><a class="px-4 py-2 rounded-lg bg-primary hover:bg-crimson-hover text-on-primary font-label-md text-label-md transition-colors shadow-[0_2px_8px_rgba(178,1,32,0.25)] flex items-center gap-1.5" href="#"><span class="material-symbols-outlined text-[18px]">school</span><span class="hidden sm:inline">Student Portal</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full relative">
+<div class="px-4 py-4 space-y-4 max-w-md mx-auto w-full">
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold shadow-sm">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h1 class="font-headline-sm text-headline-sm text-on-surface leading-tight">LexiBot Concierge</h1>
+<span class="w-2 h-2 rounded-full bg-success"></span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">AI Admissions &amp; Support Hub</p>
+</div>
+</div>
+<button class="px-3 py-1.5 bg-primary text-on-primary rounded-lg font-label-md text-label-md flex items-center gap-1 shadow-sm active:scale-95 transition-transform" id="toggle-sheet-btn">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+<span>Open Chat</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm">
+<div class="flex items-center justify-between pb-2 mb-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Interactive Test Bench</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">11 Dynamic States</span>
+</div>
+<div class="flex gap-2 overflow-x-auto pb-1" id="state-selector-strip">
+<button class="state-filter-btn px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm whitespace-nowrap shadow-sm" data-state="all">Full Feed</button>
+<button class="state-filter-btn px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap" data-state="welcome">Welcome &amp; Pills</button>
+<button class="state-filter-btn px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap" data-state="course">Course Match</button>
+<button class="state-filter-btn px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap" data-state="form">Admissions Form</button>
+<button class="state-filter-btn px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap" data-state="student">Student Portal</button>
+<button class="state-filter-btn px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap" data-state="payment">Payment Verify</button>
+<button class="state-filter-btn px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap" data-state="handoff">Human Handoff</button>
+</div>
+</div>
+<div class="space-y-4" id="preview-container">
+<div class="state-section bg-surface-container-lowest rounded-xl shadow-sm p-4 space-y-3" id="sec-welcome">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">State 1 • Welcome Intent</span>
+</div>
+<span class="text-label-sm font-label-sm text-success bg-secondary-container px-2 py-0.5 rounded">Active Agent</span>
+</div>
+<div class="flex items-start gap-2.5">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">neurology</span>
+</div>
+<div class="bg-surface-container rounded-xl rounded-tl-none p-3.5 space-y-2">
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+              Hi! Welcome to Lexicon. I can help you explore courses, understand admission requirements, and find support for your learning journey.
+            </p>
+<span class="block text-[11px] font-label-sm text-secondary">LexiBot • Just now</span>
+</div>
+</div>
+<div class="space-y-2 pt-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase">Quick Question Suggestions</span>
+<div class="flex flex-col gap-1.5">
+<button class="pill-btn w-full text-left px-3.5 py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors flex items-center justify-between group active:scale-[0.99]">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+                Which IELTS course is right for me?
+              </span>
+<span class="material-symbols-outlined text-secondary text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</button>
+<button class="pill-btn w-full text-left px-3.5 py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors flex items-center justify-between group active:scale-[0.99]">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">menu_book</span>
+                What English courses are available?
+              </span>
+<span class="material-symbols-outlined text-secondary text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</button>
+<button class="pill-btn w-full text-left px-3.5 py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors flex items-center justify-between group active:scale-[0.99]">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">laptop_mac</span>
+                How do online classes work?
+              </span>
+<span class="material-symbols-outlined text-secondary text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</button>
+<button class="pill-btn w-full text-left px-3.5 py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors flex items-center justify-between group active:scale-[0.99]">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">receipt_long</span>
+                I paid for a course but cannot access it.
+              </span>
+<span class="material-symbols-outlined text-secondary text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</button>
+<button class="pill-btn w-full text-left px-3.5 py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors flex items-center justify-between group active:scale-[0.99]">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">support_agent</span>
+                How can I contact an advisor?
+              </span>
+<span class="material-symbols-outlined text-secondary text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="state-section bg-surface-container-lowest rounded-xl shadow-sm p-4 space-y-3" id="sec-course">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">State 2 • Smart Course Match</span>
+</div>
+<span class="text-label-sm font-label-sm bg-secondary-container text-on-secondary-fixed px-2 py-0.5 rounded font-medium">IELTS 7.5+ Target</span>
+</div>
+<div class="bg-surface rounded-xl overflow-hidden shadow-sm">
+<div class="h-32 w-full relative">
+<img class="w-full h-full object-cover" data-alt="High quality academic lecture room in Canada with students preparing for international IELTS language examination, modern university aesthetic with rich natural lighting and notebooks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnh8gGtffYxd0bHKpiMx4SQJ1fjR_AIlx5yUNVEtlp9I__Htkcq5w3v1prqHhV3tbFVy44UOBwZcG895BkgYwWkYWSD_EA7hSr85RjBGO1KCBNzdz9c-vfZ496Cm_yWmP0tc1mXn05UbrlRk6q18EWCFoG6LFxlqmdNXcd_GbfaLFWtznD3dloy4QyYhQmX-mf5x_kDuUsjQ7paGtGBZ1RF9HzCSk3uyi8ZXFxUYHodD8osqEMZvZ5"/>
+<div class="absolute top-2 left-2 bg-on-background/80 backdrop-blur-md px-2 py-1 rounded text-[11px] font-label-sm text-surface-container-lowest flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[14px]">stars</span>
+              Top Recommended
+            </div>
+<div class="absolute bottom-2 right-2 bg-surface-container-lowest/90 backdrop-blur-md px-2 py-0.5 rounded font-label-sm text-label-sm text-on-surface font-bold">
+              BDT 18,500
+            </div>
+</div>
+<div class="p-4 space-y-3">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant text-label-sm font-label-sm font-semibold">IELTS Premium</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-fixed text-label-sm font-label-sm">Hybrid Format</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">IELTS Comprehensive Masterclass</h2>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Official British Council curriculum with 8 full-length simulated mock exams, live speaking assessments, and visa path guidance.</p>
+</div>
+<div class="grid grid-cols-3 gap-2 py-2">
+<div class="bg-surface-container-low p-2 rounded-lg text-center">
+<span class="block text-secondary font-label-sm text-[11px]">Duration</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">12 Weeks</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg text-center">
+<span class="block text-secondary font-label-sm text-[11px]">Live Mocks</span>
+<span class="font-headline-sm text-body-md text-on-surface font-semibold">8 Sessions</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg text-center">
+<span class="block text-secondary font-label-sm text-[11px]">Success Rate</span>
+<span class="font-headline-sm text-body-md text-success font-semibold">94.6%</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<a class="flex-1 py-2.5 rounded-lg bg-primary hover:bg-crimson-hover text-on-primary font-label-md text-label-md text-center transition-colors shadow-sm flex items-center justify-center gap-1.5" href="#">
+<span>View Course Details</span>
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</a>
+<button class="px-3 py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="state-section bg-surface-container-lowest rounded-xl shadow-sm p-4 space-y-3" id="sec-form">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">State 3 • Admissions Enquiry</span>
+</div>
+<span class="text-label-sm font-label-sm text-primary font-medium">Fast-track Form</span>
+</div>
+<form class="space-y-3" onsubmit="event.preventDefault(); alert('Admissions request dispatched! Counselor assigned in 15 mins.');">
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface block font-medium">Full Name</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-secondary text-[20px]">person</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-10 pr-3 py-2 rounded-lg focus:outline-none focus:bg-surface-container transition-colors" required="" type="text" value="Tanvir Ahmed"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface block font-medium">Mobile Phone (WhatsApp enabled)</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-secondary text-[20px]">call</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-10 pr-3 py-2 rounded-lg focus:outline-none focus:bg-surface-container transition-colors" required="" type="tel" value="+880 1712 345678"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface block font-medium">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-secondary text-[20px]">mail</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-10 pr-3 py-2 rounded-lg focus:outline-none focus:bg-surface-container transition-colors" required="" type="email" value="tanvir.ahmed@example.com"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface block font-medium">Target Test &amp; Intake</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-secondary text-[20px]">school</span>
+<select class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-10 pr-3 py-2 rounded-lg focus:outline-none focus:bg-surface-container transition-colors appearance-none">
+<option>IELTS Academic (British Council Intake)</option>
+<option>IELTS General Training</option>
+<option>PTE Academic Express</option>
+<option>Spoken English for Career</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-secondary text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<label class="flex items-start gap-2.5 pt-1 cursor-pointer">
+<input checked="" class="mt-1 w-4 h-4 rounded text-primary accent-primary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-secondary leading-tight">
+              I agree to receive course advising updates via SMS and WhatsApp from Lexicon ELTC official counselors.
+            </span>
+</label>
+<button class="w-full py-3 rounded-lg bg-primary hover:bg-crimson-hover text-on-primary font-label-md text-label-md transition-colors shadow-sm flex items-center justify-center gap-2 active:scale-[0.99]" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Submit Admissions Enquiry</span>
+</button>
+</form>
+</div>
+<div class="state-section bg-surface-container-lowest rounded-xl shadow-sm p-4 space-y-3" id="sec-student">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">State 4 • Student Desk</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-[11px] font-bold">LX-8842</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-3.5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-headline-sm">
+              TA
+            </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Tanvir Ahmed</h3>
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Batch 44 • Target: IELTS 8.0</p>
+</div>
+</div>
+<div class="text-right">
+<span class="block font-label-sm text-[11px] text-secondary">Current Score</span>
+<span class="font-headline-sm text-headline-sm text-primary">7.0</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="p-3 bg-surface rounded-lg text-left hover:bg-surface-container transition-colors flex flex-col justify-between h-24">
+<div class="flex items-center justify-between w-full">
+<span class="material-symbols-outlined text-primary text-[22px]">calendar_month</span>
+<span class="text-[10px] bg-secondary-container px-1.5 py-0.5 rounded text-on-secondary-fixed uppercase font-semibold">Live</span>
+</div>
+<div>
+<span class="block font-label-md text-label-md text-on-surface font-semibold">Class Schedule</span>
+<span class="font-label-sm text-label-sm text-secondary">Tonight • 8:00 PM</span>
+</div>
+</button>
+<button class="p-3 bg-surface rounded-lg text-left hover:bg-surface-container transition-colors flex flex-col justify-between h-24">
+<div class="flex items-center justify-between w-full">
+<span class="material-symbols-outlined text-tertiary text-[22px]">assignment_turned_in</span>
+<span class="text-[10px] bg-primary-fixed px-1.5 py-0.5 rounded text-on-primary-fixed-variant uppercase font-semibold">Slot Open</span>
+</div>
+<div>
+<span class="block font-label-md text-label-md text-on-surface font-semibold">Book Mock Test</span>
+<span class="font-label-sm text-label-sm text-secondary">Sat, Mar 29 • Paper</span>
+</div>
+</button>
+</div>
+<div class="bg-surface-container p-3 rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">assignment</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Task 2 Writing Feedback ready</span>
+</div>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest font-label-sm text-label-sm text-primary font-semibold shadow-xs">View</button>
+</div>
+</div>
+<div class="state-section bg-surface-container-lowest rounded-xl shadow-sm p-4 space-y-3" id="sec-payment">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-warning"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">State 5 • Payment Diagnostics</span>
+</div>
+<span class="text-[11px] font-label-sm bg-error-container text-on-error-container px-2 py-0.5 rounded font-bold">Priority Notice</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-3.5 space-y-3">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary block">Transaction Reference</span>
+<span class="font-label-md text-label-md text-on-surface font-mono font-semibold">bKash-TXN-9941031</span>
+</div>
+<div class="text-right">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-warning font-semibold">
+<span class="material-symbols-outlined text-[16px] animate-spin">sync</span>
+                In Progress
+              </span>
+<span class="block text-[11px] text-secondary">Reconciliation sync</span>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-lowest space-y-2">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5">security</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Zero-Fraud Compliance Shield</p>
+<p class="font-body-sm text-body-sm text-secondary leading-tight mt-0.5">
+                  Lexicon will never ask for your PIN, OTP, or CVV. If anyone requests credentials claiming to be Lexicon staff, terminate immediately.
+                </p>
+</div>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+<span>Check Settlement Status</span>
+</button>
+</div>
+</div>
+<div class="state-section bg-surface-container-lowest rounded-xl shadow-sm p-4 space-y-3" id="sec-handoff">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">State 6 • Human Handoff</span>
+</div>
+<span class="font-label-sm text-label-sm text-success flex items-center gap-1 font-medium">
+<span class="w-2 h-2 rounded-full bg-success"></span>
+            3 Officers Online
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+          Need nuanced visa documentation review or customized batch timing? Directly connect with Lexicon Senior Counselors right now.
+        </p>
+<div class="space-y-2">
+<a class="w-full py-3 px-4 rounded-lg bg-primary hover:bg-crimson-hover text-on-primary font-label-md text-label-md transition-colors shadow-sm flex items-center justify-between active:scale-[0.99]" href="tel:+8801913919470">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span>Direct Hotline (+8801913919470)</span>
+</div>
+<span class="text-xs bg-surface-container-lowest/20 px-2 py-0.5 rounded">Toll Free</span>
+</a>
+<a class="w-full py-3 px-4 rounded-lg bg-success text-on-primary font-label-md text-label-md transition-colors shadow-sm flex items-center justify-between active:scale-[0.99]" href="https://wa.me/8801913919470" target="_blank">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Instant WhatsApp Advisor</span>
+</div>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="p-3 bg-surface-container text-center rounded-xl space-y-1">
+<div class="flex items-center justify-center gap-2 text-secondary font-label-sm text-[12px]">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span>ISO Certified Official British Council Registration Partner</span>
+</div>
+<p class="font-body-sm text-secondary text-[11px]">
+        Protected by Canadian Academic Standards • <a class="text-primary underline" href="#">Privacy &amp; Compliance Policy</a>
+</p>
+</div>
+</div>
+<div class="fixed inset-0 bg-on-background/40 backdrop-blur-xs z-50 transition-opacity opacity-0 pointer-events-none duration-300" id="chat-backdrop"></div>
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto h-[795px] bg-surface-container-lowest rounded-t-2xl shadow-2xl z-50 flex flex-col transform translate-y-full transition-transform duration-300 ease-out" id="chat-sheet">
+<div class="flex justify-center pt-2.5 pb-1">
+<div class="w-12 h-1 bg-border-subtle rounded-full"></div>
+</div>
+<div class="px-4 py-3 bg-surface-container-lowest flex items-center justify-between shadow-xs">
+<div class="flex items-center gap-2.5">
+<div class="relative">
+<div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold shadow-sm">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+</div>
+<span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-success ring-2 ring-surface-container-lowest"></span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">LexiBot</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-label-sm px-1.5 py-0.2 rounded font-bold uppercase">AI</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[12px]">verified</span>
+<span class="text-[11px] font-label-sm text-secondary">British Council Venue Partner</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="bg-surface-container rounded-lg p-0.5 flex items-center">
+<button class="px-2 py-0.5 rounded font-label-sm text-[11px] bg-surface-container-lowest text-primary font-bold shadow-xs" id="lang-en">EN</button>
+<button class="px-2 py-0.5 rounded font-label-sm text-[11px] text-secondary font-medium" id="lang-bn">বাংলা</button>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary hover:text-on-surface active:scale-90 transition-transform" id="close-sheet-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+</div>
+<div class="flex-1 overflow-y-auto p-4 space-y-4" id="chat-messages">
+<div class="text-center my-1">
+<span class="font-label-sm text-[11px] bg-surface-container px-3 py-1 rounded-full text-secondary">
+          Lexicon Academic Concierge • Encrypted
+        </span>
+</div>
+<div class="flex items-start gap-2.5">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center text-xs shrink-0">
+<span class="material-symbols-outlined text-[16px]">smart_toy</span>
+</div>
+<div class="space-y-1.5 max-w-[82%]">
+<div class="bg-surface-container p-3 rounded-xl rounded-tl-none text-on-surface font-body-sm text-body-sm leading-relaxed">
+            Hi! Welcome to Lexicon. I can help you explore courses, understand admission requirements, and find support for your learning journey.
+          </div>
+<span class="text-[10px] font-label-sm text-secondary pl-1">10:42 AM</span>
+</div>
+</div>
+<div class="space-y-1.5 pl-9">
+<p class="font-label-sm text-[11px] text-secondary uppercase font-semibold">Suggested questions</p>
+<div class="flex flex-col gap-1.5">
+<button class="text-left px-3 py-2 bg-surface-container-low hover:bg-surface-container rounded-lg text-on-surface font-label-sm text-label-sm flex items-center justify-between" onclick="handleQuickPrompt('Which IELTS course is right for me?')">
+<span>Which IELTS course is right for me?</span>
+<span class="material-symbols-outlined text-[14px] text-primary">arrow_forward</span>
+</button>
+<button class="text-left px-3 py-2 bg-surface-container-low hover:bg-surface-container rounded-lg text-on-surface font-label-sm text-label-sm flex items-center justify-between" onclick="handleQuickPrompt('What English courses are available?')">
+<span>What English courses are available?</span>
+<span class="material-symbols-outlined text-[14px] text-primary">arrow_forward</span>
+</button>
+<button class="text-left px-3 py-2 bg-surface-container-low hover:bg-surface-container rounded-lg text-on-surface font-label-sm text-label-sm flex items-center justify-between" onclick="handleQuickPrompt('How do online classes work?')">
+<span>How do online classes work?</span>
+<span class="material-symbols-outlined text-[14px] text-primary">arrow_forward</span>
+</button>
+<button class="text-left px-3 py-2 bg-surface-container-low hover:bg-surface-container rounded-lg text-on-surface font-label-sm text-label-sm flex items-center justify-between" onclick="handleQuickPrompt('I paid for a course but cannot access it.')">
+<span>I paid for a course but cannot access it.</span>
+<span class="material-symbols-outlined text-[14px] text-primary">arrow_forward</span>
+</button>
+<button class="text-left px-3 py-2 bg-surface-container-low hover:bg-surface-container rounded-lg text-on-surface font-label-sm text-label-sm flex items-center justify-between" onclick="handleQuickPrompt('How can I contact an advisor?')">
+<span>How can I contact an advisor?</span>
+<span class="material-symbols-outlined text-[14px] text-primary">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="space-y-4" id="dynamic-chat-content"></div>
+</div>
+<div class="p-3 bg-surface-container-lowest shadow-sm space-y-2">
+<div class="flex items-center gap-2">
+<div class="relative flex-1">
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm pl-3 pr-9 py-2.5 rounded-lg focus:outline-none focus:bg-surface-container transition-colors" id="chat-input-field" placeholder="Type IELTS, admissions, fee query..." type="text"/>
+<button class="absolute right-2 top-2.5 text-secondary hover:text-primary" id="voice-memo-btn">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</button>
+</div>
+<button class="w-11 h-11 rounded-lg bg-primary hover:bg-crimson-hover text-on-primary flex items-center justify-center shrink-0 shadow-sm active:scale-95 transition-transform" id="send-chat-msg-btn">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</div>
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-[10px] text-secondary">Official Lexicon ELTC Portal • LexiBot 3.2</span>
+<a class="font-label-sm text-[11px] text-primary flex items-center gap-1 font-semibold" href="tel:+8801913919470">
+<span class="material-symbols-outlined text-[14px]">phone_in_talk</span>
+          Call Hotline
+        </a>
+</div>
+</div>
+</div>
+<div class="fixed bottom-6 right-5 z-40 flex items-center gap-2">
+<div class="bg-on-background/90 text-surface-container-lowest font-label-sm text-[11px] px-2.5 py-1 rounded-full shadow-md backdrop-blur-sm hidden sm:flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+      Need Guidance?
+    </div>
+<button class="relative w-14 h-14 rounded-full bg-primary text-on-primary shadow-xl flex items-center justify-center hover:scale-105 active:scale-95 transition-transform" id="floating-launcher-btn">
+<span class="material-symbols-outlined text-[28px]">chat</span>
+<span class="absolute top-0 right-0 w-4 h-4 bg-error text-on-error rounded-full text-[10px] font-bold flex items-center justify-center ring-2 ring-surface-container-lowest">
+        1
+      </span>
+</button>
+</div>
+</div>
+<script>
+  (function initLexiBotMobile() {
+    const launcherBtn = document.getElementById('floating-launcher-btn');
+    const toggleBtn = document.getElementById('toggle-sheet-btn');
+    const closeBtn = document.getElementById('close-sheet-btn');
+    const backdrop = document.getElementById('chat-backdrop');
+    const sheet = document.getElementById('chat-sheet');
+    const langEn = document.getElementById('lang-en');
+    const langBn = document.getElementById('lang-bn');
+    const chatInput = document.getElementById('chat-input-field');
+    const sendBtn = document.getElementById('send-chat-msg-btn');
+    const chatBox = document.getElementById('chat-messages');
+    const dynamicContainer = document.getElementById('dynamic-chat-content');
+
+    function openSheet() {
+      backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      backdrop.classList.add('opacity-100');
+      sheet.classList.remove('translate-y-full');
+      sheet.classList.add('translate-y-0');
+    }
+
+    function closeSheet() {
+      backdrop.classList.remove('opacity-100');
+      backdrop.classList.add('opacity-0', 'pointer-events-none');
+      sheet.classList.remove('translate-y-0');
+      sheet.classList.add('translate-y-full');
+    }
+
+    if (launcherBtn) launcherBtn.addEventListener('click', openSheet);
+    if (toggleBtn) toggleBtn.addEventListener('click', openSheet);
+    if (closeBtn) closeBtn.addEventListener('click', closeSheet);
+    if (backdrop) backdrop.addEventListener('click', closeSheet);
+
+    if (langEn && langBn) {
+      langEn.addEventListener('click', () => {
+        langEn.className = "px-2 py-0.5 rounded font-label-sm text-[11px] bg-surface-container-lowest text-primary font-bold shadow-xs";
+        langBn.className = "px-2 py-0.5 rounded font-label-sm text-[11px] text-secondary font-medium";
+      });
+      langBn.addEventListener('click', () => {
+        langBn.className = "px-2 py-0.5 rounded font-label-sm text-[11px] bg-surface-container-lowest text-primary font-bold shadow-xs";
+        langEn.className = "px-2 py-0.5 rounded font-label-sm text-[11px] text-secondary font-medium";
+      });
+    }
+
+    window.handleQuickPrompt = function(promptText) {
+      appendUserMessage(promptText);
+      setTimeout(() => {
+        if (promptText.includes('IELTS')) {
+          appendBotHtml(`
+            <div class="bg-surface-container p-3 rounded-xl rounded-tl-none space-y-2">
+              <span class="font-label-sm text-primary font-semibold block">Academic Match Detected</span>
+              <p class="font-body-sm text-body-sm text-on-surface">Based on recent intakes, our <strong>IELTS Comprehensive Masterclass</strong> has a 94.6% target hit rate for Band 7.5+.</p>
+              <div class="bg-surface-container-lowest p-2.5 rounded-lg flex items-center justify-between">
+                <div>
+                  <span class="block font-label-sm text-on-surface font-semibold">12-Week Hybrid</span>
+                  <span class="text-[11px] text-secondary">8 Mocks + BC Test Fee Waiver support</span>
+                </div>
+                <span class="font-label-md text-primary font-bold">18.5k</span>
+              </div>
+            </div>
+          `);
+        } else if (promptText.includes('access') || promptText.includes('paid')) {
+          appendBotHtml(`
+            <div class="bg-surface-container p-3 rounded-xl rounded-tl-none space-y-2">
+              <div class="flex items-center gap-1.5 text-warning">
+                <span class="material-symbols-outlined text-[18px]">verified</span>
+                <span class="font-label-sm font-semibold">Payment Tracker Initiated</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface">Please provide your bKash or Nagad Transaction ID. Our automated portal synchronizes within 2-5 minutes.</p>
+              <p class="text-[11px] text-error font-medium">Notice: Lexicon staff never asks for PIN, OTP, or CVV.</p>
+            </div>
+          `);
+        } else {
+          appendBotHtml(`
+            <div class="bg-surface-container p-3 rounded-xl rounded-tl-none space-y-2">
+              <p class="font-body-sm text-body-sm text-on-surface">Connecting you with our Senior Admissions Desk. You can also dial directly or ping WhatsApp:</p>
+              <div class="flex gap-2 pt-1">
+                <a href="tel:+8801913919470" class="flex-1 py-1.5 bg-primary text-on-primary text-center rounded font-label-sm text-[11px] font-semibold">Call Hotline</a>
+                <a href="https://wa.me/8801913919470" class="flex-1 py-1.5 bg-success text-on-primary text-center rounded font-label-sm text-[11px] font-semibold">WhatsApp</a>
+              </div>
+            </div>
+          `);
+        }
+      }, 500);
+    };
+
+    function appendUserMessage(text) {
+      const msg = document.createElement('div');
+      msg.className = "flex items-start justify-end gap-2";
+      msg.innerHTML = `
+        <div class="bg-primary text-on-primary p-3 rounded-xl rounded-tr-none text-body-sm font-body-sm max-w-[82%] shadow-xs">
+          ${text}
+        </div>
+      `;
+      dynamicContainer.appendChild(msg);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function appendBotHtml(htmlContent) {
+      const wrapper = document.createElement('div');
+      wrapper.className = "flex items-start gap-2.5";
+      wrapper.innerHTML = `
+        <div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center text-xs shrink-0">
+          <span class="material-symbols-outlined text-[16px]">smart_toy</span>
+        </div>
+        <div class="max-w-[82%]">
+          ${htmlContent}
+          <span class="text-[10px] font-label-sm text-secondary pl-1 block mt-1">LexiBot &bull; Just now</span>
+        </div>
+      `;
+      dynamicContainer.appendChild(wrapper);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    if (sendBtn && chatInput) {
+      const sendHandler = () => {
+        const val = chatInput.value.trim();
+        if (!val) return;
+        appendUserMessage(val);
+        chatInput.value = '';
+        setTimeout(() => {
+          appendBotHtml(`
+            <div class="bg-surface-container p-3 rounded-xl rounded-tl-none space-y-1.5">
+              <p class="font-body-sm text-body-sm text-on-surface">Thank you for your question. A certified counselor is inspecting your query: "<em>${val}</em>".</p>
+              <div class="p-2 bg-surface-container-lowest rounded text-secondary font-label-sm text-[11px]">
+                Admissions Hotline active: +8801913919470
+              </div>
+            </div>
+          `);
+        }, 600);
+      };
+      sendBtn.addEventListener('click', sendHandler);
+      chatInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') sendHandler();
+      });
+    }
+
+    const stateButtons = document.querySelectorAll('.state-filter-btn');
+    const sections = {
+      welcome: document.getElementById('sec-welcome'),
+      course: document.getElementById('sec-course'),
+      form: document.getElementById('sec-form'),
+      student: document.getElementById('sec-student'),
+      payment: document.getElementById('sec-payment'),
+      handoff: document.getElementById('sec-handoff'),
+    };
+
+    stateButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        stateButtons.forEach(b => {
+          b.className = "state-filter-btn px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap";
+        });
+        btn.className = "state-filter-btn px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm whitespace-nowrap shadow-sm";
+        const selectedState = btn.getAttribute('data-state');
+
+        if (selectedState === 'all') {
+          Object.values(sections).forEach(sec => sec && (sec.style.display = 'block'));
+        } else {
+          Object.keys(sections).forEach(key => {
+            if (sections[key]) {
+              sections[key].style.display = (key === selectedState) ? 'block' : 'none';
+            }
+          });
+        }
+      });
+    });
+
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(20,36,58,0.04)] py-12"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6"><div class="flex flex-col items-center md:items-start gap-1"><div class="flex items-center gap-2"><img alt="Image from https://www.lexiconeltc.com/images/logos/logo5.jpeg" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XgWSX9CSbDFeEiIOPGvFVpxXDMy69SU-adUjEe0qOHZaDfGuyizqxtlRECMob4hMNepzPouYbBuMfzWt7U2MSrugYqhvJuGsOWmVZMFask63RgkHGg_5gkUx4ZI8Ta2jsXLDkojPqfOmZnljzSD6nfXFEIP5UzvUc1ngT7myDIOhuGRIcjCnveSbkbyMZUiJdb61YsAd4Hb6SZyHl883loArKHunafDl34UH3UgisWMukICR8kfPo7VMw"/><span class="font-headline-sm text-headline-sm text-on-surface">Lexicon ELTC</span></div><p class="font-body-sm text-body-sm text-secondary">Global language test preparation and international pathway academy.</p></div><div class="flex items-center gap-6 font-label-sm text-label-sm text-secondary"><span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[16px]">support_agent</span>Hotline: +8801913919470</span><span class="hidden sm:inline">•</span><span>Official British Council Registration Centre</span></div><div class="font-body-sm text-body-sm text-secondary">© 2025 Lexicon ELTC. All rights reserved.</div></div></footer></body></html>

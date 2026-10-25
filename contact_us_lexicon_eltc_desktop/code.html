@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"outline-variant":"#e4bdbb","on-primary-fixed":"#410006","tertiary-fixed-dim":"#b4c5ff","on-secondary-container":"#54637c","on-tertiary":"#ffffff","tertiary-fixed":"#dbe1ff","primary-container":"#d62835","tertiary":"#004dcc","surface-variant":"#d5e4f8","on-surface-variant":"#5c403e","surface-light":"#F5F7FA","on-primary-fixed-variant":"#930018","inverse-primary":"#ffb3af","on-tertiary-fixed":"#00174b","crimson-hover":"#B71C28","background":"#f8f9ff","on-background":"#0e1d2b","surface-container-low":"#eef4ff","error-container":"#ffdad6","surface-container-highest":"#d5e4f8","tertiary-container":"#2a66ee","on-tertiary-fixed-variant":"#003ea8","success":"#10B981","inverse-on-surface":"#e9f1ff","on-error":"#ffffff","border-subtle":"#DCE2E9","on-secondary":"#ffffff","primary-fixed":"#ffdad7","on-primary":"#ffffff","surface-container-high":"#dbe9fe","inverse-surface":"#243241","surface-bright":"#f8f9ff","on-secondary-fixed":"#0b1c32","on-tertiary-container":"#f4f4ff","primary-fixed-dim":"#ffb3af","secondary-fixed":"#d4e3ff","surface-container":"#e4efff","surface":"#f8f9ff","secondary-fixed-dim":"#b7c7e4","on-secondary-fixed-variant":"#38475f","on-primary-container":"#fff2f0","primary":"#b20120","secondary":"#505f78","on-error-container":"#93000a","surface-tint":"#bd0f26","surface-dim":"#cddbef","surface-container-lowest":"#ffffff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-md":"1rem","space-sm":"0.5rem","gutter-mobile":"1rem","space-lg":"1.5rem","margin-mobile":"1rem",margin:"2rem","space-xs":"0.25rem",gutter:"1.5rem","space-xl":"2.5rem"},fontFamily:{"headline-md":["Lexend"],"label-sm":["Lexend"],"body-md":["Lexend"],"headline-sm":["Lexend"],"display-lg-mobile":["Lexend"],"body-sm":["Lexend"],"label-lg":["Lexend"],"display-lg":["Lexend"],"body-lg":["Lexend"],"headline-lg":["Lexend"],"label-md":["Lexend"]},fontSize:{"headline-md":["1.5rem",{lineHeight:"2rem",fontWeight:"600"}],"label-sm":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.04em",fontWeight:"600"}],"body-md":["1rem",{lineHeight:"1.5rem",fontWeight:"400"}],"headline-sm":["1.25rem",{lineHeight:"1.75rem",fontWeight:"600"}],"display-lg-mobile":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.01em",fontWeight:"700"}],"body-sm":["0.875rem",{lineHeight:"1.25rem",fontWeight:"400"}],"label-lg":["1rem",{lineHeight:"1.5rem",fontWeight:"500"}],"display-lg":["3.5rem",{lineHeight:"4rem",letterSpacing:"-0.02em",fontWeight:"700"}],"body-lg":["1.125rem",{lineHeight:"1.75rem",fontWeight:"400"}],"headline-lg":["2rem",{lineHeight:"2.5rem",letterSpacing:"-0.01em",fontWeight:"600"}],"label-md":["0.875rem",{lineHeight:"1.25rem",fontWeight:"500"}]}}}};</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased">
+<!-- BURAQ WEB SERVICE DEMO HEADER BANNER -->
+<div id="buraq-demo-banner" style="position: fixed; top: 0; left: 0; right: 0; height: 40px; z-index: 9999999; background: #0e1d2b; color: #ffffff; border-bottom: 2px solid #b20120; font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); box-sizing: border-box;">
+  <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+    <span style="background: #b20120; color: #ffffff; padding: 3px 9px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; flex-shrink: 0;">Demo Notice</span>
+    <span style="color: #f1f5f9; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">It's just a demo, original design will be much better than this</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;">
+    <a href="../index.html" target="_top" style="display: inline-flex; align-items: center; gap: 6px; background: #ffffff; color: #0e1d2b; padding: 5px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.18);" onmouseover="this.style.background='#ffdad7';this.style.color='#930018'" onmouseout="this.style.background='#ffffff';this.style.color='#0e1d2b'">
+      <svg style="width: 14px; height: 14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+      <span>Back to Index</span>
+    </a>
+  </div>
+</div>
+<style id="buraq-demo-styles">
+  body { padding-top: 40px !important; }
+  header.fixed, header[class*="fixed"], nav.fixed, nav[class*="fixed"] { top: 40px !important; }
+  aside.fixed, aside[class*="fixed"] { top: 40px !important; height: calc(100vh - 40px) !important; }
+</style>
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest shadow-[0_4px_12px_-2px_rgba(20,36,58,0.08)]"><div class="bg-primary text-on-primary py-space-xs px-margin"><div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base">verified</span><span class="font-label-sm text-label-sm font-semibold tracking-wide uppercase">British Council Awarded Venue • Khulna Campus</span></div><div class="flex items-center gap-space-md font-label-sm text-label-sm"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-base">support_agent</span><span>Hotline: +8801913 919470</span></div><div class="hidden sm:flex items-center gap-space-xs"><span class="material-symbols-outlined text-base">schedule</span><span>Open: Sat - Thu (9:00 AM - 7:30 PM)</span></div></div></div></div><div class="h-20 max-w-7xl mx-auto px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="Lexicon English Language Training Centre" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XgWSX9CSbDFeEiIOPGvFVpxXDMy69SU-adUjEe0qOHZaDfGuyizqxtlRECMob4hMNepzPouYbBuMfzWt7U2MSrugYqhvJuGsOWmVZMFask63RgkHGg_5gkUx4ZI8Ta2jsXLDkojPqfOmZnljzSD6nfXFEIP5UzvUc1ngT7myDIOhuGRIcjCnveSbkbyMZUiJdb61YsAd4Hb6SZyHl883loArKHunafDl34UH3UgisWMukICR8kfPo7VMw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-tight">Lexicon ELTC</span><span class="font-label-sm text-label-sm text-secondary font-medium tracking-wide uppercase">Language • Testing • Pathways</span></div></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg px-space-sm py-space-xs"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" data-path="courses" href="#">Courses</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" data-path="testing-center" href="#">Testing Center</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" data-path="lexifly" href="#">Lexifly</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" data-path="about-us" href="#">About Us</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-space-xs px-space-xs" data-path="faq" href="#">FAQ</a><a aria-current="page" class="transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg px-space-sm py-space-xs" data-path="contact-us" href="#">Contact Us</a></nav><div class="flex items-center gap-space-md"><a class="inline-flex items-center justify-center font-label-md text-label-md bg-primary-container hover:bg-crimson-hover text-on-primary font-semibold py-space-sm px-space-md rounded-lg shadow-sm transition-colors whitespace-nowrap" data-path="placement-test" href="#">Book Free Placement Test</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-28 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Toast Feedback Component (Client JS) -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 ease-out pointer-events-none flex items-center gap-space-sm bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-lg shadow-xl" id="toastNotification">
+<span class="material-symbols-outlined text-success" id="toastIcon">check_circle</span>
+<span class="font-label-md text-label-md" id="toastMessage">Copied to clipboard</span>
+</div>
+<!-- Breadcrumb & Page Introduction Header -->
+<section class="w-full bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-margin py-space-lg flex flex-col gap-space-sm">
+<nav aria-label="Breadcrumb" class="flex items-center gap-space-xs font-label-sm text-label-sm text-secondary">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">home</span>
+<span>Home</span>
+</a>
+<span class="material-symbols-outlined text-xs text-secondary">chevron_right</span>
+<span aria-current="page" class="text-on-surface font-semibold">Contact Us</span>
+</nav>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pt-space-xs">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-primary uppercase tracking-widest font-semibold mb-space-xs bg-primary-fixed/40 px-2.5 py-1 rounded">
+<span class="material-symbols-outlined text-sm">support_agent</span>
+            Admissions &amp; Academic Concierge
+          </div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+            Get in Touch with <span class="text-primary-container">Lexicon ELTC</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary mt-space-xs">
+            Speak with our admissions advisors, visit our Khulna testing venue, or book a personalized 30-minute study consultation.
+          </p>
+</div>
+<!-- Fast Response Guarantee Badge -->
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-sm rounded-xl shrink-0">
+<div class="w-10 h-10 rounded-full bg-success/10 text-success flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-success tracking-wide">Fast Response Guarantee</span>
+<span class="font-body-sm text-body-sm text-secondary">Advisors reply within <strong class="text-on-surface font-semibold">2 business hours</strong></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Layout (12-Col Desktop) -->
+<section class="max-w-7xl mx-auto px-margin py-space-xl w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- LEFT COLUMN: Physical Venue, Hotlines, Inboxes, Channels, Map (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Physical Venue Card with British Council Accreditation Tag -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">apartment</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Khulna Campus &amp; Exam Center</h2>
+<span class="font-label-sm text-label-sm text-secondary">British Council Certified Testing Venue</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm bg-success/10 text-success px-2 py-0.5 rounded font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-success animate-pulse"></span>
+              Open Now
+            </span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs text-on-surface">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-base mt-0.5 shrink-0">pin_drop</span>
+<p class="font-body-md text-body-md leading-snug">
+<strong class="font-semibold text-on-surface">NLI TOWER (7th Floor)</strong><br/>
+                977 Upper Jessore Road, KDA New Market Area,<br/>
+                Khulna, Bangladesh
+              </p>
+</div>
+<div class="mt-space-xs pt-space-xs border-t border-secondary/15 flex items-center gap-space-xs font-body-sm text-body-sm text-secondary">
+<span class="material-symbols-outlined text-base text-secondary">explore</span>
+<span>Opposite KDA New Market • Landmark Hub</span>
+</div>
+</div>
+<!-- Operating Hours Grid -->
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-secondary tracking-wider">Campus Operational Hours</span>
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="bg-surface-container-low/70 p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary block">Sat – Thu</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">9:00 AM – 8:00 PM</span>
+</div>
+<div class="bg-surface-container-low/70 p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-secondary block">Friday</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">2:30 PM – 8:00 PM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Hotlines & Department Direct Lines Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-tertiary/10 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">call</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Admissions Hotlines</h3>
+<span class="font-label-sm text-label-sm text-secondary">Click number to call or copy</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<!-- Line 1 -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between group hover:bg-surface-container transition-colors">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-primary font-semibold truncate">Main Admissions Hotline</span>
+<a class="font-label-md text-label-md font-semibold text-on-surface hover:text-primary transition-colors" href="tel:+8801913919470">+8801913 919470</a>
+</div>
+<button class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-secondary hover:text-primary shadow-xs transition-colors shrink-0" onclick="navigator.clipboard.writeText('+8801913919470'); showToast('Hotline +8801913 919470 copied!')" title="Copy Number" type="button">
+<span class="material-symbols-outlined text-base">content_copy</span>
+</button>
+</div>
+<!-- Line 2 -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between group hover:bg-surface-container transition-colors">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary truncate">Testing &amp; IELTS Support</span>
+<a class="font-label-md text-label-md font-semibold text-on-surface hover:text-primary transition-colors" href="tel:+8801914919470">+8801914 919470</a>
+</div>
+<button class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-secondary hover:text-primary shadow-xs transition-colors shrink-0" onclick="navigator.clipboard.writeText('+8801914919470'); showToast('Hotline +8801914 919470 copied!')" title="Copy Number" type="button">
+<span class="material-symbols-outlined text-base">content_copy</span>
+</button>
+</div>
+<!-- Line 3 -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between group hover:bg-surface-container transition-colors">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary truncate">Lexifly Study Abroad</span>
+<a class="font-label-md text-label-md font-semibold text-on-surface hover:text-primary transition-colors" href="tel:+8801842919470">+8801842 919470</a>
+</div>
+<button class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-secondary hover:text-primary shadow-xs transition-colors shrink-0" onclick="navigator.clipboard.writeText('+8801842919470'); showToast('Hotline +8801842 919470 copied!')" title="Copy Number" type="button">
+<span class="material-symbols-outlined text-base">content_copy</span>
+</button>
+</div>
+<!-- Line 4 -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between group hover:bg-surface-container transition-colors">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary truncate">Corporate &amp; YLE Desk</span>
+<a class="font-label-md text-label-md font-semibold text-on-surface hover:text-primary transition-colors" href="tel:+8801841919470">+8801841 919470</a>
+</div>
+<button class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-secondary hover:text-primary shadow-xs transition-colors shrink-0" onclick="navigator.clipboard.writeText('+8801841919470'); showToast('Hotline +8801841 919470 copied!')" title="Copy Number" type="button">
+<span class="material-symbols-outlined text-base">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Official Email Inboxes & Instant Messengers -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-2xl">mark_email_read</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Email &amp; Messaging</h3>
+<span class="font-label-sm text-label-sm text-secondary">Direct response departments</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Email 1 -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-primary text-xl shrink-0">mail</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary">General &amp; Course Admissions</span>
+<a class="font-label-md text-label-md font-semibold text-on-surface hover:text-primary transition-colors truncate" href="mailto:lexiconeltc@gmail.com">lexiconeltc@gmail.com</a>
+</div>
+</div>
+<button class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-secondary hover:text-primary shadow-xs transition-colors shrink-0" onclick="navigator.clipboard.writeText('lexiconeltc@gmail.com'); showToast('Email lexiconeltc@gmail.com copied!')" type="button">
+<span class="material-symbols-outlined text-base">content_copy</span>
+</button>
+</div>
+<!-- Email 2 -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-tertiary text-xl shrink-0">flight_takeoff</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary">Lexifly Higher Ed &amp; Visas</span>
+<a class="font-label-md text-label-md font-semibold text-on-surface hover:text-primary transition-colors truncate" href="mailto:lexifly@lexiconeltc.com">lexifly@lexiconeltc.com</a>
+</div>
+</div>
+<button class="w-8 h-8 rounded bg-surface-container-lowest flex items-center justify-center text-secondary hover:text-primary shadow-xs transition-colors shrink-0" onclick="navigator.clipboard.writeText('lexifly@lexiconeltc.com'); showToast('Email lexifly@lexiconeltc.com copied!')" type="button">
+<span class="material-symbols-outlined text-base">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Instant Messaging Buttons -->
+<div class="pt-space-xs">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-secondary tracking-wider block mb-space-xs">Instant Chat Channels</span>
+<div class="grid grid-cols-3 gap-space-xs">
+<a class="bg-surface-container-low hover:bg-success hover:text-on-primary text-on-surface p-space-sm rounded-lg flex flex-col items-center justify-center gap-1 transition-all duration-200 text-center" href="https://wa.me/8801913919470" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-xl text-success group-hover:text-on-primary">chat</span>
+<span class="font-label-sm text-label-sm font-semibold">WhatsApp</span>
+<span class="text-[11px] text-secondary group-hover:text-on-primary/80">+8801913919470</span>
+</a>
+<a class="bg-surface-container-low hover:bg-tertiary-container hover:text-on-tertiary text-on-surface p-space-sm rounded-lg flex flex-col items-center justify-center gap-1 transition-all duration-200 text-center" href="https://t.me/lexiconeltc" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-xl text-tertiary group-hover:text-on-tertiary">send</span>
+<span class="font-label-sm text-label-sm font-semibold">Telegram</span>
+<span class="text-[11px] text-secondary group-hover:text-on-tertiary/80">@lexiconeltc</span>
+</a>
+<a class="bg-surface-container-low hover:bg-primary-container hover:text-on-primary text-on-surface p-space-sm rounded-lg flex flex-col items-center justify-center gap-1 transition-all duration-200 text-center" href="https://m.me/LexiconELTC" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-xl text-primary group-hover:text-on-primary">forum</span>
+<span class="font-label-sm text-label-sm font-semibold">Messenger</span>
+<span class="text-[11px] text-secondary group-hover:text-on-primary/80">@LexiconELTC</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Venue Location Map Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-xs pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">map</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Interactive Campus Navigation</span>
+</div>
+<a class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-0.5" href="https://maps.google.com/?q=NLI+Tower+Khulna+Lexicon" rel="noopener noreferrer" target="_blank">
+<span>Open in Google Maps</span>
+<span class="material-symbols-outlined text-xs">launch</span>
+</a>
+</div>
+<!-- Map Container with data-location -->
+<div class="w-full h-56 bg-cover bg-center rounded-lg relative overflow-hidden flex items-end p-space-md" data-location="NLI TOWER, 977 Upper Jessore Road, KDA New Market, Khulna, Bangladesh" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9qsIY4xe-IySpmkW64-5CHveIKB-sNH4N6VnkxSJa1-uKxVdxoP8EYS8irT6qBRB_UZDTDZWXEfdoPCYP_RLnL587tW0hnDc8Rvqn3ELeSBnRxK2jTsRUgmeGOPQOzxA0y5UM0rhhRQjBcIVLxs455gB9jbt0KU-LYRa3juqIPz8M6IzaFjKmQZ5SJHFO99qJ4h2yx2LWVVngJWkS5wC_h0cLJJOtAZfr1WZJyKZ4YjvtnMln1EJs')">
+<div class="bg-surface-container-lowest/95 backdrop-blur-sm p-space-sm rounded-lg shadow-md max-w-sm flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl shrink-0 mt-0.5">place</span>
+<div class="flex flex-col text-on-surface">
+<span class="font-label-sm text-label-sm font-bold">Lexicon ELTC • 7th Floor</span>
+<span class="font-body-sm text-body-sm text-secondary text-xs">Directly opposite KDA New Market main entrance arch.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Accessible Student & Candidate Enquiry Form (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg lg:p-space-xl shadow-sm">
+<!-- Form Header -->
+<div class="flex flex-col gap-space-xs mb-space-lg border-b border-secondary/10 pb-space-md">
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm uppercase font-semibold">
+<span class="material-symbols-outlined text-base">edit_document</span>
+              Admissions Application &amp; Query Form
+            </div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Academic Candidate Enquiry</h2>
+<p class="font-body-md text-body-md text-secondary">
+              Fill out your details below. An assigned academic mentor will analyze your language testing background and contact you with custom course options.
+            </p>
+</div>
+<!-- Form Element -->
+<form class="flex flex-col gap-space-md" id="academicEnquiryForm" novalidate="" onsubmit="handleFormSubmit(event)">
+<!-- Row 1: Full Name & Phone Number -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Full Name -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between" for="fullName">
+<span>Full Name <span aria-hidden="true" class="text-primary font-bold">*</span></span>
+<span class="text-xs text-secondary font-normal">Candidate legal name</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-secondary text-lg">person</span>
+<input aria-describedby="fullNameHelp" aria-required="true" class="w-full bg-surface-container-lowest pl-10 pr-space-md py-2.5 rounded-lg text-on-surface font-body-md text-body-md outline-none border border-border-subtle focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all" id="fullName" name="fullName" placeholder="e.g. Tanvir Ahmed Chowdhury" required="" type="text"/>
+</div>
+<span class="font-body-sm text-body-sm text-secondary text-xs" id="fullNameHelp">Used for placement certificates and Cambridge records.</span>
+</div>
+<!-- Phone Number (+880 prefix) -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between" for="phoneNumber">
+<span>Phone Number (+880) <span aria-hidden="true" class="text-primary font-bold">*</span></span>
+<span class="text-xs text-secondary font-normal">Active for SMS/WhatsApp</span>
+</label>
+<div class="relative flex items-center">
+<span class="absolute left-3 text-secondary font-label-md text-label-md font-semibold select-none">+880</span>
+<input aria-describedby="phoneHelp" aria-required="true" class="w-full bg-surface-container-lowest pl-16 pr-space-md py-2.5 rounded-lg text-on-surface font-body-md text-body-md outline-none border border-border-subtle focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all" id="phoneNumber" name="phoneNumber" pattern="[0-9]{9,10}" placeholder="1913-919470" required="" type="tel"/>
+</div>
+<span class="font-body-sm text-body-sm text-secondary text-xs" id="phoneHelp">Admissions counsellors will send confirmation via SMS.</span>
+</div>
+</div>
+<!-- Row 2: Email Address & Preferred Mode -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Email Address -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between" for="emailAddress">
+<span>Email Address <span aria-hidden="true" class="text-primary font-bold">*</span></span>
+<span class="text-xs text-secondary font-normal">Official correspondence</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-secondary text-lg">alternate_email</span>
+<input aria-describedby="emailHelp" aria-required="true" class="w-full bg-surface-container-lowest pl-10 pr-space-md py-2.5 rounded-lg text-on-surface font-body-md text-body-md outline-none border border-border-subtle focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all" id="emailAddress" name="emailAddress" placeholder="candidate@example.com" required="" type="email"/>
+</div>
+<span class="font-body-sm text-body-sm text-secondary text-xs" id="emailHelp">We send mock test schedules and lecture materials here.</span>
+</div>
+<!-- Preferred Study Mode -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between" for="studyMode">
+<span>Preferred Study Mode <span aria-hidden="true" class="text-primary font-bold">*</span></span>
+<span class="text-xs text-secondary font-normal">Venue / Virtual</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-secondary text-lg">computer</span>
+<select aria-describedby="modeHelp" aria-required="true" class="w-full bg-surface-container-lowest pl-10 pr-space-md py-2.5 rounded-lg text-on-surface font-body-md text-body-md outline-none border border-border-subtle focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all appearance-none cursor-pointer" id="studyMode" name="studyMode" required="">
+<option disabled="" selected="" value="">Select study format...</option>
+<option value="khulna-lab">In-Person Khulna Lab (NLI Tower)</option>
+<option value="live-online">Live Online Interactive (Interactive Zoom/LMS)</option>
+<option value="hybrid">Hybrid (Weekend Venue + Weekday Online)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-secondary pointer-events-none">expand_more</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary text-xs" id="modeHelp">Labs include unlimited mock tests in Khulna computer room.</span>
+</div>
+</div>
+<!-- Interested Program Selector -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between" for="interestedProgram">
+<span>Interested Academic Program <span aria-hidden="true" class="text-primary font-bold">*</span></span>
+<span class="text-xs text-secondary font-normal">British Council / Cambridge align</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-3 text-secondary text-lg">school</span>
+<select aria-describedby="programHelp" aria-required="true" class="w-full bg-surface-container-lowest pl-10 pr-space-md py-2.5 rounded-lg text-on-surface font-body-md text-body-md outline-none border border-border-subtle focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all appearance-none cursor-pointer" id="interestedProgram" name="interestedProgram" required="">
+<option disabled="" selected="" value="">Select your priority program...</option>
+<option value="ielts-cd">IELTS on Computer (Regular / Intensive / Executive)</option>
+<option value="spoken-esl">Spoken English ESL (Signature / Professional PEEP)</option>
+<option value="pte-pearson">PTE Academic Pearson (Signature / Mock Packages)</option>
+<option value="yle-cambridge">Cambridge Young Learners English (YLE: 5–12 yrs)</option>
+<option value="lexifly-abroad">Study Abroad &amp; Visa Counselling via Lexifly</option>
+<option value="official-mock">Official British Council Computer Mock Test (10 Sets)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-secondary pointer-events-none">expand_more</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary text-xs" id="programHelp">Choose the primary program for diagnostic assessment routing.</span>
+</div>
+<!-- Detailed Message / Background -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-medium flex items-center justify-between" for="detailedMessage">
+<span>Detailed Academic Background or Queries</span>
+<span class="text-xs text-secondary font-normal">Optional</span>
+</label>
+<textarea aria-describedby="messageHelp" class="w-full bg-surface-container-lowest p-space-sm rounded-lg text-on-surface font-body-md text-body-md outline-none border border-border-subtle focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all resize-y" id="detailedMessage" name="detailedMessage" placeholder="Mention your target band score (e.g. 7.5 for Canada/UK visa), previous exam attempts, or desired intake year..." rows="4"></textarea>
+<span class="font-body-sm text-body-sm text-secondary text-xs" id="messageHelp">Providing details helps our faculty prepare relevant batch timing proposals.</span>
+</div>
+<!-- Verification Consent Checkbox -->
+<div class="pt-space-xs">
+<label class="flex items-start gap-space-sm cursor-pointer select-none">
+<input aria-required="true" class="mt-1 w-5 h-5 rounded text-primary focus:ring-primary/20 cursor-pointer accent-primary-container" id="consentCheck" required="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface leading-normal">
+                  I agree to be contacted by <strong>Lexicon ELTC</strong> academic counsellors regarding admissions, test date bookings, and free placement testing via call, SMS, or email.
+                </span>
+</label>
+</div>
+<!-- Primary Crimson CTA Button -->
+<div class="pt-space-sm flex flex-col sm:flex-row items-center gap-space-md">
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs font-label-lg text-label-lg bg-primary-container hover:bg-crimson-hover text-on-primary font-semibold py-3 px-space-xl rounded-lg shadow-sm transition-all duration-200" type="submit">
+<span>Submit Academic Enquiry</span>
+<span class="material-symbols-outlined text-xl">send</span>
+</button>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1 text-xs">
+<span class="material-symbols-outlined text-sm text-success">lock</span>
+                Confidential. No third-party data sharing.
+              </span>
+</div>
+</form>
+</div>
+</div>
+</div>
+<!-- DEDICATED 1-ON-1 CONSULTATION BOOKING CARD -->
+<div class="mt-space-xl bg-surface-container-low rounded-xl p-space-lg lg:p-space-xl flex flex-col lg:flex-row items-center justify-between gap-space-xl shadow-sm">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-lg max-w-3xl">
+<div class="w-16 h-16 rounded-2xl bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-4xl">calendar_month</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase font-semibold text-primary tracking-wide">Direct Calendar Integration</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary">Free 30-Min Slot</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+            Book a 30-Minute In-Person or Virtual Academic Guidance Session
+          </h2>
+<p class="font-body-md text-body-md text-secondary">
+            Need tailored strategy for IELTS Band 8+, Cambridge ESL certification, or university applications in Canada, Australia, and the UK? Lock in your one-on-one session with our senior consultant.
+          </p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-md w-full lg:w-auto shrink-0">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-sm font-label-lg text-label-lg bg-inverse-surface hover:bg-on-surface text-inverse-on-surface font-semibold py-3 px-space-lg rounded-lg shadow-sm transition-all duration-200" href="https://calendly.com/lexiconeltc/30min" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-xl">event_available</span>
+<span>Schedule on Calendly</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs font-label-lg text-label-lg bg-surface-container-lowest hover:bg-surface text-on-surface font-semibold py-3 px-space-md rounded-lg transition-colors border border-border-subtle" href="tel:+8801913919470">
+<span class="material-symbols-outlined text-xl text-primary">call</span>
+<span>Instant Call</span>
+</a>
+</div>
+</div>
+<!-- Campus Atmosphere & Library Preview (Photo-rich Grid inspired by attached facility photo) -->
+<div class="mt-space-xl grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="w-full h-44 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A modern, warm, state-of-the-art English language learning library at Lexicon ELTC Khulna featuring organized bookshelf cubbies with Cambridge IELTS practice test books, warm timber wood banquette seating with under-shelf ambient lighting, and modern round flush ceiling lights illuminating a welcoming yellow Lexicon illuminated circular logo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk8loDtedo24-mk2bcsS-eYX079YPtVlg17WIO0bFZQLlWN-zfhSN62H5njePYAh-K45dmuQxFfpYwbseQm-1boZg67VvDeCYaq_mlJDW1Av0bBP9-NvYey3zXOkOXTeXkgq2XR4fcCw8pBHbK0ub4VJ07HFqDgA4v4byrJzglalawXtLVm4AfR9WyIJLGHWmqATZ_L2PP9dHeCIcHdtlHkuss5dsHrsKhvUalHDc9P2kjoFGLTT5Q"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Award-Winning Campus Library</span>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Extensive collection of Cambridge IELTS, PTE academic guides, and quiet reading banquettes for all enrolled candidates.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="w-full h-44 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Clean and high-tech British Council computer delivered IELTS examination lab at Lexicon ELTC with ergonomic acoustic partitioned desks, professional high-fidelity headsets, modern monitors, and calibrated testing atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOs7Hwf-TlyNAZL2hyGKUc9LSFuT8lHsOSARjpWewU7_Ut8nQV0kent3EvQy5c5yCOkidenzsXOal40JV9D7DlOKJpxDkW9JfhDGv5xKiiPmAT_nMxqytzH98RMT--x_5r0KuZTnK_7w-oK85cGPz-iDsLJqDkaypuy3oIGee0bOt8exRFWP3uA4GE7LLEgpyJbXkb09SrKz1HirQLRCgXxqGhf6Dvm7v04OesLCwBfE2bZqzByxSg"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Computer-Delivered Testing Lab</span>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Equipped with noise-cancelling equipment and real exam terminal software for true test conditions.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="w-full h-44 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Professional academic counselling room at Lexicon ELTC with educational advisor meeting a prospective student across a modern wooden conference table reviewing Canadian and Australian university admission files." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk8D4jGr6PxdLCBSUbXRHKXdm8KsMZikROr4E_JX1gvotIbtUDvWxjPgUjaZ5zJSVMfr38peKrmdoYJAhP6WXtlzNziLQoqaqZsYZF4ybgAuGF71_v3Ez5Ma78kGv1JG7asAcp8hzGD_zJWDbhSTee80FUTJnnJsVmvgqnQ3Up2gH0IW7eLnxipJFefeacNoJQZmBJiqfJXvRYidd7z1H8mT9P3mcId7Zas-g6Qz0Mm_XU_W1OJEGk"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Lexifly Visa &amp; Counselling Desk</span>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Dedicated private consulting suites for document verification, university shortlist guidance, and visa preparation.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Logic for Forms and Notifications -->
+<script>
+    function showToast(message, isSuccess = true) {
+      const toast = document.getElementById('toastNotification');
+      const toastMsg = document.getElementById('toastMessage');
+      const toastIcon = document.getElementById('toastIcon');
+      
+      if (!toast || !toastMsg || !toastIcon) return;
+      
+      toastMsg.textContent = message;
+      toastIcon.textContent = isSuccess ? 'check_circle' : 'info';
+      toastIcon.className = `material-symbols-outlined ${isSuccess ? 'text-success' : 'text-primary'}`;
+      
+      toast.classList.remove('opacity-0', 'translate-y-24');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      
+      setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-24');
+      }, 3500);
+    }
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      
+      if (!form.checkValidity()) {
+        showToast('Please complete all required fields.', false);
+        return;
+      }
+      
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-xl">progress_activity</span><span>Registering Enquiry...</span>';
+      
+      setTimeout(() => {
+        form.reset();
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+        showToast('Enquiry received! An advisor will reach out within 2 hours.', true);
+      }, 1000);
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface mt-space-xl shadow-[0_-4px_12px_-2px_rgba(20,36,58,0.04)]"><div class="max-w-7xl mx-auto px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-3xl">school</span><span class="font-headline-md text-headline-md text-on-surface font-bold">Lexicon ELTC</span></div><p class="font-body-sm text-body-sm text-secondary leading-relaxed max-w-sm">Premier English Language Training Centre &amp; British Council Awarded Official Testing Venue in Khulna, Bangladesh. Pioneering international language proficiency, IELTS preparation, and comprehensive study-abroad guidance through Lexifly Pathways.</p><div class="flex items-center gap-space-sm mt-space-xs"><span class="inline-flex items-center gap-space-xs font-label-sm text-label-sm bg-surface-container-lowest text-success px-space-sm py-space-xs rounded font-semibold"><span class="material-symbols-outlined text-base">verified</span>British Council Partner</span><span class="inline-flex items-center gap-space-xs font-label-sm text-label-sm bg-surface-container-lowest text-primary px-space-sm py-space-xs rounded font-semibold"><span class="material-symbols-outlined text-base">award_star</span>Top Regional Venue</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg font-semibold text-on-surface mb-space-xs">Academic Courses</span><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="courses" href="#">IELTS Regular &amp; Crash</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="courses" href="#">Spoken English Mastery</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="courses" href="#">Corporate Communication</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="courses" href="#">Academic Writing Modules</a><a class="font-body-sm text-body-sm text-primary font-medium hover:underline" data-path="placement-test" href="#">Level Assessment Test</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg font-semibold text-on-surface mb-space-xs">Institutional Pathways</span><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="testing-center" href="#">Official Testing Center</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="lexifly" href="#">Lexifly Global Pathways</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="about-us" href="#">Faculty &amp; Accreditations</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="faq" href="#">Frequently Asked Questions</a><a class="font-body-sm text-body-sm text-secondary hover:text-on-surface transition-colors" data-path="contact-us" href="#">Campus Visit Booking</a></div><div class="flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg font-semibold text-on-surface mb-space-xs">Campus &amp; Support</span><div class="flex items-start gap-space-xs font-body-sm text-body-sm text-secondary"><span class="material-symbols-outlined text-base mt-0.5 text-primary shrink-0">location_on</span><span>Elite Tower, Shibbari More, Khulna, Bangladesh</span></div><div class="flex items-center gap-space-xs font-body-sm text-body-sm text-secondary"><span class="material-symbols-outlined text-base text-primary shrink-0">call</span><span>+8801913 919470</span></div><div class="flex items-center gap-space-xs font-body-sm text-body-sm text-secondary"><span class="material-symbols-outlined text-base text-primary shrink-0">mail</span><span>admissions@lexiconeltc.com</span></div><div class="flex items-center gap-space-sm mt-space-sm"><div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-secondary hover:bg-primary-container hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-base">language</span></div><div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-secondary hover:bg-primary-container hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-base">share</span></div><div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center text-secondary hover:bg-primary-container hover:text-on-primary transition-colors"><span class="material-symbols-outlined text-base">public</span></div></div></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-secondary font-body-sm text-body-sm bg-surface-container-low"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-base text-primary">verified_user</span><span>© 2025 Lexicon English Language Training Centre (Lexicon ELTC). All rights reserved.</span></div><div class="flex items-center gap-space-lg font-label-sm text-label-sm"><a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" href="#">Terms of Enrollment</a><a class="hover:text-on-surface transition-colors" href="#">Accreditation Verification</a></div></div></div></footer></body></html>

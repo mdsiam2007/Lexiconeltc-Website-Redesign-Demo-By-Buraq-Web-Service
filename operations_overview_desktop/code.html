@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-background": "#0e1d2b",
+          "primary-fixed-dim": "#ffb3af",
+          "secondary-fixed": "#d4e3ff",
+          "on-secondary-container": "#54637c",
+          "on-tertiary": "#ffffff",
+          "background": "#f8f9ff",
+          "on-secondary": "#ffffff",
+          "error-container": "#ffdad6",
+          "success": "#10B981",
+          "surface": "#f8f9ff",
+          "tertiary-container": "#2a66ee",
+          "secondary": "#505f78",
+          "secondary-fixed-dim": "#b7c7e4",
+          "on-error": "#ffffff",
+          "surface-light": "#F5F7FA",
+          "surface-container": "#e4efff",
+          "surface-variant": "#d5e4f8",
+          "inverse-on-surface": "#e9f1ff",
+          "on-secondary-fixed-variant": "#38475f",
+          "primary-container": "#d62835",
+          "on-primary-fixed-variant": "#930018",
+          "on-surface": "#0e1d2b",
+          "surface-container-highest": "#d5e4f8",
+          "on-primary": "#ffffff",
+          "inverse-primary": "#ffb3af",
+          "surface-tint": "#bd0f26",
+          "border-subtle": "#DCE2E9",
+          "outline-variant": "#e4bdbb",
+          "crimson-hover": "#B71C28",
+          "surface-dim": "#cddbef",
+          "tertiary": "#004dcc",
+          "primary": "#b20120",
+          "on-tertiary-container": "#f4f4ff",
+          "on-primary-fixed": "#410006",
+          "tertiary-fixed-dim": "#b4c5ff",
+          "on-tertiary-fixed": "#00174b",
+          "outline": "#906f6d",
+          "on-tertiary-fixed-variant": "#003ea8",
+          "error": "#ba1a1a",
+          "on-primary-container": "#fff2f0",
+          "warning": "#F59E0B",
+          "on-secondary-fixed": "#0b1c32",
+          "primary-fixed": "#ffdad7",
+          "surface-container-high": "#dbe9fe",
+          "surface-container-low": "#eef4ff",
+          "on-error-container": "#93000a",
+          "secondary-container": "#d0e0fe",
+          "surface-container-lowest": "#ffffff",
+          "inverse-surface": "#243241",
+          "on-surface-variant": "#5c403e",
+          "tertiary-fixed": "#dbe1ff",
+          "surface-bright": "#f8f9ff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin": "2rem",
+          "space-md": "1rem",
+          "space-xs": "0.25rem",
+          "space-sm": "0.5rem",
+          "margin-mobile": "1rem",
+          "gutter": "1.5rem",
+          "space-lg": "1.5rem",
+          "space-xl": "2.5rem",
+          "gutter-mobile": "1rem"
+        },
+        "fontFamily": {
+          "body-lg": [
+            "Lexend"
+          ],
+          "label-sm": [
+            "Lexend"
+          ],
+          "label-lg": [
+            "Lexend"
+          ],
+          "label-md": [
+            "Lexend"
+          ],
+          "headline-lg": [
+            "Lexend"
+          ],
+          "body-md": [
+            "Lexend"
+          ],
+          "headline-md": [
+            "Lexend"
+          ],
+          "display-lg-mobile": [
+            "Lexend"
+          ],
+          "display-lg": [
+            "Lexend"
+          ],
+          "body-sm": [
+            "Lexend"
+          ],
+          "headline-sm": [
+            "Lexend"
+          ]
+        },
+        "fontSize": {
+          "body-lg": [
+            "1.125rem",
+            {
+              "lineHeight": "1.75rem",
+              "fontWeight": "400"
+            }
+          ],
+          "label-sm": [
+            "0.75rem",
+            {
+              "lineHeight": "1rem",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-lg": [
+            "1rem",
+            {
+              "lineHeight": "1.5rem",
+              "fontWeight": "500"
+            }
+          ],
+          "label-md": [
+            "0.875rem",
+            {
+              "lineHeight": "1.25rem",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg": [
+            "2rem",
+            {
+              "lineHeight": "2.5rem",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "1rem",
+            {
+              "lineHeight": "1.5rem",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "1.5rem",
+            {
+              "lineHeight": "2rem",
+              "fontWeight": "600"
+            }
+          ],
+          "display-lg-mobile": [
+            "2.25rem",
+            {
+              "lineHeight": "2.75rem",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "700"
+            }
+          ],
+          "display-lg": [
+            "3.5rem",
+            {
+              "lineHeight": "4rem",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-sm": [
+            "0.875rem",
+            {
+              "lineHeight": "1.25rem",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "1.25rem",
+            {
+              "lineHeight": "1.75rem",
+              "fontWeight": "600"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface-light font-body-md text-on-surface antialiased">
+<!-- BURAQ WEB SERVICE DEMO HEADER BANNER -->
+<div id="buraq-demo-banner" style="position: fixed; top: 0; left: 0; right: 0; height: 40px; z-index: 9999999; background: #0e1d2b; color: #ffffff; border-bottom: 2px solid #b20120; font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); box-sizing: border-box;">
+  <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+    <span style="background: #b20120; color: #ffffff; padding: 3px 9px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; flex-shrink: 0;">Demo Notice</span>
+    <span style="color: #f1f5f9; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">It's just a demo, original design will be much better than this</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;">
+    <a href="../index.html" target="_top" style="display: inline-flex; align-items: center; gap: 6px; background: #ffffff; color: #0e1d2b; padding: 5px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.18);" onmouseover="this.style.background='#ffdad7';this.style.color='#930018'" onmouseout="this.style.background='#ffffff';this.style.color='#0e1d2b'">
+      <svg style="width: 14px; height: 14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+      <span>Back to Index</span>
+    </a>
+  </div>
+</div>
+<style id="buraq-demo-styles">
+  body { padding-top: 40px !important; }
+  header.fixed, header[class*="fixed"], nav.fixed, nav[class*="fixed"] { top: 40px !important; }
+  aside.fixed, aside[class*="fixed"] { top: 40px !important; height: calc(100vh - 40px) !important; }
+</style>
+<aside class="fixed left-0 top-0 h-screen w-72 bg-inverse-surface text-inverse-on-surface z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.08)]"><div class="flex flex-col"><div class="p-space-md border-b border-secondary/30 flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-sm text-headline-sm">L</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-surface-container-lowest leading-tight">Lexicon ELTC</span><span class="font-label-sm text-label-sm text-secondary-fixed-dim">Khulna Campus</span></div></div><div class="flex items-center justify-between mt-space-xs pt-space-xs border-t border-secondary/20"><div class="flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container-lowest/10"><span class="w-2 h-2 rounded-full bg-success animate-pulse"></span><span class="font-label-sm text-label-sm text-surface-container-lowest">Test Centre Active</span></div><span class="font-label-sm text-label-sm text-secondary-fixed-dim border border-secondary/30 px-1.5 py-0.5 rounded">BC Partner</span></div></div><nav class="flex flex-col gap-1 p-space-sm overflow-y-auto max-h-[calc(100vh-210px)]" data-active-classes="bg-secondary-container text-on-secondary-fixed font-semibold rounded-lg"><a aria-current="page" class="flex items-center gap-3 px-3 py-2 transition-colors bg-secondary-container text-on-secondary-fixed font-semibold rounded-lg" data-path="operations-overview" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span>Operations Overview</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary-fixed-dim hover:bg-surface-container-lowest/10 hover:text-surface-container-lowest transition-colors font-label-md text-label-md" data-path="course-catalog-curriculum" href="#"><span class="material-symbols-outlined text-[20px]">auto_stories</span><span>Course Catalog &amp; Curriculum</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary-fixed-dim hover:bg-surface-container-lowest/10 hover:text-surface-container-lowest transition-colors font-label-md text-label-md" data-path="student-directory" href="#"><span class="material-symbols-outlined text-[20px]">school</span><span>Student Directory</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary-fixed-dim hover:bg-surface-container-lowest/10 hover:text-surface-container-lowest transition-colors font-label-md text-label-md" data-path="enrolment-test-admissions" href="#"><span class="material-symbols-outlined text-[20px]">assignment_turned_in</span><span>Enrolment &amp; Admissions</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary-fixed-dim hover:bg-surface-container-lowest/10 hover:text-surface-container-lowest transition-colors font-label-md text-label-md" data-path="orders-financial-reconciliation" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span>Orders &amp; Finances</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary-fixed-dim hover:bg-surface-container-lowest/10 hover:text-surface-container-lowest transition-colors font-label-md text-label-md" data-path="class-exam-hall-schedules" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Schedules &amp; Exam Halls</span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-secondary-fixed-dim hover:bg-surface-container-lowest/10 hover:text-surface-container-lowest transition-colors font-label-md text-label-md" data-path="support-ticket-inbox" href="#"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px]">support_agent</span><span>Support Inbox</span></div><span class="px-1.5 py-0.2 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm">4</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary-fixed-dim hover:bg-surface-container-lowest/10 hover:text-surface-container-lowest transition-colors font-label-md text-label-md" data-path="ai-concierge-knowledge-base" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span>AI Concierge (LexiBot)</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary-fixed-dim hover:bg-surface-container-lowest/10 hover:text-surface-container-lowest transition-colors font-label-md text-label-md" data-path="staff-roles-access-control" href="#"><span class="material-symbols-outlined text-[20px]">admin_panel_settings</span><span>Roles &amp; Access</span></a><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary-fixed-dim hover:bg-surface-container-lowest/10 hover:text-surface-container-lowest transition-colors font-label-md text-label-md" data-path="system-audit-log-security" href="#"><span class="material-symbols-outlined text-[20px]">security</span><span>Audit Logs &amp; Security</span></a></nav></div><div class="p-space-sm border-t border-secondary/20 bg-inverse-surface"><div class="flex items-center justify-between px-2 py-1.5 rounded-lg bg-surface-container-lowest/5"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-fixed text-[18px]">verified</span><span class="font-label-sm text-label-sm text-secondary-fixed">NLI Tower Venue</span></div><span class="font-label-sm text-label-sm text-secondary-fixed-dim">v2.4</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl border-b border-border-subtle z-40 flex items-center justify-between px-space-lg shadow-[0_1px_8px_rgba(20,36,58,0.04)]"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[20px]">search</span><input class="w-full pl-10 pr-12 py-1.5 bg-surface-light border border-border-subtle rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-primary-container transition-all" placeholder="Search students, orders, course codes (Ctrl+K)..." type="text"/><kbd class="absolute right-2.5 top-1/2 -translate-y-1/2 font-label-sm text-label-sm text-secondary bg-surface-container-lowest border border-border-subtle px-1.5 py-0.5 rounded shadow-sm">Ctrl+K</kbd></div><div class="hidden xl:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-[16px]">event_available</span><span>Spring 2026 Active Term</span></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-border-subtle bg-surface-container-lowest text-on-surface hover:bg-surface-light font-label-sm text-label-sm" type="button"><span class="material-symbols-outlined text-[18px] text-primary-container">domain</span><span>Khulna Campus</span><span class="material-symbols-outlined text-[16px] text-secondary">expand_more</span></button><button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-primary-container hover:bg-crimson-hover text-on-primary font-label-md text-label-md font-medium shadow-sm transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>New Enrolment</span></button><button class="relative p-2 rounded-lg text-secondary hover:text-on-surface hover:bg-surface-light transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-3 pl-space-sm border-l border-border-subtle"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Md Shozibul Islam</span><span class="font-label-sm text-label-sm text-secondary">Super Admin / Head</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface-light min-h-screen"><div class="flex flex-col w-full p-space-md lg:p-space-lg gap-space-lg">
+<!-- Header & Dispatch Controls Section -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md pb-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold">Khulna NLI Campus</span>
+<span class="font-label-sm text-label-sm text-secondary">Terminal 01 • Operations Live</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Operations Overview &amp; Daily Dispatch</h1>
+<p class="font-body-md text-body-md text-secondary">Real-time admissions, British Council examination lab utilization, and academic operations for Khulna Center.</p>
+</div>
+<!-- Header Action Toolbar -->
+<div class="flex flex-wrap items-center gap-2.5">
+<div class="flex items-center gap-2 bg-surface-container-lowest px-3 py-2 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Today, 24 Feb 2026</span>
+<span class="w-1.5 h-1.5 rounded-full bg-success animate-ping ml-1"></span>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-lowest hover:bg-surface-light text-on-surface transition-colors shadow-sm font-label-md text-label-md" id="refreshBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">sync</span>
+<span>Refresh Feed</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-inverse-surface hover:bg-secondary text-surface-container-lowest transition-colors shadow-sm font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Export Daily Dispatch</span>
+</button>
+</div>
+</div>
+<!-- Top Operational Metric Cards (4 Cards Grid) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Card 1: Active Enrolments -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-secondary font-medium">Active Enrolments</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold mt-1">1,284 <span class="font-body-sm text-body-sm text-secondary font-normal">Students</span></span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">school</span>
+</div>
+</div>
+<div class="mt-4 pt-3 bg-surface-light -mx-space-md -mb-space-md px-space-md py-2.5 flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-success font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +8.2% vs last term
+          </span>
+<span class="text-secondary">Khulna Campus</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary truncate">412 IELTS • 510 ESL • 192 PTE • 170 YLE</p>
+</div>
+</div>
+<!-- Card 2: Lab Seat Occupancy -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-secondary font-medium">Today's Lab Seat Occupancy</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold mt-1">93.3% <span class="font-body-sm text-body-sm text-success font-semibold">Utilised</span></span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-success/10 flex items-center justify-center text-success">
+<span class="material-symbols-outlined text-[22px]">devices</span>
+</div>
+</div>
+<div class="mt-4 pt-3 bg-surface-light -mx-space-md -mb-space-md px-space-md py-2.5 flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-semibold">14/15 Exam Stations Active</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">NLI Hall A</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary truncate">2 upcoming British Council official test slots</p>
+</div>
+</div>
+<!-- Card 3: Pending Reconciliation -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-secondary font-medium">Pending Reconciliation</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold mt-1">18 <span class="font-body-sm text-body-sm text-warning font-semibold">Transactions</span></span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-warning/10 flex items-center justify-center text-warning">
+<span class="material-symbols-outlined text-[22px]">account_balance_wallet</span>
+</div>
+</div>
+<div class="mt-4 pt-3 bg-surface-light -mx-space-md -mb-space-md px-space-md py-2.5 flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-semibold">BDT 142,500 Unverified</span>
+<span class="text-warning font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Manual
+          </span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary truncate">bKash, Nagad &amp; Premier Bank deposits</p>
+</div>
+</div>
+<!-- Card 4: Support Queue -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-secondary font-medium">Unresolved Support</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold mt-1">7 <span class="font-body-sm text-body-sm text-primary font-semibold">Open Tickets</span></span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-primary-container/15 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">headset_mic</span>
+</div>
+</div>
+<div class="mt-4 pt-3 bg-surface-light -mx-space-md -mb-space-md px-space-md py-2.5 flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-primary font-bold">2 High Priority (LMS access)</span>
+<span class="text-secondary">Avg 18m</span>
+</div>
+<p class="font-label-sm text-label-sm text-secondary truncate">Live Concierge LexiBot resolving 14 queries</p>
+</div>
+</div>
+</div>
+<!-- Main Operational Grid: 65% / 35% Split -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+<!-- LEFT COLUMN: Hall Status & Admissions Queue (approx. 65% on Desktop) -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<!-- Exam Hall Live Interactive Grid Map -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-4">
+<!-- Hall Header & Controls -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 bg-surface-light -mx-space-md -mt-space-md p-space-md rounded-t-xl">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-inverse-surface flex items-center justify-center text-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-[20px]">desktop_windows</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">NLI Tower Lab A — Official Exam Hall</h2>
+<span class="px-2 py-0.5 rounded bg-success/10 text-success font-label-sm text-label-sm font-semibold">Live Feed</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Computer-Delivered IELTS, PTE Academic &amp; BC Mock Sessions</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">timer</span>
+<span class="font-label-sm text-label-sm text-secondary">Next Slot:</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">14:00 (Mock #4)</span>
+</div>
+</div>
+</div>
+<!-- Invigilators on Floor -->
+<div class="flex flex-wrap items-center justify-between gap-2 p-2.5 bg-surface-container-low rounded-lg font-label-sm text-label-sm">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">badge</span>
+<span class="text-secondary">Official Invigilators on Floor:</span>
+<span class="font-semibold text-on-surface">Md Shozibul Islam</span> &amp; <span class="font-semibold text-on-surface">Nawshin Tarannum</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 text-secondary"><span class="w-2.5 h-2.5 rounded-full bg-success"></span> In Session (11)</span>
+<span class="flex items-center gap-1 text-secondary"><span class="w-2.5 h-2.5 rounded-full bg-warning"></span> Ready (2)</span>
+<span class="flex items-center gap-1 text-secondary"><span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span> Calibration (1)</span>
+<span class="flex items-center gap-1 text-secondary"><span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim"></span> Idle (1)</span>
+</div>
+</div>
+<!-- Hall Visual Floor Matrix: 15 Terminals Layout -->
+<div class="p-4 bg-surface-light rounded-lg flex flex-col gap-4">
+<!-- Room Orientation Marker -->
+<div class="flex items-center justify-center py-1.5 bg-surface-container rounded font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">
+<span class="material-symbols-outlined text-[16px] mr-1">sensor_occupied</span>
+            Invigilator Desk &amp; Biometric Iris Station (North)
+          </div>
+<!-- 15 Pods Grid (5 cols x 3 rows) -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3" id="stationGrid">
+<!-- Station 01 -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-2 cursor-pointer group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Station 01</span>
+<span class="w-2.5 h-2.5 rounded-full bg-success"></span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-success">laptop_mac</span>
+<span class="font-label-sm text-label-sm font-medium">IELTS CD</span>
+</div>
+<div class="text-[11px] font-label-sm text-secondary truncate">Cand: S. Haque</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-success h-full rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<!-- Station 02 -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-2 cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Station 02</span>
+<span class="w-2.5 h-2.5 rounded-full bg-success"></span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-success">laptop_mac</span>
+<span class="font-label-sm text-label-sm font-medium">IELTS CD</span>
+</div>
+<div class="text-[11px] font-label-sm text-secondary truncate">Cand: R. Karim</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-success h-full rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<!-- Station 03 -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-2 cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Station 03</span>
+<span class="w-2.5 h-2.5 rounded-full bg-success"></span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-success">laptop_mac</span>
+<span class="font-label-sm text-label-sm font-medium">IELTS CD</span>
+</div>
+<div class="text-[11px] font-label-sm text-secondary truncate">Cand: M. Billah</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-success h-full rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<!-- Station 04 -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-2 cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Station 04</span>
+<span class="w-2.5 h-2.5 rounded-full bg-warning"></span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-warning">lock_open</span>
+<span class="font-label-sm text-label-sm font-medium text-warning">Check-In</span>
+</div>
+<div class="text-[11px] font-label-sm text-secondary truncate">Cand: T. Jaman</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-warning h-full rounded-full" style="width: 15%"></div>
+</div>
+</div>
+<!-- Station 05 (Calibration Required) -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-2 cursor-pointer bg-error-container/20">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary-container">Station 05</span>
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></span>
+</div>
+<div class="flex items-center gap-1.5 text-primary-container">
+<span class="material-symbols-outlined text-[16px]">headset_off</span>
+<span class="font-label-sm text-label-sm font-bold">Audio Calib</span>
+</div>
+<div class="text-[11px] font-label-sm text-error font-medium truncate">Mic dB Variance</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<!-- Station 06 -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-2 cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Station 06</span>
+<span class="w-2.5 h-2.5 rounded-full bg-success"></span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-success">laptop_mac</span>
+<span class="font-label-sm text-label-sm font-medium">PTE Pearson</span>
+</div>
+<div class="text-[11px] font-label-sm text-secondary truncate">Cand: N. Tasnim</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-success h-full rounded-full" style="width: 45%"></div>
+</div>
+</div>
+<!-- Station 07 -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-2 cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Station 07</span>
+<span class="w-2.5 h-2.5 rounded-full bg-success"></span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-success">laptop_mac</span>
+<span class="font-label-sm text-label-sm font-medium">PTE Pearson</span>
+</div>
+<div class="text-[11px] font-label-sm text-secondary truncate">Cand: Z. Hasan</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-success h-full rounded-full" style="width: 45%"></div>
+</div>
+</div>
+<!-- Station 08 -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-2 cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Station 08</span>
+<span class="w-2.5 h-2.5 rounded-full bg-success"></span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-success">laptop_mac</span>
+<span class="font-label-sm text-label-sm font-medium">PTE Pearson</span>
+</div>
+<div class="text-[11px] font-label-sm text-secondary truncate">Cand: K. Anam</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-success h-full rounded-full" style="width: 45%"></div>
+</div>
+</div>
+<!-- Station 09 -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-2 cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Station 09</span>
+<span class="w-2.5 h-2.5 rounded-full bg-success"></span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-success">laptop_mac</span>
+<span class="font-label-sm text-label-sm font-medium">PTE Pearson</span>
+</div>
+<div class="text-[11px] font-label-sm text-secondary truncate">Cand: P. Roy</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-success h-full rounded-full" style="width: 45%"></div>
+</div>
+</div>
+<!-- Station 10 -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-2 cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Station 10</span>
+<span class="w-2.5 h-2.5 rounded-full bg-warning"></span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-warning">lock_open</span>
+<span class="font-label-sm text-label-sm font-medium text-warning">Check-In</span>
+</div>
+<div class="text-[11px] font-label-sm text-secondary truncate">Cand: F. Begum</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-warning h-full rounded-full" style="width: 10%"></div>
+</div>
+</div>
+<!-- Station 11 -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-2 cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Station 11</span>
+<span class="w-2.5 h-2.5 rounded-full bg-success"></span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-success">laptop_mac</span>
+<span class="font-label-sm text-label-sm font-medium">IELTS CD</span>
+</div>
+<div class="text-[11px] font-label-sm text-secondary truncate">Cand: O. Faruk</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-success h-full rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<!-- Station 12 -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-2 cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Station 12</span>
+<span class="w-2.5 h-2.5 rounded-full bg-success"></span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-success">laptop_mac</span>
+<span class="font-label-sm text-label-sm font-medium">IELTS CD</span>
+</div>
+<div class="text-[11px] font-label-sm text-secondary truncate">Cand: A. Chowdhury</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-success h-full rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<!-- Station 13 -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-2 cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Station 13</span>
+<span class="w-2.5 h-2.5 rounded-full bg-success"></span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-success">laptop_mac</span>
+<span class="font-label-sm text-label-sm font-medium">IELTS CD</span>
+</div>
+<div class="text-[11px] font-label-sm text-secondary truncate">Cand: R. Sarker</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-success h-full rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<!-- Station 14 -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-2 cursor-pointer">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Station 14</span>
+<span class="w-2.5 h-2.5 rounded-full bg-success"></span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px] text-success">laptop_mac</span>
+<span class="font-label-sm text-label-sm font-medium">IELTS CD</span>
+</div>
+<div class="text-[11px] font-label-sm text-secondary truncate">Cand: S. Bristy</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-success h-full rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<!-- Station 15 (Idle / Cleaned) -->
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm hover:shadow-md transition-all flex flex-col gap-2 cursor-pointer opacity-75">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-secondary">Station 15</span>
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-fixed-dim"></span>
+</div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">power_settings_new</span>
+<span class="font-label-sm text-label-sm font-medium">Standby / Clean</span>
+</div>
+<div class="text-[11px] font-label-sm text-secondary truncate">Sanitized 11:15</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full rounded-full" style="width: 0%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Diagnostic & Audio Calibration Action Banner -->
+<div class="flex flex-col sm:flex-row items-center justify-between p-3 rounded-lg bg-surface-container-high gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">warning</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Lab Terminal 05 reported audio noise during pre-exam microphone check.</span>
+</div>
+<button class="px-3 py-1 bg-surface-container-lowest hover:bg-surface-light text-primary-container rounded font-label-sm text-label-sm font-bold shadow-sm whitespace-nowrap transition-colors" type="button">
+            Run Noise Floor Test
+          </button>
+</div>
+</div>
+<!-- Admissions & Enrolment Applications Queue -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Recent Admissions &amp; Enrolment Applications</h2>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-bold">Queue (5 pending)</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Real-time candidate intake from website portal and Khulna front desk.</p>
+</div>
+<a class="font-label-md text-label-md text-primary font-semibold hover:underline flex items-center gap-1" href="#">
+<span>View All Applications</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</a>
+</div>
+<!-- Applicants Compact Table -->
+<div class="overflow-x-auto -mx-space-md px-space-md">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-light text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<tr>
+<th class="py-3 px-3 rounded-l-lg">Applicant &amp; Student ID</th>
+<th class="py-3 px-3">Selected Course &amp; Cohort</th>
+<th class="py-3 px-3">Enrolment Mode</th>
+<th class="py-3 px-3">Payment Status</th>
+<th class="py-3 px-3 text-right rounded-r-lg">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Applicant 1 -->
+<tr class="hover:bg-surface-light/60 transition-colors">
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-fixed font-bold flex items-center justify-center font-label-md text-label-md">
+                      TA
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Tanvir Ahmed</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">LEX-2026-0891</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">IELTS Signature Band 7.5+</span>
+<span class="font-label-sm text-label-sm text-secondary">Batch IELTS-M-24 (Evening)</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">
+<span class="material-symbols-outlined text-[14px] text-primary">location_city</span>
+                    Computer Lab
+                  </span>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-success/10 text-success font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Verified (Bkash)
+                  </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="px-3 py-1.5 bg-primary-container hover:bg-crimson-hover text-on-primary font-label-sm text-label-sm font-semibold rounded-lg shadow-sm transition-colors" type="button">
+                    Issue LMS ID
+                  </button>
+</td>
+</tr>
+<!-- Applicant 2 -->
+<tr class="hover:bg-surface-light/60 transition-colors">
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface font-bold flex items-center justify-center font-label-md text-label-md">
+                      SA
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Sumaiya Akhter</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">LEX-2026-0892</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">PTE Academic Intensive</span>
+<span class="font-label-sm text-label-sm text-secondary">Cohort PTE-26A (Weekend)</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">
+<span class="material-symbols-outlined text-[14px] text-primary">location_city</span>
+                    Computer Lab
+                  </span>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-warning/15 text-warning font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">pending</span>
+                    Pending Nagad Slip
+                  </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-variant text-on-surface font-label-sm text-label-sm font-semibold rounded-lg transition-colors" type="button">
+                    Review Slip
+                  </button>
+</td>
+</tr>
+<!-- Applicant 3 -->
+<tr class="hover:bg-surface-light/60 transition-colors">
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-fixed font-bold flex items-center justify-center font-label-md text-label-md">
+                      FK
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Farhan Kabir</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">LEX-2026-0893</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">ESL Premium Spoken Group</span>
+<span class="font-label-sm text-label-sm text-secondary">Lounge Executive Class</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">
+<span class="material-symbols-outlined text-[14px] text-tertiary">groups</span>
+                    In-Person Lounge
+                  </span>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-success/10 text-success font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Verified (Cash)
+                  </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="px-3 py-1.5 bg-primary-container hover:bg-crimson-hover text-on-primary font-label-sm text-label-sm font-semibold rounded-lg shadow-sm transition-colors" type="button">
+                    Issue LMS ID
+                  </button>
+</td>
+</tr>
+<!-- Applicant 4 -->
+<tr class="hover:bg-surface-light/60 transition-colors">
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface font-bold flex items-center justify-center font-label-md text-label-md">
+                      NM
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Nabila Mehzabin</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">LEX-2026-0894</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Online IELTS Fast-Track</span>
+<span class="font-label-sm text-label-sm text-secondary">Global Zoom Hybrid Batch</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+                    Live Online
+                  </span>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-success/10 text-success font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    Verified (Bank Card)
+                  </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="px-3 py-1.5 bg-primary-container hover:bg-crimson-hover text-on-primary font-label-sm text-label-sm font-semibold rounded-lg shadow-sm transition-colors" type="button">
+                    Issue LMS ID
+                  </button>
+</td>
+</tr>
+<!-- Applicant 5 -->
+<tr class="hover:bg-surface-light/60 transition-colors">
+<td class="py-3.5 px-3">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-container text-on-secondary-fixed font-bold flex items-center justify-center font-label-md text-label-md">
+                      RI
+                    </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Rafiul Islam</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">LEX-2026-0895</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface">Cambridge Young Learners English</span>
+<span class="font-label-sm text-label-sm text-secondary">Junior Movers Level 2</span>
+</div>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">
+<span class="material-symbols-outlined text-[14px] text-primary">location_city</span>
+                    Computer Lab
+                  </span>
+</td>
+<td class="py-3.5 px-3">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">cancel</span>
+                    Card Failed
+                  </span>
+</td>
+<td class="py-3.5 px-3 text-right">
+<button class="px-3 py-1.5 bg-surface-container hover:bg-surface-variant text-on-surface font-label-sm text-label-sm font-semibold rounded-lg transition-colors" type="button">
+                    Resend Link
+                  </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Alerts, Schedules & Quick Actions (approx. 35% on Desktop) -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- Urgent Action Alerts -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-3">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">notifications_active</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Urgent Operational Alerts</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-bold">3 Action Items</span>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Alert 1 (Warning) -->
+<div class="p-3 rounded-lg bg-surface-light border-l-4 border-warning flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-warning uppercase tracking-wide">Capacity Ceiling</span>
+<span class="font-label-sm text-label-sm text-secondary">10m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">Batch IELTS-M-24 capacity reached (20/20 seats). Waitlist enabled for 4 students.</p>
+<div class="mt-1 flex items-center gap-2">
+<button class="font-label-sm text-label-sm text-primary font-bold hover:underline" type="button">Open Second Section</button>
+<span class="text-secondary">•</span>
+<button class="font-label-sm text-label-sm text-secondary hover:text-on-surface" type="button">Dismiss</button>
+</div>
+</div>
+<!-- Alert 2 (Info) -->
+<div class="p-3 rounded-lg bg-surface-light border-l-4 border-tertiary-container flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-tertiary uppercase tracking-wide">BC Portal Sync</span>
+<span class="font-label-sm text-label-sm text-secondary">08:30 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">British Council Cambridge Mock exam papers synced successfully for today's 14:00 session.</p>
+</div>
+<!-- Alert 3 (Action Required / Refund) -->
+<div class="p-3 rounded-lg bg-surface-light border-l-4 border-primary-container flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary-container uppercase tracking-wide">Managerial Approval</span>
+<span class="font-label-sm text-label-sm text-secondary">Urgent</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">3 student course-change / refund requests awaiting managerial sign-off.</p>
+<div class="mt-1 flex items-center gap-2">
+<a class="font-label-sm text-label-sm text-primary font-bold hover:underline" href="#">Review &amp; Authorize</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Faculty On Duty & Daily Class Schedule -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-4">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">co_present</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Faculty on Duty &amp; Live Batches</h3>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">Khulna NLI</span>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Item 1 -->
+<div class="flex items-start gap-3 p-3 rounded-lg bg-surface-light hover:bg-surface-container-low transition-colors">
+<div class="flex flex-col items-center justify-center min-w-[58px] py-1 bg-surface-container-lowest rounded shadow-sm text-on-surface">
+<span class="font-label-sm text-label-sm font-bold text-primary">10:00</span>
+<span class="font-label-sm text-label-sm text-secondary">12:00</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">IELTS Band 7.5+ Masterclass</span>
+<span class="px-1.5 py-0.5 rounded bg-success/10 text-success font-label-sm text-label-sm font-semibold">Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">meeting_room</span>
+<span>Computer Lab 1</span>
+</p>
+<div class="flex items-center gap-2 mt-1.5 font-label-sm text-label-sm text-on-surface">
+<div class="w-5 h-5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[11px] font-bold flex items-center justify-center">AS</div>
+<span class="font-medium text-secondary">Instructor:</span>
+<span class="font-semibold">Afrin Shruti</span>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start gap-3 p-3 rounded-lg bg-surface-light hover:bg-surface-container-low transition-colors">
+<div class="flex flex-col items-center justify-center min-w-[58px] py-1 bg-surface-container-lowest rounded shadow-sm text-on-surface">
+<span class="font-label-sm text-label-sm font-bold text-primary">11:30</span>
+<span class="font-label-sm text-label-sm text-secondary">01:00</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Spoken English Pronunciation</span>
+<span class="px-1.5 py-0.5 rounded bg-success/10 text-success font-label-sm text-label-sm font-semibold">Active</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">meeting_room</span>
+<span>Language Lounge B</span>
+</p>
+<div class="flex items-center gap-2 mt-1.5 font-label-sm text-label-sm text-on-surface">
+<div class="w-5 h-5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[11px] font-bold flex items-center justify-center">FJ</div>
+<span class="font-medium text-secondary">Instructor:</span>
+<span class="font-semibold">Farjana Jahan</span>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-start gap-3 p-3 rounded-lg bg-surface-light hover:bg-surface-container-low transition-colors">
+<div class="flex flex-col items-center justify-center min-w-[58px] py-1 bg-surface-container-lowest rounded shadow-sm text-on-surface">
+<span class="font-label-sm text-label-sm font-bold text-secondary">02:00</span>
+<span class="font-label-sm text-label-sm text-secondary">04:00</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">PTE Algorithm Simulation</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm font-semibold">Upcoming</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">meeting_room</span>
+<span>Exam Hall Lab A</span>
+</p>
+<div class="flex items-center gap-2 mt-1.5 font-label-sm text-label-sm text-on-surface">
+<div class="w-5 h-5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[11px] font-bold flex items-center justify-center">DB</div>
+<span class="font-medium text-secondary">Instructor:</span>
+<span class="font-semibold">Diganggana Barai</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Operational Action Buttons -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-3">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold pb-1">Quick Operational Actions</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+<!-- Button 1: Walk-in Student -->
+<button class="flex items-center gap-2.5 p-3 rounded-lg bg-surface-light hover:bg-surface-container-low text-on-surface font-label-md text-label-md font-semibold transition-all text-left group" type="button">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+</div>
+<span class="leading-tight">+ Walk-in Enrolment</span>
+</button>
+<!-- Button 2: Issue Mock Voucher -->
+<button class="flex items-center gap-2.5 p-3 rounded-lg bg-surface-light hover:bg-surface-container-low text-on-surface font-label-md text-label-md font-semibold transition-all text-left group" type="button">
+<div class="w-8 h-8 rounded-lg bg-inverse-surface text-surface-container-lowest flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[18px]">confirmation_number</span>
+</div>
+<span class="leading-tight">Issue Mock Voucher</span>
+</button>
+<!-- Button 3: Broadcast Notice -->
+<button class="flex items-center gap-2.5 p-3 rounded-lg bg-surface-light hover:bg-surface-container-low text-on-surface font-label-md text-label-md font-semibold transition-all text-left group" type="button">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container text-on-tertiary flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+</div>
+<span class="leading-tight">Broadcast Center Notice</span>
+</button>
+<!-- Button 4: Emergency Reschedule -->
+<button class="flex items-center gap-2.5 p-3 rounded-lg bg-surface-light hover:bg-surface-container-low text-on-surface font-label-md text-label-md font-semibold transition-all text-left group" type="button">
+<div class="w-8 h-8 rounded-lg bg-error-container text-on-error-container flex items-center justify-center group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[18px]">edit_calendar</span>
+</div>
+<span class="leading-tight">Emergency Reschedule</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive feedback for Refresh Button
+  document.getElementById('refreshBtn')?.addEventListener('click', function() {
+    const icon = this.querySelector('.material-symbols-outlined');
+    if (icon) {
+      icon.classList.add('animate-spin');
+      setTimeout(() => {
+        icon.classList.remove('animate-spin');
+      }, 700);
+    }
+  });
+</script></main></div></body></html>

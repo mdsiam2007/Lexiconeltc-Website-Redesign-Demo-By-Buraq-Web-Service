@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lexiconeltc Website Redesign Demo | By Buraq Web Service</title>
+  <meta name="description" content="Lexiconeltc Website Redesign Demo Presentation by Buraq Web Service. Comprehensive showcase of all 23 redesigned pages, interactive previews, and high-fidelity mockups." />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            crimson: {
+              50: '#fff1f2',
+              100: '#ffe4e6',
+              200: '#fecdd3',
+              500: '#e11d48',
+              600: '#be123c',
+              700: '#b20120', // Brand Primary Canadian Crimson
+              800: '#9f1239',
+              900: '#881337',
+              hover: '#930018',
+            },
+            navy: {
+              800: '#14243a',
+              900: '#0e1d2b', // Deep brand surface
+              950: '#08121d',
+            },
+            surface: '#f8f9ff',
+          },
+          fontFamily: {
+            display: ['Lexend', 'sans-serif'],
+            body: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #f8f9ff;
+      color: #0e1d2b;
+    }
+    .font-display {
+      font-family: 'Lexend', sans-serif;
+    }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    }
+    .glass-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px -8px rgba(14, 29, 43, 0.08), 0 4px 12px -2px rgba(178, 1, 32, 0.06);
+      border-color: #fecdd3;
+    }
+    .crimson-gradient {
+      background: linear-gradient(135deg, #b20120 0%, #d62835 50%, #881337 100%);
+    }
+    .crimson-subtle-gradient {
+      background: radial-gradient(circle at top right, rgba(178, 1, 32, 0.06) 0%, transparent 60%),
+                  radial-gradient(circle at bottom left, rgba(14, 29, 43, 0.03) 0%, transparent 50%);
+    }
+    /* Custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="crimson-subtle-gradient min-h-screen flex flex-col antialiased">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-navy-900 text-white text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="font-medium">Client Presentation Portal: Lexiconeltc Website Redesign</span>
+        <span class="text-slate-400 hidden sm:inline">|</span>
+        <span class="text-slate-300 hidden sm:inline">23 High-Fidelity Interactive Pages Ready for Review</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-slate-400">Agency:</span>
+        <a href="https://buraqwebservice.com/" target="_blank" rel="noopener noreferrer" class="font-semibold text-rose-300 hover:text-white transition-colors flex items-center gap-1">
+          Buraq Web Service
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 glass-nav shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <!-- Brand & Project Title -->
+      <div class="flex items-center gap-4">
+        <div class="w-11 h-11 rounded-xl bg-crimson-700 text-white flex items-center justify-center font-display font-extrabold text-xl shadow-md shadow-crimson-700/20">
+          L
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="font-display font-bold text-lg sm:text-xl text-navy-900 leading-tight">
+              Lexiconeltc Website Redesign Demo
+            </h1>
+            <span class="hidden md:inline-flex px-2.5 py-0.5 rounded-full text-xs font-semibold bg-crimson-100 text-crimson-700">
+              v2.0 Redesign
+            </span>
+          </div>
+          <p class="text-xs text-slate-500 font-medium">
+            Crafted for Lexicon ELTC by 
+            <a href="https://buraqwebservice.com/" target="_blank" rel="noopener noreferrer" class="text-crimson-700 hover:underline font-semibold">
+              Buraq Web Service
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Action CTAs -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="lexicon_eltc_homepage_desktop_1440px/code.html" target="_blank" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg text-sm font-semibold text-navy-900 bg-slate-100 hover:bg-slate-200 transition-colors">
+          <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+          <span class="hidden sm:inline">View</span> Homepage
+        </a>
+        <a href="https://buraqwebservice.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg text-sm font-semibold text-white bg-crimson-700 hover:bg-crimson-hover shadow-md shadow-crimson-700/25 transition-all">
+          <span>buraqwebservice.com</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-10 pb-12 px-4 sm:px-6 lg:px-8 border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-rose-50 border border-rose-200 text-crimson-700 mb-4">
+          <span class="w-1.5 h-1.5 rounded-full bg-crimson-600"></span>
+          Official Client Demo & Review Portal
+        </div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-navy-900 tracking-tight leading-[1.15]">
+          Lexiconeltc Website Redesign Demo
+          <span class="block text-transparent bg-clip-text crimson-gradient mt-1">
+            By Buraq Web Service
+          </span>
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+          Welcome to the comprehensive design demonstration for <strong class="text-navy-900">Lexicon Language Training Centre (ELTC)</strong>. Below you can explore every single redesigned page — test live interactive mockups, review pixel-perfect full-length designs, and experience the modern Canadian Crimson academic visual identity.
+        </p>
+
+        <!-- Feature Pills -->
+        <div class="mt-6 flex flex-wrap items-center gap-3 text-xs sm:text-sm font-medium text-slate-700">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 shadow-sm">
+            <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+            23 Comprehensive Screens
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 shadow-sm">
+            <svg class="w-4 h-4 text-indigo-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+            Interactive Live Code & Mockups
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 shadow-sm">
+            <svg class="w-4 h-4 text-crimson-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+            Full Student Portal & Checkout Flows
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 shadow-sm">
+            <svg class="w-4 h-4 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+            Desktop & Mobile Responsive
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTROL PANEL: FILTERS, SEARCH, VIEW TOGGLE -->
+  <section class="sticky top-20 z-30 bg-surface/95 backdrop-blur-md border-b border-slate-200/80 py-4 px-4 sm:px-6 lg:px-8 shadow-xs">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <!-- Category Tabs -->
+      <div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 text-sm no-scrollbar">
+        <button onclick="setFilter('all')" id="tab-all" class="filter-tab px-3.5 py-1.5 rounded-lg font-semibold bg-crimson-700 text-white shadow-sm transition-all whitespace-nowrap">
+          All Screens <span class="ml-1 text-xs px-1.5 py-0.5 rounded-full bg-white/20">23</span>
+        </button>
+        <button onclick="setFilter('core')" id="tab-core" class="filter-tab px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-navy-900 hover:bg-slate-100 transition-all whitespace-nowrap">
+          Core Website <span class="ml-1 text-xs px-1.5 py-0.5 rounded-full bg-slate-200 text-slate-700">5</span>
+        </button>
+        <button onclick="setFilter('courses')" id="tab-courses" class="filter-tab px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-navy-900 hover:bg-slate-100 transition-all whitespace-nowrap">
+          Courses & Academic <span class="ml-1 text-xs px-1.5 py-0.5 rounded-full bg-slate-200 text-slate-700">6</span>
+        </button>
+        <button onclick="setFilter('checkout')" id="tab-checkout" class="filter-tab px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-navy-900 hover:bg-slate-100 transition-all whitespace-nowrap">
+          Enrollment & Checkout <span class="ml-1 text-xs px-1.5 py-0.5 rounded-full bg-slate-200 text-slate-700">4</span>
+        </button>
+        <button onclick="setFilter('portal')" id="tab-portal" class="filter-tab px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-navy-900 hover:bg-slate-100 transition-all whitespace-nowrap">
+          Student Portal & Auth <span class="ml-1 text-xs px-1.5 py-0.5 rounded-full bg-slate-200 text-slate-700">6</span>
+        </button>
+        <button onclick="setFilter('ai')" id="tab-ai" class="filter-tab px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-navy-900 hover:bg-slate-100 transition-all whitespace-nowrap">
+          AI Assistant <span class="ml-1 text-xs px-1.5 py-0.5 rounded-full bg-slate-200 text-slate-700">2</span>
+        </button>
+      </div>
+
+      <!-- Search & Layout Mode -->
+      <div class="flex items-center gap-3">
+        <!-- Search Input -->
+        <div class="relative w-full sm:w-64">
+          <input 
+            type="text" 
+            id="searchInput" 
+            placeholder="Search screens..." 
+            oninput="handleSearch()"
+            class="w-full pl-9 pr-4 py-2 text-sm bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-crimson-600/20 focus:border-crimson-600 transition-all"
+          />
+          <svg class="w-4 h-4 text-slate-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </div>
+
+        <!-- Quick View Toggle -->
+        <div class="hidden sm:flex items-center bg-white border border-slate-200 rounded-lg p-0.5 text-slate-500">
+          <button onclick="setViewMode('grid')" id="viewModeGrid" class="p-1.5 rounded bg-slate-100 text-navy-900" title="Card Grid View">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+          </button>
+          <button onclick="setViewMode('list')" id="viewModeList" class="p-1.5 rounded hover:text-navy-900" title="Compact List View">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN GALLERY CONTENT -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    
+    <!-- Results Header -->
+    <div class="flex items-center justify-between mb-6">
+      <div class="flex items-center gap-2">
+        <h3 id="galleryTitle" class="font-display font-bold text-xl text-navy-900">All Redesign Pages</h3>
+        <span id="screenCountBadge" class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-200 text-slate-700">Showing 23 screens</span>
+      </div>
+      <div class="text-xs text-slate-500">
+        💡 Tip: Click <strong>"Live Interactive"</strong> to preview interactive HTML or <strong>"Hi-Res Mockup"</strong> for full screenshot.
+      </div>
+    </div>
+
+    <!-- GRID VIEW -->
+    <div id="gridContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Generated via JS -->
+    </div>
+
+    <!-- LIST VIEW (Hidden by default) -->
+    <div id="listContainer" class="hidden flex-col gap-3">
+      <!-- Generated via JS -->
+    </div>
+
+    <!-- NO RESULTS FOUND -->
+    <div id="noResults" class="hidden text-center py-16">
+      <div class="w-16 h-16 rounded-full bg-slate-100 text-slate-400 mx-auto flex items-center justify-center mb-3">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      </div>
+      <h4 class="font-display font-semibold text-lg text-navy-900">No matching screens found</h4>
+      <p class="text-sm text-slate-500 mt-1">Try searching for a different keyword or select another category.</p>
+      <button onclick="setFilter('all'); document.getElementById('searchInput').value=''; handleSearch();" class="mt-4 px-4 py-2 rounded-lg text-xs font-semibold bg-crimson-700 text-white hover:bg-crimson-hover">
+        Reset All Filters
+      </button>
+    </div>
+
+  </main>
+
+  <!-- INTERACTIVE LIVE PREVIEW MODAL (WITH RESPONSIVE DEVICE TOGGLE) -->
+  <div id="previewModal" class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-md flex flex-col justify-between p-2 sm:p-4 transition-all">
+    <!-- Modal Header -->
+    <div class="bg-white rounded-t-xl px-4 py-3 flex items-center justify-between border-b border-slate-200 gap-4 shrink-0">
+      <div class="flex items-center gap-3 truncate">
+        <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+        <div class="truncate">
+          <h4 id="modalTitle" class="font-display font-bold text-navy-900 text-sm sm:text-base truncate">Page Preview</h4>
+          <p id="modalPath" class="text-xs text-slate-500 font-mono truncate">path/to/code.html</p>
+        </div>
+      </div>
+
+      <!-- Responsive Viewport Switcher -->
+      <div class="hidden md:flex items-center bg-slate-100 p-1 rounded-lg border border-slate-200 text-xs font-medium text-slate-600 gap-1">
+        <button onclick="setModalDevice('100%')" id="device-full" class="device-btn px-2.5 py-1 rounded bg-white text-navy-900 shadow-xs font-semibold">
+          Desktop (100%)
+        </button>
+        <button onclick="setModalDevice('1024px')" id="device-laptop" class="device-btn px-2.5 py-1 rounded hover:text-navy-900">
+          Laptop (1024px)
+        </button>
+        <button onclick="setModalDevice('768px')" id="device-tablet" class="device-btn px-2.5 py-1 rounded hover:text-navy-900">
+          Tablet (768px)
+        </button>
+        <button onclick="setModalDevice('390px')" id="device-mobile" class="device-btn px-2.5 py-1 rounded hover:text-navy-900">
+          Mobile (390px)
+        </button>
+      </div>
+
+      <!-- Modal Actions -->
+      <div class="flex items-center gap-2 shrink-0">
+        <a id="modalExternalLink" href="#" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 text-navy-900 transition-colors">
+          <span>Open Fullscreen</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+        </a>
+        <button onclick="closePreviewModal()" class="w-8 h-8 rounded-lg bg-slate-100 hover:bg-rose-100 hover:text-rose-700 flex items-center justify-center text-slate-600 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Iframe Container -->
+    <div onclick="if(event.target === this) closePreviewModal()" class="flex-1 bg-slate-900/40 flex items-center justify-center overflow-hidden p-2 rounded-b-xl cursor-pointer">
+      <div id="iframeWrapper" class="w-full h-full bg-white rounded-lg shadow-2xl transition-all duration-300 overflow-hidden flex flex-col cursor-default">
+        <iframe id="previewIframe" src="" class="w-full h-full border-0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- HI-RES IMAGE LIGHTBOX MODAL -->
+  <div id="imageLightbox" onclick="if(event.target === this || event.target.id === 'lightboxScrollArea') closeLightbox()" class="fixed inset-0 z-50 hidden bg-navy-950/90 backdrop-blur-md flex flex-col justify-between p-3 sm:p-6 transition-all">
+    <div class="flex items-center justify-between text-white pb-3 border-b border-white/10 shrink-0">
+      <div>
+        <h4 id="lightboxTitle" class="font-display font-bold text-lg text-white">Full Screen Mockup</h4>
+        <p id="lightboxSubtitle" class="text-xs text-slate-400">High-Fidelity Render</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <a id="lightboxDownloadLink" href="#" target="_blank" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors">
+          Open Image in Tab
+        </a>
+        <button onclick="closeLightbox()" class="px-3 py-1.5 rounded-lg bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold flex items-center gap-1 transition-colors">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          <span>Close</span>
+        </button>
+      </div>
+    </div>
+    <div id="lightboxScrollArea" class="flex-1 overflow-auto flex items-start justify-center p-2 sm:p-6 cursor-zoom-out">
+      <img id="lightboxImage" src="" alt="Full Mockup" class="max-w-full rounded-lg shadow-2xl border border-white/10 object-contain mx-auto my-auto cursor-default" />
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-navy-900 text-white mt-16 border-t border-navy-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center justify-between">
+        <div class="md:col-span-7">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-8 h-8 rounded-lg bg-crimson-700 text-white flex items-center justify-center font-display font-bold text-sm">
+              L
+            </div>
+            <span class="font-display font-bold text-lg text-white tracking-tight">Lexiconeltc Website Redesign Demo</span>
+          </div>
+          <p class="text-sm text-slate-300 max-w-xl leading-relaxed">
+            This presentation portal has been prepared specifically for the client review of the new Lexicon Language Training Centre website. Designed with the Canadian Crimson Academic aesthetic, offering modern course discovery, online registration, student portal, and AI support.
+          </p>
+          <div class="mt-4 flex items-center gap-4 text-xs text-slate-400">
+            <span>Client: Lexicon ELTC</span>
+            <span>•</span>
+            <span>Agency: Buraq Web Service</span>
+            <span>•</span>
+            <span>Design Year: 2026</span>
+          </div>
+        </div>
+
+        <div class="md:col-span-5 flex flex-col md:items-end justify-center">
+          <div class="bg-navy-800/80 p-5 rounded-2xl border border-navy-700/60 max-w-sm w-full">
+            <span class="text-xs uppercase tracking-wider text-rose-300 font-semibold block mb-1">Presented by</span>
+            <h5 class="font-display font-bold text-white text-base">Buraq Web Service</h5>
+            <p class="text-xs text-slate-300 mt-1 mb-4 leading-relaxed">
+              Professional Web Development, UI/UX Engineering & Digital Solutions.
+            </p>
+            <a href="https://buraqwebservice.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-xs font-semibold text-white bg-crimson-700 hover:bg-crimson-hover transition-colors shadow-md">
+              <span>Visit buraqwebservice.com</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 pt-6 border-t border-navy-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <p>© 2026 Lexiconeltc Website Redesign Demo. All Rights Reserved.</p>
+        <p class="flex items-center gap-1.5">
+          Designed & Developed with excellence by 
+          <a href="https://buraqwebservice.com/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-rose-300 font-semibold underline decoration-rose-500/50">
+            Buraq Web Service
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT DATA & LOGIC -->
+  <script>
+    const PAGES = [
+      // 1. Core Website
+      {
+        id: "homepage",
+        title: "Homepage (Desktop 1440px)",
+        folder: "lexicon_eltc_homepage_desktop_1440px",
+        category: "core",
+        categoryName: "Core Website",
+        device: "Desktop",
+        tag: "Primary Landing",
+        description: "Official Lexicon homepage with British Council venue accreditation, admission tickers, interactive course highlights, and counselor booking.",
+        features: ["British Council Badge", "Featured IELTS/PTE Courses", "Student Success Stories", "Dynamic Announcement Bar"]
+      },
+      {
+        id: "about_us",
+        title: "About Us — Lexicon ELTC",
+        folder: "about_us_lexicon_eltc_desktop",
+        category: "core",
+        categoryName: "Core Website",
+        device: "Desktop",
+        tag: "Institutional",
+        description: "Centre legacy, leadership message, Cambridge/British Council affiliation, instructor accreditations, and modern facilities.",
+        features: ["Faculty Highlights", "Mission & Vision", "Certified Instructors", "Campus Tour Gallery"]
+      },
+      {
+        id: "contact_us",
+        title: "Contact & Campus Support",
+        folder: "contact_us_lexicon_eltc_desktop",
+        category: "core",
+        categoryName: "Core Website",
+        device: "Desktop",
+        tag: "Support",
+        description: "Campus location, hotline numbers, inquiry forms, free placement test booking, and interactive consultation schedule.",
+        features: ["Direct Consultation Form", "Google Map Integration", "Emergency Helplines", "Walk-in Timing"]
+      },
+      {
+        id: "faq",
+        title: "Frequently Asked Questions (FAQ)",
+        folder: "faq_lexicon_eltc_desktop",
+        category: "core",
+        categoryName: "Core Website",
+        device: "Desktop",
+        tag: "Knowledge Base",
+        description: "Categorized accordion FAQs addressing test registration, course schedules, refund policies, and online mock exams.",
+        features: ["Interactive Accordions", "Searchable Topics", "IELTS / PTE Guidance", "Support Ticket Escalation"]
+      },
+      {
+        id: "operations",
+        title: "Operations & Administration Overview",
+        folder: "operations_overview_desktop",
+        category: "core",
+        categoryName: "Core Website",
+        device: "Desktop",
+        tag: "Admin & Operations",
+        description: "Administrative workflow blueprint showing curriculum management, batch scheduling, and student lifecycle tracking.",
+        features: ["Batch Management", "Operational Metrics", "Staff Coordination", "Resource Planning"]
+      },
+
+      // 2. Courses & Academic
+      {
+        id: "course_catalogue_desktop",
+        title: "Course Catalogue (Desktop 1440px)",
+        folder: "lexicon_eltc_course_catalogue_desktop_1440px",
+        category: "courses",
+        categoryName: "Courses & Academic",
+        device: "Desktop",
+        tag: "Catalogue",
+        description: "Comprehensive courses library with multi-facet filters (IELTS, PTE, Spoken English, Young Learners), price tags, and level badges.",
+        features: ["Sidebar Filters", "Search & Sort", "Duration & Fee Tags", "Instant Enrollment CTA"]
+      },
+      {
+        id: "course_catalogue_mobile",
+        title: "Course Catalogue (Mobile 390px)",
+        folder: "lexicon_eltc_course_catalogue_mobile_390px",
+        category: "courses",
+        categoryName: "Courses & Academic",
+        device: "Mobile",
+        tag: "Mobile Ready",
+        description: "Mobile-first responsive course browsing with horizontal category pills, touch-friendly course cards, and quick checkout.",
+        features: ["Mobile Filter Sheet", "Compact Cards", "Fast-load Layout", "Direct Call-to-Enroll"]
+      },
+      {
+        id: "course_detail",
+        title: "Course Detail Template",
+        folder: "lexicon_eltc_course_detail_template_desktop_1440px",
+        category: "courses",
+        categoryName: "Courses & Academic",
+        device: "Desktop",
+        tag: "Template",
+        description: "Rich syllabus breakdown, instructor biography, weekly lecture plan, batch timings, mock test inclusions, and sticky checkout bar.",
+        features: ["Curriculum Modules", "Instructor Profile", "Sticky Enroll Box", "Mock Test Breakdown"]
+      },
+      {
+        id: "ielts_prep",
+        title: "IELTS Preparation Programs",
+        folder: "ielts_preparation_programs_lexicon_eltc",
+        category: "courses",
+        categoryName: "Courses & Academic",
+        device: "Desktop",
+        tag: "Flagship",
+        description: "Flagship IELTS Academic & General Training landing page with band-score prediction, diagnostic mock exam registration, and schedules.",
+        features: ["Band 7.5+ Target Plan", "Diagnostic Test CTA", "Cambridge Materials", "Mock Exam Schedule"]
+      },
+      {
+        id: "pte_prep",
+        title: "PTE Academic Preparation",
+        folder: "pte_academic_preparation_lexicon_eltc",
+        category: "courses",
+        categoryName: "Courses & Academic",
+        device: "Desktop",
+        tag: "Exam Ready",
+        description: "Pearson PTE computer-delivered exam training with AI lab practice modules, score improvement matrices, and intensive workshops.",
+        features: ["Pearson Test Lab Preview", "AI Scoring System", "Fast-track Batches", "Score Improvement Matrix"]
+      },
+      {
+        id: "esl_spoken",
+        title: "ESL & Spoken English Programs",
+        folder: "esl_spoken_english_programs_lexicon_eltc",
+        category: "courses",
+        categoryName: "Courses & Academic",
+        device: "Desktop",
+        tag: "Communication",
+        description: "English fluency, accent reduction, phonetics, and corporate business English communication training for professionals and students.",
+        features: ["Fluency Assessment", "Phonetics & Pronunciation", "Corporate Modules", "Interactive Speaking Club"]
+      },
+
+      // 3. Enrollment & Checkout
+      {
+        id: "checkout",
+        title: "Course Checkout & Enrollment",
+        folder: "course_checkout_lexicon_eltc",
+        category: "checkout",
+        categoryName: "Enrollment & Checkout",
+        device: "Desktop",
+        tag: "Checkout",
+        description: "Clean multi-step enrollment form with batch timing selector, discount promo code, student details, and price recap.",
+        features: ["Batch Slot Selector", "Coupon / Discount Code", "Order Summary", "Student Details Form"]
+      },
+      {
+        id: "payment_processing",
+        title: "Payment Gateway Processing",
+        folder: "payment_processing_lexicon_eltc",
+        category: "checkout",
+        categoryName: "Enrollment & Checkout",
+        device: "Desktop",
+        tag: "Gateway",
+        description: "Integrated payment screen with bKash, Nagad, Rocket, credit/debit card gateway, and SSL security indicators.",
+        features: ["bKash / Nagad / Cards", "Secure SSL Badges", "Real-time Verification", "Order Reference"]
+      },
+      {
+        id: "payment_success",
+        title: "Payment Success Confirmation",
+        folder: "payment_success_lexicon_eltc",
+        category: "checkout",
+        categoryName: "Enrollment & Checkout",
+        device: "Desktop",
+        tag: "Confirmation",
+        description: "Celebratory success confirmation with downloadable invoice PDF, student ID assignment, and direct link to portal classes.",
+        features: ["Instant Invoice Download", "Class Schedule Link", "Welcome Instructions", "Portal Access Trigger"]
+      },
+      {
+        id: "payment_recovery",
+        title: "Payment Status & Recovery",
+        folder: "payment_status_recovery_lexicon_eltc",
+        category: "checkout",
+        categoryName: "Enrollment & Checkout",
+        device: "Desktop",
+        tag: "Recovery",
+        description: "Handles pending, timeout, or failed transactions with automatic retry, customer support hotline, and reference recovery.",
+        features: ["Transaction Recovery", "Support Hotlines", "Retry Mechanism", "Status Lookup"]
+      },
+
+      // 4. Student Portal & Auth
+      {
+        id: "student_login",
+        title: "Student Portal Login",
+        folder: "student_login_lexicon_eltc",
+        category: "portal",
+        categoryName: "Student Portal & Auth",
+        device: "Desktop",
+        tag: "Authentication",
+        description: "Secure login portal for registered students with student ID, password credentials, remember me, and quick recovery links.",
+        features: ["Student ID & Email Login", "Show/Hide Password", "Remember Me", "Direct Registration Link"]
+      },
+      {
+        id: "student_register",
+        title: "New Student Registration",
+        folder: "new_student_registration_lexicon_eltc",
+        category: "portal",
+        categoryName: "Student Portal & Auth",
+        device: "Desktop",
+        tag: "Onboarding",
+        description: "Comprehensive student registration form capturing contact information, course interests, and profile setup.",
+        features: ["Course Interest Picker", "Email & Phone Validation", "Password Strength Meter", "Terms Agreement"]
+      },
+      {
+        id: "forgot_password",
+        title: "Forgot Password Recovery",
+        folder: "forgot_password_lexicon_eltc",
+        category: "portal",
+        categoryName: "Student Portal & Auth",
+        device: "Desktop",
+        tag: "Security",
+        description: "Clean password reset request screen with registered email/phone validation and OTP dispatch.",
+        features: ["Email / Phone Lookup", "Instant OTP Dispatch", "Back to Login", "Security Assurance"]
+      },
+      {
+        id: "email_verification",
+        title: "Email & OTP Verification",
+        folder: "email_verification_lexicon_eltc",
+        category: "portal",
+        categoryName: "Student Portal & Auth",
+        device: "Desktop",
+        tag: "Verification",
+        description: "6-digit OTP code input interface with auto-focus, countdown timer, and resend verification code action.",
+        features: ["6-Digit Code Input", "Resend Countdown Timer", "One-click Verify", "Security Notice"]
+      },
+      {
+        id: "portal_dashboard",
+        title: "Student Dashboard Overview",
+        folder: "lexicon_eltc_student_portal_dashboard_overview_desktop_1440px",
+        category: "portal",
+        categoryName: "Student Portal & Auth",
+        device: "Desktop",
+        tag: "Portal Hub",
+        description: "Complete student command centre with upcoming live classes, mock exam scores, attendance metrics, and downloadable notes.",
+        features: ["Upcoming Classes Widget", "Mock Exam Band Score", "Attendance Tracker", "Notice Board"]
+      },
+      {
+        id: "portal_my_courses",
+        title: "Student Portal — My Courses",
+        folder: "lexicon_eltc_student_portal_my_courses_desktop_1440px",
+        category: "portal",
+        categoryName: "Student Portal & Auth",
+        device: "Desktop",
+        tag: "LMS",
+        description: "Course enrollment dashboard showing active modules, syllabus progress, recorded lecture archives, and assignment submissions.",
+        features: ["Enrolled Courses Grid", "Module Progress Bar", "Recorded Lectures", "Homework & Feedback"]
+      },
+
+      // 5. AI Assistant
+      {
+        id: "ai_desktop",
+        title: "Lexicon AI Assistant (Desktop Suite)",
+        folder: "lexicon_ai_assistant_desktop_multi_state_suite",
+        category: "ai",
+        categoryName: "AI Assistant",
+        device: "Desktop",
+        tag: "AI Innovation",
+        description: "Advanced AI learning companion for IELTS essay grading, speaking prompts, grammar correction, and instant answers.",
+        features: ["Essay Band Evaluation", "Speaking Topic Prompts", "Multi-state Chat UI", "Instant Study Guides"]
+      },
+      {
+        id: "ai_mobile",
+        title: "Lexicon AI Assistant (Mobile Sheet)",
+        folder: "lexicon_ai_assistant_mobile_bottom_sheet_chat_panel",
+        category: "ai",
+        categoryName: "AI Assistant",
+        device: "Mobile",
+        tag: "AI Mobile",
+        description: "Mobile bottom-sheet AI chat interface allowing students to practice on smartphones anytime with responsive gestures.",
+        features: ["Draggable Bottom Sheet", "Fast Audio/Text Prompts", "Mobile Optimized", "Instant Suggestions"]
+      }
+    ];
+
+    let currentFilter = 'all';
+    let searchQuery = '';
+    let currentViewMode = 'grid';
+
+    // RENDER FUNCTIONS
+    function renderGallery() {
+      const grid = document.getElementById('gridContainer');
+      const list = document.getElementById('listContainer');
+      const noResults = document.getElementById('noResults');
+      const countBadge = document.getElementById('screenCountBadge');
+
+      const filtered = PAGES.filter(page => {
+        const matchesCat = currentFilter === 'all' || page.category === currentFilter;
+        const q = searchQuery.toLowerCase().trim();
+        const matchesSearch = !q || 
+          page.title.toLowerCase().includes(q) || 
+          page.description.toLowerCase().includes(q) || 
+          page.categoryName.toLowerCase().includes(q) ||
+          page.tag.toLowerCase().includes(q) ||
+          page.device.toLowerCase().includes(q);
+        return matchesCat && matchesSearch;
+      });
+
+      countBadge.textContent = `Showing ${filtered.length} of ${PAGES.length} screens`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        list.innerHTML = '';
+        noResults.classList.remove('hidden');
+        return;
+      }
+      noResults.classList.add('hidden');
+
+      // 1. Grid HTML
+      grid.innerHTML = filtered.map(page => `
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+          <!-- Thumbnail Image Container -->
+          <div class="relative h-56 bg-slate-100 overflow-hidden border-b border-slate-100">
+            <img 
+              src="./${page.folder}/screen.png" 
+              alt="${page.title}" 
+              loading="lazy" 
+              class="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+              onerror="this.parentElement.innerHTML='<div class=\'w-full h-full flex flex-col items-center justify-center bg-slate-100 text-slate-400 text-xs\'><svg class=\'w-8 h-8 mb-1\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'2\' d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'></path></svg>Screenshot Preview Available in Folder</div>'"
+            />
+            
+            <!-- Badges -->
+            <div class="absolute top-3 left-3 flex items-center gap-1.5">
+              <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-navy-900/85 backdrop-blur-sm text-white">
+                ${page.device}
+              </span>
+              <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-rose-600/90 backdrop-blur-sm text-white">
+                ${page.tag}
+              </span>
+            </div>
+
+            <!-- Quick Overlay Actions -->
+            <div class="absolute inset-0 bg-navy-950/60 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center gap-2 p-4">
+              <button 
+                onclick="openPreviewModal('${page.folder}/code.html', '${escapeQuotes(page.title)}', '${page.device}')" 
+                class="px-3.5 py-2 rounded-xl bg-white text-navy-900 text-xs font-bold hover:bg-slate-100 shadow-lg flex items-center gap-1.5 transition-transform hover:scale-105"
+              >
+                <svg class="w-4 h-4 text-crimson-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                Live Preview
+              </button>
+              <button 
+                onclick="openLightbox('./${page.folder}/screen.png', '${escapeQuotes(page.title)}', '${page.categoryName}')" 
+                class="px-3.5 py-2 rounded-xl bg-crimson-700 text-white text-xs font-bold hover:bg-crimson-hover shadow-lg flex items-center gap-1.5 transition-transform hover:scale-105"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                Hi-Res Mockup
+              </button>
+            </div>
+          </div>
+
+          <!-- Card Body -->
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-1.5">
+                <span class="text-xs font-semibold text-crimson-700 tracking-wider uppercase">${page.categoryName}</span>
+                <span class="text-[11px] font-mono text-slate-400 truncate max-w-[140px]">${page.folder}</span>
+              </div>
+              <h4 class="font-display font-bold text-base text-navy-900 group-hover:text-crimson-700 transition-colors">
+                ${page.title}
+              </h4>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                ${page.description}
+              </p>
+
+              <!-- Feature Bullets -->
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                ${page.features.map(f => `
+                  <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-slate-100 text-slate-600">
+                    ${f}
+                  </span>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Card Actions Footer -->
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between gap-2">
+              <a 
+                href="./${page.folder}/code.html" 
+                target="_blank" 
+                class="inline-flex items-center gap-1.5 text-xs font-semibold text-crimson-700 hover:text-crimson-hover hover:underline"
+              >
+                <span>Open in Tab</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+
+              <div class="flex items-center gap-1.5">
+                <button 
+                  onclick="openPreviewModal('${page.folder}/code.html', '${escapeQuotes(page.title)}', '${page.device}')" 
+                  class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-navy-900 transition-colors"
+                  title="Test in Interactive Modal"
+                >
+                  Modal View
+                </button>
+                <button 
+                  onclick="openLightbox('./${page.folder}/screen.png', '${escapeQuotes(page.title)}', '${page.categoryName}')" 
+                  class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-rose-50 hover:bg-rose-100 text-crimson-700 transition-colors"
+                  title="View High Resolution Screenshot"
+                >
+                  Screenshot
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // 2. List HTML
+      list.innerHTML = filtered.map(page => `
+        <div class="glass-card rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-center gap-4">
+            <img 
+              src="./${page.folder}/screen.png" 
+              alt="${page.title}" 
+              class="w-16 h-12 object-cover object-top rounded-lg border border-slate-200 shrink-0 cursor-pointer"
+              onclick="openLightbox('./${page.folder}/screen.png', '${escapeQuotes(page.title)}', '${page.categoryName}')"
+            />
+            <div>
+              <div class="flex items-center gap-2 mb-0.5">
+                <span class="text-xs font-bold text-crimson-700">${page.categoryName}</span>
+                <span class="text-slate-300">•</span>
+                <span class="text-xs font-semibold px-2 py-0.2 rounded bg-slate-100 text-slate-700">${page.device}</span>
+              </div>
+              <h4 class="font-display font-bold text-sm sm:text-base text-navy-900">${page.title}</h4>
+              <p class="text-xs text-slate-500 font-mono mt-0.5">${page.folder}/code.html</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 self-end sm:self-center shrink-0">
+            <button 
+              onclick="openPreviewModal('${page.folder}/code.html', '${escapeQuotes(page.title)}', '${page.device}')" 
+              class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 text-navy-900 transition-colors flex items-center gap-1"
+            >
+              <svg class="w-3.5 h-3.5 text-crimson-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              Live Demo
+            </button>
+            <a 
+              href="./${page.folder}/code.html" 
+              target="_blank" 
+              class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-crimson-700 hover:bg-crimson-hover text-white transition-colors flex items-center gap-1"
+            >
+              <span>Full Tab</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // HELPER: Escape quotes in attributes
+    function escapeQuotes(str) {
+      return (str || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
+    }
+
+    // FILTER LOGIC
+    function setFilter(cat) {
+      currentFilter = cat;
+      document.querySelectorAll('.filter-tab').forEach(tab => {
+        tab.classList.remove('bg-crimson-700', 'text-white', 'shadow-sm', 'font-semibold');
+        tab.classList.add('text-slate-600', 'font-medium');
+      });
+      const activeTab = document.getElementById(`tab-${cat}`);
+      if (activeTab) {
+        activeTab.classList.remove('text-slate-600', 'font-medium');
+        activeTab.classList.add('bg-crimson-700', 'text-white', 'shadow-sm', 'font-semibold');
+      }
+
+      // Update gallery title
+      const titles = {
+        all: "All Redesign Pages",
+        core: "Core Website & Support Pages",
+        courses: "Courses & Academic Program Pages",
+        checkout: "Enrollment & Payment Flows",
+        portal: "Student Portal & Authentication",
+        ai: "Lexicon AI Learning Assistant"
+      };
+      document.getElementById('galleryTitle').textContent = titles[cat] || "Redesign Pages";
+
+      renderGallery();
+    }
+
+    function handleSearch() {
+      searchQuery = document.getElementById('searchInput').value;
+      renderGallery();
+    }
+
+    function setViewMode(mode) {
+      currentViewMode = mode;
+      const grid = document.getElementById('gridContainer');
+      const list = document.getElementById('listContainer');
+      const btnGrid = document.getElementById('viewModeGrid');
+      const btnList = document.getElementById('viewModeList');
+
+      if (mode === 'grid') {
+        grid.classList.remove('hidden');
+        list.classList.add('hidden');
+        btnGrid.classList.add('bg-slate-100', 'text-navy-900');
+        btnList.classList.remove('bg-slate-100', 'text-navy-900');
+      } else {
+        grid.classList.add('hidden');
+        list.classList.remove('hidden');
+        btnList.classList.add('bg-slate-100', 'text-navy-900');
+        btnGrid.classList.remove('bg-slate-100', 'text-navy-900');
+      }
+    }
+
+    // MODAL LOGIC
+    function openPreviewModal(url, title, device) {
+      const modal = document.getElementById('previewModal');
+      const iframe = document.getElementById('previewIframe');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalPath = document.getElementById('modalPath');
+      const extLink = document.getElementById('modalExternalLink');
+
+      iframe.src = `./${url}`;
+      modalTitle.textContent = title;
+      modalPath.textContent = url;
+      extLink.href = `./${url}`;
+
+      // Default device size
+      if (device === 'Mobile') {
+        setModalDevice('390px');
+      } else {
+        setModalDevice('100%');
+      }
+
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePreviewModal() {
+      const modal = document.getElementById('previewModal');
+      const iframe = document.getElementById('previewIframe');
+      iframe.src = '';
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    function setModalDevice(width) {
+      const wrapper = document.getElementById('iframeWrapper');
+      wrapper.style.maxWidth = width;
+
+      // Update button active states
+      document.querySelectorAll('.device-btn').forEach(btn => {
+        btn.classList.remove('bg-white', 'text-navy-900', 'shadow-xs', 'font-semibold');
+        btn.classList.add('hover:text-navy-900');
+      });
+
+      const map = {
+        '100%': 'device-full',
+        '1024px': 'device-laptop',
+        '768px': 'device-tablet',
+        '390px': 'device-mobile'
+      };
+      const activeBtn = document.getElementById(map[width]);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-white', 'text-navy-900', 'shadow-xs', 'font-semibold');
+      }
+    }
+
+    // LIGHTBOX LOGIC
+    function openLightbox(imgSrc, title, subtitle) {
+      const box = document.getElementById('imageLightbox');
+      const img = document.getElementById('lightboxImage');
+      const boxTitle = document.getElementById('lightboxTitle');
+      const boxSub = document.getElementById('lightboxSubtitle');
+      const link = document.getElementById('lightboxDownloadLink');
+
+      img.src = imgSrc;
+      boxTitle.textContent = title;
+      boxSub.textContent = subtitle + " • High-Fidelity UI Screenshot";
+      link.href = imgSrc;
+
+      box.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const box = document.getElementById('imageLightbox');
+      const img = document.getElementById('lightboxImage');
+      img.src = '';
+      box.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // ESCAPE KEY LISTENER FOR MODALS
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closePreviewModal();
+        closeLightbox();
+      }
+    });
+
+    // INITIAL RENDER
+    renderGallery();
+  </script>
+</body>
+</html>

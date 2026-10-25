@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Lexicon ELTC AI Assistant Showcase</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#ffffff","secondary-fixed-dim":"#b7c7e4","secondary-fixed":"#d4e3ff","primary":"#b20120","on-error-container":"#93000a","on-surface-variant":"#5c403e","surface-light":"#F5F7FA","primary-fixed":"#ffdad7","on-primary":"#ffffff","on-primary-fixed-variant":"#930018","on-tertiary-fixed":"#00174b","inverse-on-surface":"#e9f1ff","on-error":"#ffffff","border-subtle":"#DCE2E9","surface":"#f8f9ff","inverse-primary":"#ffb3af","secondary-container":"#d0e0fe","on-tertiary-fixed-variant":"#003ea8","on-secondary-fixed-variant":"#38475f","crimson-hover":"#B71C28","secondary":"#505f78","on-background":"#0e1d2b","inverse-surface":"#243241","surface-container-high":"#dbe9fe","surface-tint":"#bd0f26","primary-fixed-dim":"#ffb3af","warning":"#F59E0B","error":"#ba1a1a","tertiary-container":"#2a66ee","tertiary-fixed-dim":"#b4c5ff","background":"#f8f9ff","on-secondary-container":"#54637c","on-tertiary":"#ffffff","tertiary-fixed":"#dbe1ff","outline":"#906f6d","surface-bright":"#f8f9ff","outline-variant":"#e4bdbb","on-tertiary-container":"#f4f4ff","on-secondary":"#ffffff","surface-variant":"#d5e4f8","on-secondary-fixed":"#0b1c32","success":"#10B981","error-container":"#ffdad6","on-primary-fixed":"#410006","surface-dim":"#cddbef","on-surface":"#0e1d2b","on-primary-container":"#fff2f0","surface-container-low":"#eef4ff","surface-container-highest":"#d5e4f8","tertiary":"#004dcc","surface-container":"#e4efff","primary-container":"#d62835"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","gutter-mobile":"1rem","space-sm":"0.5rem","margin":"2rem","space-md":"1rem","space-xl":"2.5rem","margin-mobile":"1rem","gutter":"1.5rem","space-xs":"0.25rem"},fontFamily:{"body-sm":["Lexend"],"body-lg":["Lexend"],"label-md":["Lexend"],"display-lg":["Lexend"],"headline-md":["Lexend"],"label-lg":["Lexend"],"display-lg-mobile":["Lexend"],"headline-lg":["Lexend"],"label-sm":["Lexend"],"body-md":["Lexend"],"headline-sm":["Lexend"]},fontSize:{"body-sm":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"body-lg":["1.125rem",{"lineHeight":"1.75rem","fontWeight":"400"}],"label-md":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"display-lg":["3.5rem",{"lineHeight":"4rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["1.5rem",{"lineHeight":"2rem","fontWeight":"600"}],"label-lg":["1rem",{"lineHeight":"1.5rem","fontWeight":"500"}],"display-lg-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"label-sm":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.04em","fontWeight":"600"}],"body-md":["1rem",{"lineHeight":"1.5rem","fontWeight":"400"}],"headline-sm":["1.25rem",{"lineHeight":"1.75rem","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen">
+<!-- BURAQ WEB SERVICE DEMO HEADER BANNER -->
+<div id="buraq-demo-banner" style="position: fixed; top: 0; left: 0; right: 0; height: 40px; z-index: 9999999; background: #0e1d2b; color: #ffffff; border-bottom: 2px solid #b20120; font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); box-sizing: border-box;">
+  <div style="display: flex; align-items: center; gap: 10px; font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+    <span style="background: #b20120; color: #ffffff; padding: 3px 9px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; flex-shrink: 0;">Demo Notice</span>
+    <span style="color: #f1f5f9; font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">It's just a demo, original design will be much better than this</span>
+  </div>
+  <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;">
+    <a href="../index.html" target="_top" style="display: inline-flex; align-items: center; gap: 6px; background: #ffffff; color: #0e1d2b; padding: 5px 14px; border-radius: 6px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.18);" onmouseover="this.style.background='#ffdad7';this.style.color='#930018'" onmouseout="this.style.background='#ffffff';this.style.color='#0e1d2b'">
+      <svg style="width: 14px; height: 14px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+      <span>Back to Index</span>
+    </a>
+  </div>
+</div>
+<style id="buraq-demo-styles">
+  body { padding-top: 40px !important; }
+  header.fixed, header[class*="fixed"], nav.fixed, nav[class*="fixed"] { top: 40px !important; }
+  aside.fixed, aside[class*="fixed"] { top: 40px !important; height: calc(100vh - 40px) !important; }
+</style>
+<header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(20,36,58,0.06)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4"><div class="flex items-center gap-4"><img alt="Image from https://www.lexiconeltc.com/images/logos/logo5.jpeg" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XgWSX9CSbDFeEiIOPGvFVpxXDMy69SU-adUjEe0qOHZaDfGuyizqxtlRECMob4hMNepzPouYbBuMfzWt7U2MSrugYqhvJuGsOWmVZMFask63RgkHGg_5gkUx4ZI8Ta2jsXLDkojPqfOmZnljzSD6nfXFEIP5UzvUc1ngT7myDIOhuGRIcjCnveSbkbyMZUiJdb61YsAd4Hb6SZyHl883loArKHunafDl34UH3UgisWMukICR8kfPo7VMw"/><div class="hidden sm:flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">Lexicon ELTC</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">English Language Training Centre</span></div><div class="hidden lg:flex items-center gap-1.5 px-3 py-1 rounded bg-secondary-container text-on-secondary-fixed"><span class="material-symbols-outlined text-primary text-[16px]">verified</span><span class="font-label-sm text-label-sm uppercase tracking-wide">British Council Partner</span></div></div><nav class="hidden xl:flex items-center gap-2" data-active-classes="bg-primary-container text-on-primary-container font-label-md rounded-lg"><a aria-current="page" class="px-3 py-2 transition-colors bg-primary-container text-on-primary-container font-label-md rounded-lg" data-path="overview" href="#">Overview</a><a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="playground" href="#">Playground</a><a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="curriculum-integration" href="#">Curriculum Integration</a><a class="px-3 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="admissions-support" href="#">Admissions Support</a></nav><div class="flex items-center gap-4"><a class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" href="tel:+8801913919470"><span class="material-symbols-outlined text-primary text-[18px]">call</span><span class="font-label-md text-label-md font-semibold">+8801913919470</span></a><a class="px-4 py-2 rounded-lg bg-primary hover:bg-crimson-hover text-on-primary font-label-md text-label-md transition-colors shadow-[0_2px_8px_rgba(178,1,32,0.25)] flex items-center gap-1.5" href="#"><span class="material-symbols-outlined text-[18px]">school</span><span class="hidden sm:inline">Student Portal</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full relative min-h-screen">
+<!-- Interactive Demo Controls Bar (Always Visible at Top) -->
+<aside class="sticky top-20 z-40 w-full bg-surface-container-lowest/95 backdrop-blur-md shadow-md py-3 px-4 lg:px-8">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-3">
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center justify-center p-1.5 rounded-lg bg-primary-container text-on-primary-container">
+<span class="material-symbols-outlined text-[18px]">smart_toy</span>
+</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary block">Interactive State Simulator</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Lexicon AI Concierge Controller</span>
+</div>
+</div>
+<!-- State Controller Switcher Tabs -->
+<div class="flex items-center gap-1.5 overflow-x-auto py-1 scrollbar-none" id="stateSwitcherBar">
+<button class="state-pill px-3 py-1.5 rounded-lg font-label-sm text-label-sm whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface transition-all flex items-center gap-1.5" data-target-state="collapsed" onclick="setWidgetState('collapsed')">
+<span class="material-symbols-outlined text-[14px]">call_to_action</span>
+<span>1. Launcher</span>
+</button>
+<button class="state-pill px-3 py-1.5 rounded-lg font-label-sm text-label-sm whitespace-nowrap bg-primary text-on-primary shadow-sm flex items-center gap-1.5" data-target-state="welcome" onclick="setWidgetState('welcome')">
+<span class="material-symbols-outlined text-[14px]">chat_bubble</span>
+<span>2. Welcome &amp; Chips</span>
+</button>
+<button class="state-pill px-3 py-1.5 rounded-lg font-label-sm text-label-sm whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface transition-all flex items-center gap-1.5" data-target-state="courses" onclick="setWidgetState('courses')">
+<span class="material-symbols-outlined text-[14px]">school</span>
+<span>3. Course Match</span>
+</button>
+<button class="state-pill px-3 py-1.5 rounded-lg font-label-sm text-label-sm whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface transition-all flex items-center gap-1.5" data-target-state="enquiry" onclick="setWidgetState('enquiry')">
+<span class="material-symbols-outlined text-[14px]">how_to_reg</span>
+<span>4. Enquiry Form</span>
+</button>
+<button class="state-pill px-3 py-1.5 rounded-lg font-label-sm text-label-sm whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface transition-all flex items-center gap-1.5" data-target-state="student" onclick="setWidgetState('student')">
+<span class="material-symbols-outlined text-[14px]">badge</span>
+<span>5. Student Portal Auth</span>
+</button>
+<button class="state-pill px-3 py-1.5 rounded-lg font-label-sm text-label-sm whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface transition-all flex items-center gap-1.5" data-target-state="payment" onclick="setWidgetState('payment')">
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+<span>6. Payment Triage</span>
+</button>
+<button class="state-pill px-3 py-1.5 rounded-lg font-label-sm text-label-sm whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface transition-all flex items-center gap-1.5" data-target-state="loading-error" onclick="setWidgetState('loading-error')">
+<span class="material-symbols-outlined text-[14px]">sync_problem</span>
+<span>7. Loading &amp; Error</span>
+</button>
+<button class="state-pill px-3 py-1.5 rounded-lg font-label-sm text-label-sm whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface transition-all flex items-center gap-1.5" data-target-state="human" onclick="setWidgetState('human')">
+<span class="material-symbols-outlined text-[14px]">support_agent</span>
+<span>8. Human Escalation</span>
+</button>
+<button class="state-pill px-3 py-1.5 rounded-lg font-label-sm text-label-sm whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface transition-all flex items-center gap-1.5" data-target-state="privacy" onclick="setWidgetState('privacy')">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>9. Privacy Notice</span>
+</button>
+</div>
+<!-- Assistant Global Locale Switcher -->
+<div class="flex items-center gap-2 bg-surface-container px-2 py-1 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[16px]">translate</span>
+<button class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-lowest text-primary font-bold shadow-xs" id="btnLocaleEn" onclick="switchLocale('en')">EN</button>
+<button class="px-2 py-0.5 rounded font-label-sm text-label-sm text-secondary hover:text-on-surface" id="btnLocaleBn" onclick="switchLocale('bn')">বাংলা</button>
+</div>
+</div>
+</aside>
+<!-- Realistic Lexicon ELTC Contextual Academy Backdrop -->
+<div class="w-full max-w-7xl mx-auto px-6 lg:px-12 py-10 flex flex-col gap-12">
+<!-- Hero / Institutional Overview -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-surface-container-lowest rounded-xl p-8 lg:p-12 shadow-sm relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="lg:col-span-7 flex flex-col gap-4 z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed w-fit">
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Official British Council Registration Centre</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface leading-tight">
+          Where Ambition Meets <span class="text-primary underline decoration-primary/30">Global Pathways</span>.
+        </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl">
+          Lexicon ELTC combines cutting-edge AI diagnostic assessment with certified British Council master trainers to accelerate IELTS, PTE, and University admissions readiness.
+        </p>
+<!-- Metrics Row -->
+<div class="grid grid-cols-3 gap-4 pt-4">
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="font-headline-lg text-headline-lg text-primary block">8.5</span>
+<span class="font-label-sm text-label-sm text-secondary">Highest Band Score</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="font-headline-lg text-headline-lg text-on-surface block">12,400+</span>
+<span class="font-label-sm text-label-sm text-secondary">Successful Students</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<span class="font-headline-lg text-headline-lg text-tertiary block">100%</span>
+<span class="font-label-sm text-label-sm text-secondary">Authorized Venues</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<button class="px-6 py-3 rounded-lg bg-primary hover:bg-crimson-hover text-on-primary font-label-lg text-label-lg transition shadow-sm flex items-center gap-2" onclick="setWidgetState('courses')">
+<span>Explore Certified Tracks</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="px-5 py-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-lg text-label-lg transition flex items-center gap-2" onclick="setWidgetState('student')">
+<span class="material-symbols-outlined text-primary text-[18px]">account_circle</span>
+<span>Student Portal Mock</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-5 relative z-10">
+<div class="rounded-xl overflow-hidden shadow-lg bg-surface-container-high relative">
+<img class="w-full h-80 object-cover" data-alt="Modern educational language laboratory at Lexicon ELTC with engaged international students practicing IELTS speaking with instructors, crisp ambient daylight, Canadian institutional crimson accents, modern clean architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw49tHiY3VBNZoL-MqxhkdQhpNuh7JJNjTrz_MDiGbLRnvQCuoANujqTTRr_LoxbmZNpQeLZiNA_tQn-ix-vl45xM7nY6G6OnGrUbPvEvryUb3t7n-styiskHiYeh0Jq2u_Ugp7K86Ra6nNEebV9ldYOlrzv8M-DCwnVjrRlU2Km3_zuVHvCTZZxWLVMWKL8TZrmXqWI9ggsZCIOk2eaMnt1UYnAKKBu2mxQpWi4XXpRT6MTmlaE0e"/>
+<div class="p-5 bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+<div>
+<span class="font-label-md text-label-md font-semibold text-on-surface block">AI-Assisted Diagnostic</span>
+<span class="font-body-sm text-body-sm text-secondary">Instant CEFR &amp; IELTS mapping</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-success/10 text-success font-label-sm text-label-sm font-semibold">Active</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Institutional Partners Strip (From Prompt Graphic Inspiration) -->
+<section class="bg-surface-container-low rounded-xl p-6 shadow-sm">
+<div class="flex flex-col md:flex-row items-center justify-around gap-8 text-center md:text-left">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center font-bold text-headline-sm">LX</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block tracking-tight">LEXICON</span>
+<span class="font-label-sm text-label-sm text-secondary">The Future Begins Here</span>
+</div>
+</div>
+<div class="w-px h-10 bg-secondary-container hidden md:block"></div>
+<div class="flex items-center gap-3">
+<div class="grid grid-cols-2 gap-1 p-1">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block tracking-tight">BRITISH COUNCIL</span>
+<span class="font-label-sm text-label-sm text-secondary">Official Testing Venue</span>
+</div>
+</div>
+<div class="w-px h-10 bg-secondary-container hidden md:block"></div>
+<div class="flex items-center gap-3">
+<span class="font-display-lg text-headline-lg font-bold text-primary tracking-tighter">IELTS</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Official Partner</span>
+<span class="font-label-sm text-label-sm text-secondary">Khulna &amp; Dhaka Testing</span>
+</div>
+</div>
+<div class="w-px h-10 bg-secondary-container hidden md:block"></div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-inverse-surface text-inverse-on-surface flex items-center justify-center font-bold">LXF</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface block tracking-tight">LEXIFLY</span>
+<span class="font-label-sm text-label-sm text-secondary">Tomorrow Starts Today</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Context Curriculum Cards Preview -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-3">
+<div class="w-12 h-12 rounded-lg bg-secondary-container text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">menu_book</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-primary font-semibold">Flagship Track</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">IELTS Signature Regular Lab</h2>
+<p class="font-body-sm text-body-sm text-secondary">
+            Comprehensive 3-month module featuring 48 structured class hours, 12 computer-delivered British Council mock exams, and 1-on-1 speaking diagnostics.
+          </p>
+</div>
+<div class="pt-6 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Batch 44 Starts: Oct 15</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition font-label-sm text-label-sm" onclick="setWidgetState('enquiry')">Enquire Now</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-3">
+<div class="w-12 h-12 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-tertiary font-semibold">Pearson Certified</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">PTE Academic Crash Lab</h2>
+<p class="font-body-sm text-body-sm text-secondary">
+            Fast-track 6-week intensive simulation program with AI algorithm speech analysis, automated scoring engines, and targeted template coaching.
+          </p>
+</div>
+<div class="pt-6 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Online &amp; On-Campus</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition font-label-sm text-label-sm" onclick="setWidgetState('courses')">View Curriculum</button>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-3">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">flight_takeoff</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-primary font-semibold">Global Migration</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Canadian University Pathway</h2>
+<p class="font-body-sm text-body-sm text-secondary">
+            Integrated language readiness paired with visa filing, SOP documentation workshops, and direct intake advisement with partner institutions.
+          </p>
+</div>
+<div class="pt-6 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Direct Counsellor Slot</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition font-label-sm text-label-sm" onclick="setWidgetState('human')">Talk to Advisor</button>
+</div>
+</div>
+</section>
+</div>
+<!-- ========================================================================= -->
+<!-- FLOATING LEXICON AI ASSISTANT OVERLAY CONTAINER                          -->
+<!-- ========================================================================= -->
+<!-- STATE 1: Collapsed Floating Launcher Pill / Bubble -->
+<div class="hidden fixed bottom-6 right-6 z-50 transition-transform duration-300 transform scale-100" id="aiLauncherPill">
+<button class="group relative flex items-center gap-3 px-5 py-3.5 rounded-full bg-inverse-surface text-inverse-on-surface shadow-xl hover:shadow-2xl hover:scale-105 transition-all" onclick="setWidgetState('welcome')">
+<!-- Pulsing Beacon Marker -->
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</span>
+<!-- Mascot Icon -->
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-xs">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+</div>
+<div class="flex flex-col text-left">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-bold text-on-primary tracking-tight" id="launcherTitle">Ask Lexicon AI</span>
+<span class="px-1.5 py-0.2 rounded text-[10px] bg-primary text-on-primary uppercase tracking-wider font-semibold">Online</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim" id="launcherSubtitle">Admissions &amp; Student Portal</span>
+</div>
+<span class="material-symbols-outlined text-secondary-fixed-dim group-hover:translate-x-1 transition-transform text-[20px]">expand_less</span>
+</button>
+</div>
+<!-- EXPANDED AI ASSISTANT WINDOW (States 2 through 11) -->
+<div class="fixed bottom-6 right-4 sm:right-6 z-50 w-[95vw] sm:w-[440px] h-[640px] max-h-[901px] bg-surface-container-lowest rounded-xl shadow-2xl flex flex-col overflow-hidden transition-all duration-300" id="aiChatWindow">
+<!-- AI Top Header Bar -->
+<header class="bg-inverse-surface text-inverse-on-surface px-4 py-3.5 flex items-center justify-between shadow-sm flex-shrink-0">
+<div class="flex items-center gap-3 min-w-0">
+<div class="relative">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-xs">
+<span class="material-symbols-outlined text-[22px]">smart_toy</span>
+</div>
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-success ring-2 ring-inverse-surface"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold truncate">LexiBot</span>
+<span class="px-1.5 py-0.5 rounded bg-primary/20 text-inverse-primary text-[10px] font-semibold uppercase tracking-wider">AI Verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim truncate">Lexicon ELTC • British Council Partner</span>
+</div>
+</div>
+<!-- Header Controls: Lang toggle, Minimize, Privacy Info, Close -->
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded hover:bg-surface-variant/20 text-inverse-on-surface font-label-sm text-label-sm" onclick="toggleLocaleFromChat()" title="Toggle Language">
+<span id="chatLangToggleLabel">বাংলা</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-variant/20 text-inverse-on-surface transition" onclick="setWidgetState('privacy')" title="Privacy &amp; Security Protocol">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-variant/20 text-inverse-on-surface transition" onclick="setWidgetState('collapsed')" title="Minimize Window">
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-variant/20 text-inverse-on-surface transition" onclick="setWidgetState('collapsed')" title="Close Concierge">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</header>
+<!-- State Viewport Area (Scrollable Dynamic Feed) -->
+<main class="flex-1 overflow-y-auto p-4 bg-surface flex flex-col gap-4 relative" id="chatStreamBody">
+<!-- =================================================================== -->
+<!-- VIEW 1: WELCOME & QUESTION CHIPS (Prompt States 2 & 3) -->
+<!-- =================================================================== -->
+<div class="view-panel flex flex-col gap-3" id="viewWelcome">
+<!-- Verified Venue Notice Pill -->
+<div class="mx-auto px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center gap-1.5 text-center shadow-xs">
+<span class="material-symbols-outlined text-primary text-[14px]">apartment</span>
+<span class="font-label-sm text-label-sm" id="badgeVenueText">British Council Official Registration Centre • Khulna &amp; Online</span>
+</div>
+<!-- Bot Welcome Bubble -->
+<div class="flex items-start gap-2.5 max-w-[90%]">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 text-[14px]">
+<span class="material-symbols-outlined text-[16px]">smart_toy</span>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-xs text-on-surface flex flex-col gap-2">
+<p class="font-body-md text-body-md leading-relaxed" id="welcomeMsgText">
+              Hi! Welcome to Lexicon. I can help you explore courses, understand admission requirements, and find support for your learning journey.
+            </p>
+<span class="font-label-sm text-label-sm text-secondary self-end">Just now</span>
+</div>
+</div>
+<!-- Section Label for Suggested Queries -->
+<div class="flex items-center gap-2 pt-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold" id="chipHeaderPrompt">Frequently Asked Questions</span>
+</div>
+<!-- Suggested Question Chips (State 3 Requirement) -->
+<div class="flex flex-col gap-2">
+<button class="text-left p-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container transition shadow-xs flex items-center justify-between group" onclick="setWidgetState('courses')">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium" id="chip1">Which IELTS course is right for me?</span>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform text-[18px]">chevron_right</span>
+</button>
+<button class="text-left p-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container transition shadow-xs flex items-center justify-between group" onclick="setWidgetState('courses')">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[18px]">school</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium" id="chip2">What English courses are available?</span>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform text-[18px]">chevron_right</span>
+</button>
+<button class="text-left p-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container transition shadow-xs flex items-center justify-between group" onclick="setWidgetState('enquiry')">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">devices</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium" id="chip3">How do online classes work?</span>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform text-[18px]">chevron_right</span>
+</button>
+<button class="text-left p-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container transition shadow-xs flex items-center justify-between group" onclick="setWidgetState('payment')">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-error text-[18px]">receipt_long</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium" id="chip4">I paid for a course but cannot access it.</span>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform text-[18px]">chevron_right</span>
+</button>
+<button class="text-left p-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container transition shadow-xs flex items-center justify-between group" onclick="setWidgetState('human')">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px]">support_agent</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium" id="chip5">How can I contact an advisor?</span>
+</div>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-1 transition-transform text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- =================================================================== -->
+<!-- VIEW 2: COURSE RECOMMENDATIONS (Prompt State 4)                      -->
+<!-- =================================================================== -->
+<div class="view-panel hidden flex flex-col gap-3" id="viewCourses">
+<!-- User Query Bubble -->
+<div class="self-end bg-primary-container text-on-primary-container p-3 rounded-xl max-w-[85%] shadow-xs">
+<p class="font-body-md text-body-md">Which IELTS and English courses are currently open for admission?</p>
+</div>
+<!-- Assistant Response Statement -->
+<div class="flex items-start gap-2">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">smart_toy</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl shadow-xs text-on-surface max-w-[90%]">
+<p class="font-body-sm text-body-sm">
+              Here are verified official courses matched to British Council and Pearson curriculum standards. We never guarantee visa results or test scores without academic effort.
+            </p>
+</div>
+</div>
+<!-- Rich Course Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div>
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-semibold uppercase">Flagship</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">IELTS Signature Lab</h3>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-on-surface block">BDT 16,500</span>
+<span class="font-label-sm text-label-sm text-secondary">3 Months</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 text-secondary font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[16px]">desktop_windows</span>Computer Lab + Live</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-tertiary text-[16px]">groups</span>Max 12 Students</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">schedule</span>Sat &amp; Mon (6:30 PM)</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-success text-[16px]">assignment_turned_in</span>12 Official Mocks</span>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 py-2 px-3 rounded-lg bg-primary hover:bg-crimson-hover text-on-primary font-label-sm text-label-sm font-semibold transition text-center shadow-xs" onclick="setWidgetState('enquiry')">
+              Enquire This Course
+            </button>
+<button class="p-2 rounded-lg bg-surface-container text-secondary hover:text-on-surface" onclick="setWidgetState('human')" title="Discuss with Counsellor">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+</button>
+</div>
+</div>
+<!-- Rich Course Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold uppercase">Pearson PTE</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">PTE Academic Crash Lab</h3>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-bold text-on-surface block">BDT 14,000</span>
+<span class="font-label-sm text-label-sm text-secondary">6 Weeks</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 text-secondary font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[16px]">psychology</span>AI Speech Scorer</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-tertiary text-[16px]">wifi</span>Online / Interactive</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-[16px]">schedule</span>Sun &amp; Wed (8:00 PM)</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-success text-[16px]">check_circle</span>Template Engine</span>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 py-2 px-3 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-sm text-label-sm font-semibold transition text-center" onclick="setWidgetState('enquiry')">
+              View Course Details
+            </button>
+</div>
+</div>
+</div>
+<!-- =================================================================== -->
+<!-- VIEW 3: IN-STREAM ENQUIRY FORM (Prompt State 5)                      -->
+<!-- =================================================================== -->
+<div class="view-panel hidden flex flex-col gap-3" id="viewEnquiry">
+<div class="flex items-start gap-2">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">smart_toy</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl shadow-xs text-on-surface max-w-[95%]">
+<p class="font-body-sm text-body-sm">
+              Please complete this direct admissions inquiry. A senior counselor from Lexicon ELTC will review your background and call you within 2 working hours.
+            </p>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between pb-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">Admissions Form</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Khulna &amp; Online</span>
+</div>
+<form class="flex flex-col gap-3" onsubmit="handleEnquirySubmit(event)">
+<div>
+<label class="font-label-sm text-label-sm text-secondary block mb-1">Full Legal Name *</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="e.g. Tanvir Ahmed" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+<div>
+<label class="font-label-sm text-label-sm text-secondary block mb-1">Phone Number *</label>
+<div class="flex items-center bg-surface rounded-lg px-2 py-1">
+<span class="font-label-sm text-label-sm text-secondary font-bold mr-1">+880</span>
+<input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none" placeholder="1711223344" required="" type="tel"/>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-secondary block mb-1">Email Address *</label>
+<input class="w-full px-3 py-2 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="name@email.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+<div>
+<label class="font-label-sm text-label-sm text-secondary block mb-1">Target Test / Course</label>
+<select class="w-full px-3 py-2 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none">
+<option>IELTS Academic Regular</option>
+<option>IELTS General Training</option>
+<option>Pearson PTE Academic</option>
+<option>Executive Spoken English</option>
+<option>Study Abroad Advisory</option>
+</select>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-secondary block mb-1">Academic Intake</label>
+<select class="w-full px-3 py-2 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none">
+<option>Immediate / Next Batch</option>
+<option>January 2026 Intake</option>
+<option>May 2026 Intake</option>
+<option>September 2026 Intake</option>
+</select>
+</div>
+</div>
+<!-- GDPR / Data Consent -->
+<label class="flex items-start gap-2.5 pt-1 cursor-pointer">
+<input checked="" class="mt-1 rounded text-primary focus:ring-primary" required="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-secondary leading-snug">
+                I agree to receive academic counseling, syllabus details, and admission updates from Lexicon ELTC. We do not sell student data.
+              </span>
+</label>
+<button class="w-full mt-2 py-2.5 rounded-lg bg-primary hover:bg-crimson-hover text-on-primary font-label-md text-label-md font-semibold transition flex items-center justify-center gap-2 shadow-sm" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Submit Admission Enquiry</span>
+</button>
+</form>
+</div>
+</div>
+<!-- =================================================================== -->
+<!-- VIEW 4: AUTHENTICATED STUDENT PORTAL SUPPORT (Prompt State 6)       -->
+<!-- =================================================================== -->
+<div class="view-panel hidden flex flex-col gap-3" id="viewStudent">
+<!-- Auth Header Banner -->
+<div class="bg-surface-container-highest p-3.5 rounded-xl flex items-center justify-between shadow-xs">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-full bg-primary text-on-primary font-bold flex items-center justify-center">
+              TA
+            </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Tanvir Ahmed</span>
+<span class="font-label-sm text-label-sm text-secondary">Student ID: LX-8842 • Regular</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-success/15 text-success font-label-sm text-label-sm font-semibold uppercase">Active</span>
+</div>
+<!-- Enrolled Course Summary -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-secondary font-semibold">Active Enrollment</span>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm">Batch 42</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">IELTS Signature Academic Lab</h3>
+<p class="font-body-sm text-body-sm text-secondary">Trainer: Master Instructor Farhan Chowdhury, Cambridge CELTA Certified.</p>
+<div class="pt-2">
+<div class="flex justify-between font-label-sm text-label-sm text-secondary mb-1">
+<span>Curriculum Completion</span>
+<span class="font-semibold text-primary">68%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 68%"></div>
+</div>
+</div>
+</div>
+<!-- Student Quick Actions Mosaic -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+<button class="p-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-left shadow-xs flex flex-col gap-1 transition">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_today</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Schedule</span>
+<span class="font-body-sm text-body-sm text-secondary">Sat 6:30 PM (Lab 2)</span>
+</button>
+<button class="p-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-left shadow-xs flex flex-col gap-1 transition">
+<span class="material-symbols-outlined text-tertiary text-[20px]">analytics</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Mocks</span>
+<span class="font-body-sm text-body-sm text-secondary">Band 7.0 (Test #4)</span>
+</button>
+<button class="p-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container text-left shadow-xs flex flex-col gap-1 transition">
+<span class="material-symbols-outlined text-success text-[20px]">download</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Materials</span>
+<span class="font-body-sm text-body-sm text-secondary">Cambridge 19 PDF</span>
+</button>
+</div>
+<!-- Automated Support Query Pill -->
+<div class="p-3 rounded-xl bg-surface-container-low text-secondary font-body-sm text-body-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">contact_support</span>
+<span>Need class reschedule or 1-on-1 speaking slot?</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-bold hover:underline" onclick="setWidgetState('human')">Request Slot</button>
+</div>
+</div>
+<!-- =================================================================== -->
+<!-- VIEW 5: PAYMENT PENDING & TRIAGE SUPPORT (Prompt State 7)            -->
+<!-- =================================================================== -->
+<div class="view-panel hidden flex flex-col gap-3" id="viewPayment">
+<!-- User Issue Bubble -->
+<div class="self-end bg-primary-container text-on-primary-container p-3 rounded-xl max-w-[85%] shadow-xs">
+<p class="font-body-md text-body-md">I paid via bKash for Batch 44, but the portal still says 'Enrollment Inactive'.</p>
+</div>
+<div class="flex items-start gap-2">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">smart_toy</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl shadow-xs text-on-surface max-w-[90%] flex flex-col gap-2">
+<p class="font-body-sm text-body-sm">
+              Don't worry. Online transactions in Bangladesh often take between 5 to 20 minutes for our merchant gateway to synchronize with the core student ledger.
+            </p>
+</div>
+</div>
+<!-- Verification Status Card -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-on-surface">Payment Verification Engine</span>
+<span class="px-2 py-0.5 rounded bg-warning/20 text-warning font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] animate-spin">sync</span>
+              Sync in Progress
+            </span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-secondary">Reference Identifier</span>
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-wider">LX-TXN-90218</span>
+<span class="font-label-sm text-label-sm text-secondary">Gateway: bKash Merchant API • Amount: BDT 16,500</span>
+</div>
+<!-- Safe Banking Advisory Box (Strict Security Requirement) -->
+<div class="p-3 rounded-lg bg-error-container/20 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">security</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+<strong class="font-semibold text-primary">Safe Security Advisory:</strong> Lexicon ELTC officers will <strong>never</strong> ask for your bKash PIN, debit card CVV, or one-time OTP passwords.
+            </p>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm transition text-center font-semibold" onclick="setWidgetState('loading-error')">
+              Re-check Sync Status
+            </button>
+<button class="flex-1 py-2 px-3 rounded-lg bg-primary hover:bg-crimson-hover text-on-primary font-label-sm text-label-sm font-semibold transition text-center shadow-xs" onclick="setWidgetState('human')">
+              Talk to Accounts Desk
+            </button>
+</div>
+</div>
+</div>
+<!-- =================================================================== -->
+<!-- VIEW 6: LOADING INDICATOR & SERVER ERROR STATE (Prompt States 8 & 9)-->
+<!-- =================================================================== -->
+<div class="view-panel hidden flex flex-col gap-4" id="viewLoadingError">
+<!-- Sub-State A: Loading / Reasoning Simulation -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-xs flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">LexiBot is searching curriculum schedules...</span>
+<div class="flex items-center gap-1.5 pt-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-bounce"></span>
+<span class="w-2 h-2 rounded-full bg-primary animate-bounce [animation-delay:0.2s]"></span>
+<span class="w-2 h-2 rounded-full bg-primary animate-bounce [animation-delay:0.4s]"></span>
+<span class="font-label-sm text-label-sm text-secondary ml-1">Analyzing seat availability</span>
+</div>
+</div>
+</div>
+<!-- Sub-State B: Network Connection Interrupted (State 9 Requirement) -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col gap-3">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-error-container text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">cloud_off</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-headline-sm text-headline-sm text-error">Connection Interrupted</h4>
+<p class="font-body-sm text-body-sm text-secondary mt-1">
+                Could not retrieve real-time response from the Lexicon admissions server. Your entered inputs have been securely cached.
+              </p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-2 pt-2">
+<button class="w-full sm:w-auto flex-1 py-2.5 px-4 rounded-lg bg-primary hover:bg-crimson-hover text-on-primary font-label-md text-label-md font-semibold transition text-center shadow-xs flex items-center justify-center gap-2" onclick="setWidgetState('courses')">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+<span>Retry Request</span>
+</button>
+<a class="w-full sm:w-auto flex-1 py-2.5 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition text-center flex items-center justify-center gap-1.5" href="tel:+8801913919470">
+<span class="material-symbols-outlined text-primary text-[18px]">call</span>
+<span>Hotline: +8801913919470</span>
+</a>
+</div>
+</div>
+</div>
+<!-- =================================================================== -->
+<!-- VIEW 7: HUMAN ESCALATION & ADVISOR HANDOFF (Prompt State 10)         -->
+<!-- =================================================================== -->
+<div class="view-panel hidden flex flex-col gap-3" id="viewHuman">
+<div class="flex items-start gap-2">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[16px]">smart_toy</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-xl shadow-xs text-on-surface max-w-[90%]">
+<p class="font-body-sm text-body-sm">
+              Would you like to speak directly with an admissions advisor? Our certified team is available on WhatsApp, direct phone, or at our Khulna center.
+            </p>
+</div>
+</div>
+<!-- Advisor Profile Card -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover shadow-xs" data-alt="Portrait of professional Bangladeshi academic advisor in clean corporate office attire at Lexicon ELTC, welcoming smile, crisp daylight, Canadian crimson lanyard, modern education office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8RYmxHn0dIT4Stql1hSnjiFDfgoJqkw8dVaQItQXDcE3-gRiDjLNPyueIxVH2HUXCv5vaXKcrZu6exxbwY9M48TGY-wEVC0IFLqc4Dbc7-LY5Dp_xQcyJsj0gQWjf-9zjueVdnj3bNCGzU79pBMjWW_zzgAwWRa3HwCiLBAdFJmlWLRSb1laoMSqBKw1qiznIauZY1tQOyrt3IgsGyIAoL8vXsJSSZGqjVCd0geDKW7IkFp5-xKfr"/>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-bold text-on-surface truncate">Nazmus Sakib</span>
+<span class="w-2 h-2 rounded-full bg-success"></span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary truncate">Senior Academic Advisor • IELTS Specialist</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Available Right Now</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<!-- WhatsApp Action -->
+<a class="w-full py-2.5 px-3 rounded-lg bg-surface-container-highest hover:bg-success hover:text-white text-on-surface font-label-md text-label-md font-semibold transition flex items-center justify-center gap-2" href="https://wa.me/8801913919470" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px] text-success hover:text-white">chat</span>
+<span>Chat on WhatsApp (+8801913919470)</span>
+</a>
+<!-- Direct Call Action -->
+<a class="w-full py-2.5 px-3 rounded-lg bg-primary hover:bg-crimson-hover text-on-primary font-label-md text-label-md font-semibold transition flex items-center justify-center gap-2 shadow-sm" href="tel:+8801913919470">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span>Call Advisor Immediately</span>
+</a>
+<!-- In-Person Khulna Campus Booking -->
+<button class="w-full py-2 px-3 rounded-lg bg-surface-container text-secondary hover:text-on-surface font-label-sm text-label-sm font-semibold transition flex items-center justify-center gap-1.5" onclick="setWidgetState('enquiry')">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span>Book 30-min In-Person Counseling (Khulna Centre)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- =================================================================== -->
+<!-- VIEW 8: PRIVACY POLICY & TRUST MODAL (Prompt State 11)              -->
+<!-- =================================================================== -->
+<div class="view-panel hidden flex flex-col gap-3" id="viewPrivacy">
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-2.5 pb-2">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Data Privacy &amp; Student Trust</h3>
+<span class="font-label-sm text-label-sm text-secondary">Lexicon ELTC AI Transparency Policy</span>
+</div>
+</div>
+<div class="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">lock_clock</span>
+<p><strong>Zero Credential Harvesting:</strong> We never log or request sensitive passwords, OTPs, or financial payment keys.</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">enhanced_encryption</span>
+<p><strong>256-Bit Data Security:</strong> Student mock scores and inquiries are encrypted in transit under strict academic rights protocols.</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">gavel</span>
+<p><strong>Compliance &amp; Visa Disclosure:</strong> AI recommendations are guidance only and do NOT constitute official embassy visas or university admission guarantees.</p>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">ISO 27001 &amp; British Council Standards</span>
+<button class="py-1.5 px-4 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold hover:bg-crimson-hover transition" onclick="setWidgetState('welcome')">
+              Understood
+            </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Chat User Input Bar (Fixed Bottom of Assistant Window) -->
+<footer class="p-3 bg-surface-container-lowest shadow-[0_-2px_10px_rgba(20,36,58,0.04)] flex-shrink-0">
+<form class="flex items-center gap-2" onsubmit="handleChatInput(event)">
+<input class="flex-1 px-3.5 py-2.5 rounded-lg bg-surface font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/20" id="chatTextInput" placeholder="Type your course question..." type="text"/>
+<button class="w-10 h-10 rounded-lg bg-primary hover:bg-crimson-hover text-on-primary flex items-center justify-center transition shadow-xs" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</form>
+<div class="flex items-center justify-between px-1 pt-2 text-secondary font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-success"></span>
+<span>Official Admissions Desk</span>
+</span>
+<button class="hover:underline" onclick="setWidgetState('privacy')">Privacy &amp; Compliance</button>
+</div>
+</footer>
+</div>
+<!-- Interactive State Engine Script -->
+<script>
+    let currentAssistantState = 'welcome';
+    let currentLocale = 'en';
+
+    const localeData = {
+      en: {
+        launcherTitle: "Ask Lexicon AI",
+        launcherSubtitle: "Admissions & Student Portal",
+        badgeVenueText: "British Council Official Registration Centre • Khulna & Online",
+        welcomeMsgText: "Hi! Welcome to Lexicon. I can help you explore courses, understand admission requirements, and find support for your learning journey.",
+        chipHeaderPrompt: "Frequently Asked Questions",
+        chip1: "Which IELTS course is right for me?",
+        chip2: "What English courses are available?",
+        chip3: "How do online classes work?",
+        chip4: "I paid for a course but cannot access it.",
+        chip5: "How can I contact an advisor?",
+        inputPlaceholder: "Type your course question...",
+        langToggleChat: "বাংলা"
+      },
+      bn: {
+        launcherTitle: "লেক্সিকন এআই জিজ্ঞাসা করুন",
+        launcherSubtitle: "ভর্তি ও শিক্ষার্থী সহায়তা পোর্টাল",
+        badgeVenueText: "ব্রিটিশ কাউন্সিল অফিশিয়াল রেজিস্ট্রেশন কেন্দ্র • খুলনা ও অনলাইন",
+        welcomeMsgText: "স্বাগতম! আমি লেক্সিকন এআই সহকারী। কোর্স নির্বাচন, ভর্তির যোগ্যতা এবং আপনার স্টাডি জার্নির যেকোনো সহায়তায় আমি প্রস্তুত।",
+        chipHeaderPrompt: "সাধারণ জিজ্ঞাসাসমূহ",
+        chip1: "আমার জন্য কোন আইইএলটিএস কোর্সটি উপযুক্ত?",
+        chip2: "বর্তমানে কী কী ইংরেজি কোর্স চালু আছে?",
+        chip3: "অনলাইন ক্লাস কীভাবে পরিচালিত হয়?",
+        chip4: "ফি পরিশোধ করেছি কিন্তু কোর্স চালু হয়নি।",
+        chip5: "কাউন্সেলরের সাথে কীভাবে সরাসরি কথা বলব?",
+        inputPlaceholder: "আপনার প্রশ্নটি বাংলায় লিখুন...",
+        langToggleChat: "English"
+      }
+    };
+
+    function setWidgetState(stateKey) {
+      currentAssistantState = stateKey;
+      const launcherPill = document.getElementById('aiLauncherPill');
+      const chatWindow = document.getElementById('aiChatWindow');
+      
+      // Update top state switcher active pills
+      document.querySelectorAll('#stateSwitcherBar .state-pill').forEach(btn => {
+        if(btn.getAttribute('data-target-state') === stateKey) {
+          btn.className = "state-pill px-3 py-1.5 rounded-lg font-label-sm text-label-sm whitespace-nowrap bg-primary text-on-primary shadow-sm flex items-center gap-1.5";
+        } else {
+          btn.className = "state-pill px-3 py-1.5 rounded-lg font-label-sm text-label-sm whitespace-nowrap bg-surface-container text-secondary hover:text-on-surface transition-all flex items-center gap-1.5";
+        }
+      });
+
+      // Handle collapsed launcher vs expanded views
+      if (stateKey === 'collapsed') {
+        chatWindow.classList.add('hidden');
+        launcherPill.classList.remove('hidden');
+        return;
+      } else {
+        launcherPill.classList.add('hidden');
+        chatWindow.classList.remove('hidden');
+      }
+
+      // Hide all panels inside viewport
+      document.querySelectorAll('.view-panel').forEach(panel => {
+        panel.classList.add('hidden');
+      });
+
+      // Match target panel
+      const panelMapping = {
+        'welcome': 'viewWelcome',
+        'courses': 'viewCourses',
+        'enquiry': 'viewEnquiry',
+        'student': 'viewStudent',
+        'payment': 'viewPayment',
+        'loading-error': 'viewLoadingError',
+        'human': 'viewHuman',
+        'privacy': 'viewPrivacy'
+      };
+
+      const targetId = panelMapping[stateKey] || 'viewWelcome';
+      const targetPanel = document.getElementById(targetId);
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+      }
+
+      // Scroll top of stream
+      const streamBody = document.getElementById('chatStreamBody');
+      if (streamBody) streamBody.scrollTop = 0;
+    }
+
+    function switchLocale(lang) {
+      currentLocale = lang;
+      const data = localeData[lang];
+      if (!data) return;
+
+      document.getElementById('launcherTitle').innerText = data.launcherTitle;
+      document.getElementById('launcherSubtitle').innerText = data.launcherSubtitle;
+      document.getElementById('badgeVenueText').innerText = data.badgeVenueText;
+      document.getElementById('welcomeMsgText').innerText = data.welcomeMsgText;
+      document.getElementById('chipHeaderPrompt').innerText = data.chipHeaderPrompt;
+      document.getElementById('chip1').innerText = data.chip1;
+      document.getElementById('chip2').innerText = data.chip2;
+      document.getElementById('chip3').innerText = data.chip3;
+      document.getElementById('chip4').innerText = data.chip4;
+      document.getElementById('chip5').innerText = data.chip5;
+      document.getElementById('chatTextInput').setAttribute('placeholder', data.inputPlaceholder);
+      document.getElementById('chatLangToggleLabel').innerText = data.langToggleChat;
+
+      // Update switcher buttons UI
+      const btnEn = document.getElementById('btnLocaleEn');
+      const btnBn = document.getElementById('btnLocaleBn');
+      if (lang === 'bn') {
+        btnBn.className = "px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-lowest text-primary font-bold shadow-xs";
+        btnEn.className = "px-2 py-0.5 rounded font-label-sm text-label-sm text-secondary hover:text-on-surface";
+      } else {
+        btnEn.className = "px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container-lowest text-primary font-bold shadow-xs";
+        btnBn.className = "px-2 py-0.5 rounded font-label-sm text-label-sm text-secondary hover:text-on-surface";
+      }
+    }
+
+    function toggleLocaleFromChat() {
+      switchLocale(currentLocale === 'en' ? 'bn' : 'en');
+    }
+
+    function handleChatInput(e) {
+      e.preventDefault();
+      const input = document.getElementById('chatTextInput');
+      const text = input.value.trim().toLowerCase();
+      if (!text) return;
+      input.value = '';
+
+      // Intelligent routing based on query keywords
+      if (text.includes('ielts') || text.includes('course') || text.includes('pte') || text.includes('কোর্স')) {
+        setWidgetState('courses');
+      } else if (text.includes('pay') || text.includes('bkash') || text.includes('money') || text.includes('টাকা') || text.includes('পেমেন্ট')) {
+        setWidgetState('payment');
+      } else if (text.includes('portal') || text.includes('student') || text.includes('mock') || text.includes('আইডি')) {
+        setWidgetState('student');
+      } else if (text.includes('advisor') || text.includes('call') || text.includes('human') || text.includes('কথা')) {
+        setWidgetState('human');
+      } else {
+        setWidgetState('loading-error');
+      }
+    }
+
+    function handleEnquirySubmit(e) {
+      e.preventDefault();
+      alert("Thank you! Your academic admission enquiry has been logged with Lexicon ELTC Khulna Admissions Registry. Ref: LX-ENQ-" + Math.floor(1000 + Math.random() * 9000));
+      setWidgetState('human');
+    }
+
+    // Initialize default view to Welcome State
+    document.addEventListener('DOMContentLoaded', () => {
+      setWidgetState('welcome');
+    });
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_8px_rgba(20,36,58,0.04)] py-12"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6"><div class="flex flex-col items-center md:items-start gap-1"><div class="flex items-center gap-2"><img alt="Image from https://www.lexiconeltc.com/images/logos/logo5.jpeg" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XgWSX9CSbDFeEiIOPGvFVpxXDMy69SU-adUjEe0qOHZaDfGuyizqxtlRECMob4hMNepzPouYbBuMfzWt7U2MSrugYqhvJuGsOWmVZMFask63RgkHGg_5gkUx4ZI8Ta2jsXLDkojPqfOmZnljzSD6nfXFEIP5UzvUc1ngT7myDIOhuGRIcjCnveSbkbyMZUiJdb61YsAd4Hb6SZyHl883loArKHunafDl34UH3UgisWMukICR8kfPo7VMw"/><span class="font-headline-sm text-headline-sm text-on-surface">Lexicon ELTC</span></div><p class="font-body-sm text-body-sm text-secondary">Global language test preparation and international pathway academy.</p></div><div class="flex items-center gap-6 font-label-sm text-label-sm text-secondary"><span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[16px]">support_agent</span>Hotline: +8801913919470</span><span class="hidden sm:inline">•</span><span>Official British Council Registration Centre</span></div><div class="font-body-sm text-body-sm text-secondary">© 2025 Lexicon ELTC. All rights reserved.</div></div></footer></body></html>
